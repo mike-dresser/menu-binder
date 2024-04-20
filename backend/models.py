@@ -35,7 +35,7 @@ class ItemAllergen(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     item_id = db.Column(db.Integer, db.ForeignKey('items.id'), nullable=False)
     allergen_id = db.Column(db.Integer, db.ForeignKey('allergens.id'), nullable=False)
-    available_mod = db.Column(db.String)
+    notes = db.Column(db.String)
 
     item = db.relationship('Item', back_populates = 'item_allergens')
     allergen = db.relationship('Allergen', back_populates = 'item_allergens')

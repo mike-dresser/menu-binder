@@ -43,7 +43,7 @@ with app.app_context():
             current_allergen_id = Allergen.query.filter_by(name = allergen['name']).first().to_dict()['id']
             new_item_allergen = ItemAllergen(item_id = new_item.to_dict()['id'], 
                                              allergen_id = current_allergen_id,
-                                             available_mod = allergen.get('mod'))
+                                             notes = allergen.get('notes'))
             db.session.add(new_item_allergen)
             db.session.commit()
 
