@@ -1,5 +1,6 @@
 {
-  "menu": [
+  "name": "Dinner",
+  "items": [
     {
       "name": "Marinated Olives",
       "description": "mixed Greek olives, lemon, garlic, olive oil",
