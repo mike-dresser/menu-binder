@@ -22,8 +22,9 @@ class Item(db.Model, SerializerMixin):
     active = db.Column(db.Boolean, default=True)
 
     item_allergens = db.relationship('ItemAllergen', back_populates = 'item')
+    category_item = db.relationship('CategoryItem', back_populates = 'item')
 
-    serialize_rules = ('-item_allergens.item',)
+    serialize_rules = ('-item_allergens.item', '-category_item.item')
 
     def __repr__(self):
         return f'<Item {self.id} {self.name}>'
@@ -57,3 +58,38 @@ class Allergen(db.Model, SerializerMixin):
 
     def __repr__(self):
         return f'<Allergen {self.id} {self.name}>'
+
+class CategoryItem(db.Model, SerializerMixin):
+    __tablename__ = 'category_items'
+
+    id = db.Column(db.Integer, primary_key=True)
+    item_id = db.Column(db.Integer, db.ForeignKey('items.id'), nullable=False)
+    category_id = db.Column(db.Integer, db.ForeignKey('categories.id'), nullable=False)
+
+    item = db.relationship('Item', back_populates = 'category_item')
+    category = db.relationship('Category', back_populates = 'category_items')
+
+    serialize_rules = ('-item.category_item', '-category.category_items')
+
+class Category(db.Model, SerializerMixin):
+    __tablename__ = 'categories'
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String, nullable=False)
+    menu_id = db.Column(db.Integer, db.ForeignKey('menus.id'), nullable=False)
+ 
+    category_items = db.relationship('CategoryItem', back_populates = 'category') 
+    menu = db.relationship('Menu', back_populates = 'categories')
+
+    serialize_rules = ('-menu.categories', '-category_items.category')
+
+
+class Menu(db.Model, SerializerMixin):
+    __tablename__ = 'menus'
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String, nullable=False)
+
+    categories = db.relationship('Category', back_populates='menu')
+
+    serialize_rules = ('-categories.menu',)
