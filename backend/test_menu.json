@@ -1,0 +1,208 @@
+{
+  "menu": [
+    {
+      "name": "Marinated Olives",
+      "description": "mixed Greek olives, lemon, garlic, olive oil",
+      "allergies": [{ "name": "allium", "mod": "" }],
+      "mise": "Small ramekin for pits",
+      "category": "Snacks"
+    },
+    {
+      "name": "House Pickles",
+      "description": "Vegetables (cauliflower, carrots, cucumber, jalapenos, radish,celery ) pickled with chili-infused white vinegar",
+      "allergies": [
+        { "name": "allium", "mod": "" },
+        { "name": "nightshade", "mod": "" }
+      ],
+      "mise": "Fork",
+      "category": "Snacks"
+    },
+    {
+      "name": "Whitefish",
+      "description": "Whipped whitefish salad (whitefish, mayonnaise), served in a jar.\nServed with bagel chips",
+      "allergies": [
+        { "name": "gluten", "mod": "can be omitted - no crackers" },
+        { "name": "seeds", "mod": "from crackers" }
+      ],
+      "mise": "Fork, Knife, Tea Spoon (Share)",
+      "category": "Snacks"
+    },
+    {
+      "name": "Chips & Dip",
+      "description": "House fried (in canola) sweet potato and idaho potato chips. Served with black pepper ranch (sour cream, mayonnaise, lemon juice, garlic, buttermilk, black pepper, onion powder, garlic powder) topped with 1⁄2 ounce Grinnel caviar (from bowfin fish, harvested in Alabama) and chives",
+      "allergies": [
+        { "name": "gluten", "mod": "fryer cc" },
+        { "name": "dairy", "mod": "" },
+        { "name": "allium", "mod": "" }
+      ],
+      "mise": "mark w/ demi spoon",
+      "category": "Snacks"
+    },
+    {
+      "name": "Crab Dip",
+      "description": "Crab Mix: Claw Crabmeat (from blue crabs, Venezuela), roasted cauliflower, jalapeno, cream cheese, smoked cheddar cheese, mayonnaise, sour cream, white onion, adobo seasoning, Worcestershire, fines herbs, smoked paprika, cayenne, lemon juice, Green Tabasco, black pepper. Served with Ritz Crackers (wheat flour, sugar, salt, corn syrup, soy lecithin)",
+      "allergies": [
+        {
+          "name": "gluten",
+          "mod": "can be omitted - no crackers, ask kitchen if can sub tortilla chips or crudite"
+        },
+        { "name": "dairy", "mod": "" },
+        { "name": "allium", "mod": "" },
+        { "name": "shellfish", "mod": "" },
+        { "name": "nightshade", "mod": "" }
+      ],
+      "mise": "Fork, Knife, Tea Spoon (Share)",
+      "category": "Snacks"
+    },
+    {
+      "name": "Chilled Pepper Soup",
+      "description": "Puree of canola, shallot, garlic, ginger, red curry paste, roasted red peppers, white wine, rice vinegar, vegetable stock, oat milk, EVOO Garnish: marinated blue crab (blue crab, lemon vinaigrette, fines herbs) + crispy shallot (GF)",
+      "allergies": [
+        { "name": "allium", "mod": "" },
+        { "name": "shellfish", "mod": "red curry paste, cannot be omitted" },
+        { "name": "nightshade", "mod": "" }
+      ],
+      "mise": "Soup Spoon",
+      "category": "Apps"
+    },
+    {
+      "name": "Heirloom Tomatoes",
+      "description": "Straciatella: Stracciatella is shreds of fresh mozzarella soaked in sweet cream. Like a creamier burrata. Heirloom tomatoes: heirloom tomatoes, tossed w/ sherry vinaigrette (shallot, Dijon, honey, sherry vinegar, Aleppo pepper, EVOO) Anchovy Pesto: basil, parsley, garlic, green olives, anchovies, parmesan, EVOO Served w/ toasted seeded multigrain brushed w/ garlic clove and EVOO.",
+      "allergies": [
+        { "name": "allium", "mod": "" },
+        { "name": "dairy", "mod": "" },
+        { "name": "nightshade", "mod": "" },
+        { "name": "gluten", "mod": "" },
+        { "name": "seed", "mod": "" }
+      ],
+      "mise": "Soup Spoon",
+      "category": "Apps"
+    },
+    {
+      "name": "Tuna Tartare",
+      "description": "Served in the style of nacho chips. Tuna Tartare: 3 oz line-caught yellowfin tuna mixed with citrus ponzu, marinated cucumber (salt, rice wine vinegar, fresno pickling liquid, sesame), scallions Citrus ponzu: shallots, yuzu kosho, lemon juice, red pepper flakes, gf soy sauce, sesame oil Served over a bed of guacamole (avocado, lime, red onion, jalapeno, cilantro) Garnish: chili mayo (sriracha, mayonnaise, garlic), chives",
+      "allergies": [
+        { "name": "allium", "mod": "" },
+        { "name": "nightshade", "mod": "" },
+        { "name": "gluten", "mod": "cc w/ chips" },
+        { "name": "seed", "mod": "" }
+      ],
+      "mise": "teaspoon (tuck it in at the pass)",
+      "category": "Apps"
+    },
+    {
+      "name": "Summer Chicories",
+      "description": "Mix of Castelfranco + radicchio + frisee, mixed w/ sweet corn mix, roasted pumpkin seeds (aka pepitas) and tarragon vinaigrette (tarragon, feta, crème fraiche, lemon juice, shallot, EVOO). Garnish: cotija cheese (Cotija is an aged Mexican cheese made from cow's milk and named after the town of Cotija, Michoacán. White in color and firm in texture, its flavor is salty and milky. Cotija cheese has been described as akin to a mild feta or parmesan (depending on age). Corn Relish: corn and scallion - charred on the plancha, mixed with fines herbs",
+      "allergies": [
+        { "name": "allium", "mod": "" },
+        { "name": "dairy", "mod": "" },
+        { "name": "seed", "mod": "" }
+      ],
+      "mise": "Fork, Knife",
+      "category": "Apps"
+    },
+    {
+      "name": "Mussels",
+      "description": "3⁄4 # mussels, 3 ounces pork chorizo (pork, beef, chili pepper, paprika, mustard, garlic, vinegar, salt, sugar, sodium nitrite), steamed open with white wine, soffrito (fennel, garlic, shallots, red pepper flakes, EVOO), and garnished with chopped spring onions. Finished with herb butter (chives, parsley, basil, butter) Served with garlic bread (baguette, garlic-herb butter, parmesan) and 1⁄2 a charred lemon",
+      "allergies": [
+        { "name": "allium", "mod": "" },
+        { "name": "dairy", "mod": "can be omitted-butter" },
+        { "name": "shellfish", "mod": "" },
+        { "name": "gluten", "mod": "garlic bread" },
+        { "name": "alcohol", "mod": "" },
+        { "name": "pork", "mod": "can be omitted" }
+      ],
+      "mise": "Fork, Knife, Spoon, 2 bowls for shells",
+      "category": "Mains"
+    },
+    {
+      "name": "Lobster Roll",
+      "description": "4 ounce cooked Maine lobster tossed with herb mayonnaise (celery, chives, lemon juice, parsley, lobster oil) Pickled cucumbers (cucumbers, rice vinegar, salt, sugar) Brioche hot dog buns (buttered) Chopped herbs (parsley, chives, tarragon) Served with chips",
+      "allergies": [
+        { "name": "allium", "mod": "" },
+        { "name": "dairy", "mod": "" },
+        { "name": "shellfish", "mod": "" },
+        { "name": "gluten", "mod": "" },
+        { "name": "nightshade", "mod": "" }
+      ],
+      "mise": "Fork, Knife",
+      "category": "Mains"
+    },
+    {
+      "name": "Arctic Char",
+      "description": "Charred Corn: corn and scallion - charred on the plancha, mixed with fines herbs. Pepper Coulis: garlic, shallot, harissa, smoked paprika, sherry vinegar, roasted red peppers, EVOO. Coulis→ A coulis is a form of thin sauce made from puréed and strained vegetables or fruits. Gremolata→parsley, mint, basil, lemon zest, lemon zest, garlic clove, capers, chili flakes, EVOO",
+      "allergies": [
+        { "name": "allium", "mod": "" },
+        { "name": "nightshade", "mod": "" }
+      ],
+      "mise": "Fork, Knife",
+      "category": "Mains"
+    },
+    {
+      "name": "Steak Frites",
+      "description": "8 oz terras major (aka petit filet or bistro filet), cooked to medium rare, unless otherwise specified. Served over our french fries (old bay), served w/ ramekin of au poivre. Au poivre (peppercorn sauce): shallot, clove, thyme, butter, black peppercorn, brandy, chicken stock, crème fraiche, Dijon mustard",
+      "allergies": [
+        { "name": "dairy", "mod": "" },
+        { "name": "gluten", "c.c.": "" },
+        { "name": "nightshade", "mod": "" },
+        { "name": "allium", "mod": "" }
+      ],
+      "mise": "Fork, Steak Knife",
+      "category": "Mains"
+    },
+    {
+      "name": "Lobster Spaghetti",
+      "description": "4 oz spaghetti tossed with 3 ounces Maine lobster in a moderately spicy fresh tomato sauce. Tomato sauce - EVOO, garlic, red pepper flakes, cherry tomatoes, capers, castelvetrano olives, fresno chili, white wine, vegetable stock. Finished with butter and fines herbs. Topped with parmesan and toasted panko breadcrumbs.",
+      "allergies": [
+        { "name": "dairy", "mod": "" },
+        { "name": "gluten", "mod": "c.c." },
+        { "name": "nightshade", "mod": "" },
+        { "name": "allium", "mod": "" },
+        { "name": "shellfish", "mod": "" },
+        { "name": "alcohol", "mod": "" }
+      ],
+      "mise": "Fork, Knife, Spoon",
+      "category": "Mains"
+    },
+    {
+      "name": "Fried Artichokes",
+      "description": "Deep-fried artichoke hearts (5 oz), topped with fresh grated parmesan cheese and fines herbs. Served with buttermilk ranch (sour cream, mayonnaise, lemon juice, garlic, buttermilk, black pepper, onion powder, garlic powder)",
+      "allergies": [
+        { "name": "dairy", "mod": "" },
+        { "name": "gluten", "mod": "cross-contamination" },
+        { "name": "nightshade", "mod": "" },
+        { "name": "allium", "mod": "" }
+      ],
+      "mise": "Fork",
+      "category": "Sides"
+    },
+    {
+      "name": "French Fries",
+      "description": "Old bay, malt vinegar aioli (mayo, malt vinegar powder)",
+      "allergies": [
+        { "name": "gluten", "mod": "cross-contamination" },
+        { "name": "nightshade", "mod": "" }
+      ],
+      "mise": "Fork",
+      "category": "Sides"
+    },
+    {
+      "name": "Garlic Bread",
+      "description": "baguette, garlic butter, parmesan",
+      "allergies": [
+        { "name": "gluten", "mod": "" },
+        { "name": "dairy", "mod": "" },
+        { "name": "allium", "mod": "" }
+      ],
+      "mise": "Fork, Knife",
+      "category": "Sides"
+    },
+    {
+      "name": "Petit Lettuces",
+      "description": "Mix of seasonal mesclun style mix and house chicory mix (Castelfranco + radicchio + frisee)",
+      "allergies": "",
+      "mise": "Fork, Knife",
+      "category": "Sides"
+    }
+  ]
+}
