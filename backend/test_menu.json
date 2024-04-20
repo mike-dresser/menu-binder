@@ -143,7 +143,7 @@
       "description": "8 oz terras major (aka petit filet or bistro filet), cooked to medium rare, unless otherwise specified. Served over our french fries (old bay), served w/ ramekin of au poivre. Au poivre (peppercorn sauce): shallot, clove, thyme, butter, black peppercorn, brandy, chicken stock, crème fraiche, Dijon mustard",
       "allergies": [
         { "name": "dairy", "mod": "" },
-        { "name": "gluten", "c.c.": "" },
+        { "name": "gluten", "mod": "" },
         { "name": "nightshade", "mod": "" },
         { "name": "allium", "mod": "" }
       ],
