@@ -1,7 +1,30 @@
 body {
   font-family: Inter, system-ui, Helvetica, sans-serif;
+  padding: 0.5em;
 }
 
 ul {
+  padding: 0;
   list-style-type: none;
+}
+
+#menuList {
+  ul {
+    display: none;
+
+    &.expanded {
+      display: block;
+    }
+  }
+
+  li {
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  span.expandGlyph {
+    font-size: 1.5em;
+  }
 }

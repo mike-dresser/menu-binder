@@ -11,7 +11,7 @@ function MenuList() {
   }, []);
   const menus = ['Breakfast', 'Lunch', 'Snack', 'Dinner', 'Brunch'];
   return (
-    <ul>
+    <ul id="menuList">
       {menus.map((menu) => (
         <li key={menu}>
           <ItemList name={menu} items={testMenu} />
