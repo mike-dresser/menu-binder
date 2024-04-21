@@ -1,12 +1,14 @@
-from flask import Flask
+from flask import Flask, jsonify
 import os
 from flask_migrate import Migrate;
+from flask_cors import CORS
 from models import db, Item, ItemAllergen, Allergen, CategoryItem, Category, Menu
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 DATABASE = os.environ.get("DB_URI", f"sqlite:///{os.path.join(BASE_DIR, 'app.db')}")
-
 app = Flask(__name__)
+# this proved unecessary with the jsonify.headers add approach
+# cors = CORS(app, resources={r"/": {"origins": "*"}})
 app.config["SQLALCHEMY_DATABASE_URI"] = DATABASE
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.json.compact = False
@@ -15,6 +17,14 @@ migrate = Migrate(app, db)
 
 db.init_app(app)
 
+def add_cors(response):
+    '''Add cross-origin headers to keep CORS happy
+    
+    response: a non-JSONified Python object'''
+
+    updated_response = jsonify(response)
+    updated_response.headers.add('Access-Control-Allow-Origin', '*')
+    return updated_response
 
 def allergy_serialize(item):
     '''A workaround to get nicely serialized allergy lists'''
@@ -50,7 +60,8 @@ def home():
 
 @app.route('/items', methods = ['GET'])
 def all_items():
-    return [allergy_serialize(item) for item in Item.query.all()], 200
+    response = [allergy_serialize(item) for item in Item.query.all()]
+    return add_cors(response), 200
 
 @app.route('/items/<int:id>')
 def get_item(id):
@@ -58,7 +69,7 @@ def get_item(id):
     if not item:
         return {"error": f"No item with id {id} found."}, 404
     response = allergy_serialize(item)
-    return response, 200
+    return add_cors(response), 200
 
 if __name__ == "__main__":
     app.run(port=5555, debug=True)
