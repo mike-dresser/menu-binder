@@ -1,5 +1,7 @@
+import MenuList from './MenuList';
+
 function App() {
-  return <h1>Hello, world!</h1>;
+  return <MenuList />;
 }
 
 export default App;
