@@ -15,6 +15,18 @@ const item = {
       name: 'nightshade',
       notes: '',
     },
+    {
+      name: 'dairy',
+      notes: '',
+    },
+    {
+      name: 'pork',
+      notes: 'red curry paste, cannot be omitted',
+    },
+    {
+      name: 'nuts',
+      notes: '',
+    },
   ],
   description:
     'Puree of canola, shallot, garlic, ginger, red curry paste, roasted red peppers, white wine, rice vinegar, vegetable stock, oat milk, EVOO Garnish: marinated blue crab (blue crab, lemon vinaigrette, fines herbs) + crispy shallot (GF)',
@@ -34,11 +46,18 @@ function Item() {
       <p className="sectionHeader">Description</p>
       <p>{item.description}</p>
       <p className="sectionHeader">Allergens</p>
-      <ul>
+
+      <ul id="allergenContainer">
         {item.allergens.map((allergen) => (
-          <li>{allergen.name}</li>
+          <li className="allergen">
+            <span>
+              <span className={`${allergen.name}Item`}>{allergen.name}</span>
+            </span>
+            {allergen.notes ? <span className="infoGlyph">ℹ︎</span> : ''}
+          </li>
         ))}
       </ul>
+
       <p className="sectionHeader">Mise</p>
       <p>{item.mise}</p>
       <p className="sectionHeader">Available</p>

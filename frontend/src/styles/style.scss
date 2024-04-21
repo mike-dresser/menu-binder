@@ -1,4 +1,29 @@
 $header-color: rgb(192, 192, 192);
+$allergen-colors: (
+  'shellfish': #f94144,
+  'nuts': #f3722c,
+  'sesame': #f8961e,
+  'pork': #f9844a,
+  'eggs': #f9c74f,
+  'gluten': #90be6d,
+  'dairy': #43aa8b,
+  'nightshade': #4d908e,
+  'fish': #577590,
+  'allium': #277da1,
+);
+
+$allergen-glyphs: (
+  'shellfish': '●',
+  'nuts': '■',
+  'sesame': '◆',
+  'pork': '▲',
+  'eggs': '●',
+  'gluten': '■',
+  'dairy': '◆',
+  'nightshade': '▲',
+  'fish': '●',
+  'allium': '■',
+);
 
 body {
   font-family: Inter, system-ui, Helvetica, sans-serif;
@@ -35,10 +60,40 @@ ul {
   img {
     width: 100%;
   }
-
   .sectionHeader {
     font-weight: 600;
     color: $header-color;
     text-align: center;
+  }
+  #allergenContainer {
+    max-height: 4em;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    @each $allergen, $color in $allergen-colors {
+      .#{$allergen}Item {
+        color: $color;
+        margin-right: 1em;
+      }
+    }
+
+    @each $allergen, $glyph in $allergen-glyphs {
+      .#{$allergen}Item::before {
+        content: ($glyph);
+        margin-right: 1em;
+      }
+    }
+    .infoGlyph {
+      color: $header-color;
+      font-size: 1.5em;
+    }
+    li.allergen {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 40%;
+      height: 1.5em;
+    }
   }
 }

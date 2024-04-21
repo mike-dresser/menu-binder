@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: Inter, system-ui, Helvetica, sans-serif;
   padding: 0.5em;
@@ -30,4 +31,101 @@ ul {
   font-weight: 600;
   color: rgb(192, 192, 192);
   text-align: center;
+}
+#itemDetails #allergenContainer {
+  max-height: 4em;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+#itemDetails #allergenContainer .shellfishItem {
+  color: #f94144;
+  margin-right: 1em;
+}
+#itemDetails #allergenContainer .nutsItem {
+  color: #f3722c;
+  margin-right: 1em;
+}
+#itemDetails #allergenContainer .sesameItem {
+  color: #f8961e;
+  margin-right: 1em;
+}
+#itemDetails #allergenContainer .porkItem {
+  color: #f9844a;
+  margin-right: 1em;
+}
+#itemDetails #allergenContainer .eggsItem {
+  color: #f9c74f;
+  margin-right: 1em;
+}
+#itemDetails #allergenContainer .glutenItem {
+  color: #90be6d;
+  margin-right: 1em;
+}
+#itemDetails #allergenContainer .dairyItem {
+  color: #43aa8b;
+  margin-right: 1em;
+}
+#itemDetails #allergenContainer .nightshadeItem {
+  color: #4d908e;
+  margin-right: 1em;
+}
+#itemDetails #allergenContainer .fishItem {
+  color: #577590;
+  margin-right: 1em;
+}
+#itemDetails #allergenContainer .alliumItem {
+  color: #277da1;
+  margin-right: 1em;
+}
+#itemDetails #allergenContainer .shellfishItem::before {
+  content: "●";
+  margin-right: 1em;
+}
+#itemDetails #allergenContainer .nutsItem::before {
+  content: "■";
+  margin-right: 1em;
+}
+#itemDetails #allergenContainer .sesameItem::before {
+  content: "◆";
+  margin-right: 1em;
+}
+#itemDetails #allergenContainer .porkItem::before {
+  content: "▲";
+  margin-right: 1em;
+}
+#itemDetails #allergenContainer .eggsItem::before {
+  content: "●";
+  margin-right: 1em;
+}
+#itemDetails #allergenContainer .glutenItem::before {
+  content: "■";
+  margin-right: 1em;
+}
+#itemDetails #allergenContainer .dairyItem::before {
+  content: "◆";
+  margin-right: 1em;
+}
+#itemDetails #allergenContainer .nightshadeItem::before {
+  content: "▲";
+  margin-right: 1em;
+}
+#itemDetails #allergenContainer .fishItem::before {
+  content: "●";
+  margin-right: 1em;
+}
+#itemDetails #allergenContainer .alliumItem::before {
+  content: "■";
+  margin-right: 1em;
+}
+#itemDetails #allergenContainer .infoGlyph {
+  color: rgb(192, 192, 192);
+  font-size: 1.5em;
+}
+#itemDetails #allergenContainer li.allergen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  height: 1.5em;
 }/*# sourceMappingURL=style.css.map */
