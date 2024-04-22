@@ -8,8 +8,8 @@ function ItemList({ name, items }) {
   }
   return (
     <>
-      <div>
-        <h2 onClick={handleExpand}>{name}</h2>
+      <div onClick={handleExpand}>
+        <h2>{name}</h2>
         <span className="expandGlyph">{expanded ? '▿' : '▹'}</span>
       </div>
       <ul className={expanded ? 'expanded' : ''}>

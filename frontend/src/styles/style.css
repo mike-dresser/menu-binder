@@ -45,6 +45,10 @@ img {
   text-align: center;
 }
 
+#itemDetails #imageFrame {
+  height: 30vh;
+  overflow: hidden;
+}
 #itemDetails .backLink {
   font-size: 1.2em;
   font-weight: 600;

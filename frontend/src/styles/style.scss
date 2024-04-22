@@ -28,6 +28,10 @@
   text-align: center;
 }
 #itemDetails {
+  #imageFrame {
+    height: 30vh;
+    overflow: hidden;
+  }
   .backLink {
     font-size: 1.2em;
     font-weight: 600;

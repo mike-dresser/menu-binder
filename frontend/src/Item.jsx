@@ -46,7 +46,7 @@ function Item() {
       <Link to="/" className="backLink">
         ◁ Back
       </Link>
-      {item.image && <img src={item.image} />}
+      <div id="imageFrame">{item.image && <img src={item.image} />}</div>
       <h2>{item.name}</h2>
       <p className="sectionHeader">Description</p>
       <p>{item.description}</p>

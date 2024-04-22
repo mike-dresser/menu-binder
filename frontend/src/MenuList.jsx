@@ -7,7 +7,10 @@ function MenuList() {
   useEffect(() => {
     fetch('http://127.0.0.1:5555/items')
       .then((res) => res.json())
-      .then((menuData) => setTestMenu(menuData));
+      .then((menuData) => {
+        setTestMenu(menuData);
+        console.log(menuData);
+      });
   }, []);
   const menus = ['Breakfast', 'Lunch', 'Snack', 'Dinner', 'Brunch'];
   return (
