@@ -24,7 +24,7 @@ img {
 #menuList ul {
   display: none;
 }
-#menuList ul.expanded {
+#menuList .expanded {
   display: block;
 }
 #menuList li {
@@ -34,6 +34,11 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+#menuList li.itemLink {
+  font-weight: 600;
+  font-size: 1.2em;
+  line-height: 1.4em;
 }
 #menuList span.expandGlyph {
   font-size: 1.5em;

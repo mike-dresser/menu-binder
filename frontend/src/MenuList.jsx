@@ -5,20 +5,17 @@ function MenuList() {
   const [testMenu, setTestMenu] = useState([]);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:5555/items')
+    fetch('http://127.0.0.1:5555/menus')
       .then((res) => res.json())
       .then((menuData) => {
         setTestMenu(menuData);
-        console.log(menuData);
+        // console.log(menuData);
       });
   }, []);
-  const menus = ['Breakfast', 'Lunch', 'Snack', 'Dinner', 'Brunch'];
   return (
     <ul id="menuList">
-      {menus.map((menu) => (
-        <li key={menu}>
-          <ItemList name={menu} items={testMenu} />
-        </li>
+      {testMenu.map((menu) => (
+        <ItemList menu={menu} />
       ))}
     </ul>
   );
