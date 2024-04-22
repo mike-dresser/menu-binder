@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ItemAllergens from './ItemAllergens';
 
 const item = {
   active: true,
@@ -51,23 +52,14 @@ function Item() {
       <p>{item.description}</p>
       <p className="sectionHeader">Allergens</p>
 
-      <ul id="allergenContainer">
-        {item.allergens.map((allergen) => (
-          <li className="allergen">
-            <span>
-              <span className={`${allergen.name}Item`}>{allergen.name}</span>
-            </span>
-            {allergen.notes ? <span className="infoGlyph">ℹ︎</span> : ''}
-          </li>
-        ))}
-      </ul>
+      <ItemAllergens item={item} />
 
       <p className="sectionHeader">Mise</p>
       <p>{item.mise}</p>
       <p className="sectionHeader">Available</p>
       <ul>
         {item.menus.map((menu) => (
-          <li>{menu}</li>
+          <li key={menu}>{menu}</li>
         ))}
       </ul>
     </div>

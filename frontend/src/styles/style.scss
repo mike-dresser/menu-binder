@@ -22,20 +22,17 @@
   }
 }
 
+.sectionHeader {
+  font-weight: 600;
+  color: $header-color;
+  text-align: center;
+}
 #itemDetails {
-  img {
-    width: 100%;
-  }
   .backLink {
     font-size: 1.2em;
     font-weight: 600;
     margin-bottom: 0.5em;
     display: inline-block;
-  }
-  .sectionHeader {
-    font-weight: 600;
-    color: $header-color;
-    text-align: center;
   }
   #allergenContainer {
     max-height: 4em;
@@ -46,19 +43,19 @@
     @each $allergen, $color in $allergen-colors {
       .#{$allergen}Item {
         color: $color;
-        margin-right: 1em;
       }
     }
 
     @each $allergen, $glyph in $allergen-glyphs {
       .#{$allergen}Item::before {
         content: ($glyph);
-        margin-right: 1em;
+        margin-right: 0.5em;
       }
     }
     .infoGlyph {
       color: $header-color;
-      font-size: 1.5em;
+      font-size: 1.3em;
+      padding-right: 1em;
     }
     li.allergen {
       display: flex;
@@ -68,4 +65,34 @@
       height: 1.5em;
     }
   }
+}
+
+#infoBoxContainer {
+  position: relative;
+}
+
+.infoBox {
+  position: absolute;
+  top: -2em;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 1;
+  border-radius: 5px;
+  text-align: center;
+  background-color: white;
+  padding: 1em;
+  border: 1px solid #000;
+
+  .closeBtn {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    font-size: 1.1em;
+  }
+  p {
+    margin: 0 0 0.5em 0;
+  }
+}
+.hidden {
+  display: none;
 }
