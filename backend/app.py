@@ -71,5 +71,10 @@ def get_item(id):
     response = allergy_serialize(item)
     return add_cors(response), 200
 
+@app.route('/menus')
+def items_by_menu():
+    response = [menu.to_dict() for menu in Menu.query.all()]
+    return add_cors(response), 200
+
 if __name__ == "__main__":
     app.run(port=5555, debug=True)

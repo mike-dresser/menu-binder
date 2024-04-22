@@ -92,4 +92,5 @@ class Menu(db.Model, SerializerMixin):
 
     categories = db.relationship('Category', back_populates='menu')
 
+    # serialize_only = ('id','name', 'categories.name', 'categories.category_items.item.id','categories.category_items.item.name')
     serialize_rules = ('-categories.menu',)
