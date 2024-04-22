@@ -31,7 +31,7 @@ const item = {
   description:
     'Puree of canola, shallot, garlic, ginger, red curry paste, roasted red peppers, white wine, rice vinegar, vegetable stock, oat milk, EVOO Garnish: marinated blue crab (blue crab, lemon vinaigrette, fines herbs) + crispy shallot (GF)',
   id: 6,
-  image: './public/soup.jpg',
+  image: '../public/soup.jpg',
   menus: ['Dinner'],
   mise: 'Soup Spoon',
   name: 'Chilled Pepper Soup',

@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function ItemList({ name, items }) {
   const [expanded, setExpanded] = useState(false);
@@ -14,7 +15,9 @@ function ItemList({ name, items }) {
       <ul className={expanded ? 'expanded' : ''}>
         {items.map((item) => (
           <li key={item.id}>
-            <h3>{item.name}</h3>
+            <h3>
+              <Link to={`./items/${item.id}`}>{item.name}</Link>
+            </h3>
           </li>
         ))}
       </ul>
