@@ -1,39 +1,4 @@
-$header-color: rgb(192, 192, 192);
-$allergen-colors: (
-  'shellfish': #f94144,
-  'nuts': #f3722c,
-  'sesame': #f8961e,
-  'pork': #f9844a,
-  'eggs': #f9c74f,
-  'gluten': #90be6d,
-  'dairy': #43aa8b,
-  'nightshade': #4d908e,
-  'fish': #577590,
-  'allium': #277da1,
-);
-
-$allergen-glyphs: (
-  'shellfish': '●',
-  'nuts': '■',
-  'sesame': '◆',
-  'pork': '▲',
-  'eggs': '●',
-  'gluten': '■',
-  'dairy': '◆',
-  'nightshade': '▲',
-  'fish': '●',
-  'allium': '■',
-);
-
-body {
-  font-family: Inter, system-ui, Helvetica, sans-serif;
-  padding: 0.5em;
-}
-
-ul {
-  padding: 0;
-  list-style-type: none;
-}
+@import 'config';
 
 #menuList {
   ul {
@@ -45,6 +10,7 @@ ul {
   }
 
   li {
+    cursor: pointer;
     div {
       display: flex;
       justify-content: space-between;
