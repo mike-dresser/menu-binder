@@ -1,6 +1,9 @@
-from models import db, Item, ItemAllergen, Allergen
+import json
 from app import app
+from models import db, Item, ItemAllergen, Allergen, Category, CategoryItem, Menu
 
+file = open('./test_menu.json')
+menu_data = json.load(file)
 
 with app.app_context():
 
@@ -8,46 +11,56 @@ with app.app_context():
     Allergen.query.delete()
     Item.query.delete()
     ItemAllergen.query.delete()
+    Category.query.delete()
+    CategoryItem.query.delete()
+    Menu.query.delete()
 
-    print('Populating allergens...')
-    
-    allium = Allergen(name='Allium')
-    nightshade = Allergen(name='Nightshade')
-    gluten = Allergen(name='Gluten')
-    dairy = Allergen(name='Dairy')
-    nuts = Allergen(name='Nuts')
-    sesame = Allergen(name='Sesame')
-    fish = Allergen(name='Fish')
-    shellfish = Allergen(name='Shellfish')
-    legumes = Allergen(name='Legumes')
+    for menu in menu_data:
+        # add menu if does not exist, set menu_id
+        existing_menu = Menu.query.filter_by(name = menu['name']).first()
+        if not existing_menu:
+            new_menu = Menu(name = menu['name'])
+            db.session.add(new_menu)
+            db.session.commit()
+            menu_id = new_menu.to_dict()['id']
 
-    db.session.add_all([allium, nightshade, gluten, dairy, nuts, sesame, fish, shellfish, legumes])
-    db.session.commit()
+        # iterate through items
+        for item in menu['items']:
+            new_item = Item(name = item['name'], description = item['description'], mise = item['mise'])
+            db.session.add(new_item)
+            db.session.commit()
 
-    print('Adding items...')
-    olives = Item(name='Marinated Olives',
-                description='mixed Greek olives, lemon, garlic, olive oil',
-                mise='Small ramekin for pits')
-    db.session.add(olives)
-    db.session.commit()
+            # add allergens listed by name...
+            for allergen in item['allergies']:
+                existing_allergen = Allergen.query.filter_by(name = allergen['name']).first()
 
-    olives_allergens = ItemAllergen(item_id=olives.id, allergen_id=allium.id)
-    db.session.add(olives_allergens)
-    db.session.commit() 
+                # add new allergen to allergens table if doesn't exist
+                if not existing_allergen:
+                    new_allergen = Allergen(name=allergen['name'])
+                    db.session.add(new_allergen)
+                    db.session.commit()
+                
+                # create ItemAllergen record
+                current_allergen_id = Allergen.query.filter_by(name = allergen['name']).first().to_dict()['id']
+                new_item_allergen = ItemAllergen(item_id = new_item.to_dict()['id'], 
+                                                allergen_id = current_allergen_id,
+                                                notes = allergen.get('notes'))
+                db.session.add(new_item_allergen)
+                db.session.commit()
 
-    pickles = Item(name='House Pickles',
-                description='Vegetables (cauliflower, carrots, cucumber, jalapenos, radish,celery ) pickled with chili-infused white vinegar',
-                mise='Fork')
-    pickles_allergens = ItemAllergen(item_id=pickles.id, allergen_id=allium.id)
-    db.session.add(olives_allergens)
-    db.session.commit()                
-    whitefish = Item(name='Whitefish',
-                description='Whipped whitefish salad (whitefish, mayonnaise), served in a jar. Served with bagel chips',
-                mise='Fork, Knife, Tea Spoon (Share)')
-    chips = Item(name='Chips & Dip',
-                description='House fried (in canola) sweet potato and idaho potato chips.Served with black pepper ranch (sour cream, mayonnaise, lemon juice, garlic, buttermilk, black pepper, onion powder, garlic powder) topped with 1⁄2 ounce Grinnel caviar (from bowfin fish,harvested in Alabama) and chives',
-                mise='Mark with demi spoon')   
+            # adding item to category...
+            category = item.get('category')
+            existing_category = Category.query.filter_by(name = category).first()
 
+            # add category if does not exist
+            if not existing_category:
+                new_category = Category(name = category, menu_id = menu_id)
+                db.session.add(new_category)
+                db.session.commit()
+                category_id = new_category.to_dict()['id']
+            else:
+                category_id = existing_category.to_dict()['id'] 
 
-    db.session.add(olives_allergens)
-    db.session.commit()
+            new_category_item = CategoryItem(item_id = new_item.to_dict()['id'], category_id = category_id)
+            db.session.add(new_category_item)
+            db.session.commit()
