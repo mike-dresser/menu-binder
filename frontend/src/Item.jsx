@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const item = {
   active: true,
@@ -41,6 +42,9 @@ const item = {
 function Item() {
   return (
     <div id="itemDetails">
+      <Link to="/" className="backLink">
+        ◁ Back
+      </Link>
       {item.image && <img src={item.image} />}
       <h2>{item.name}</h2>
       <p className="sectionHeader">Description</p>

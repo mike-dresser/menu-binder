@@ -38,6 +38,12 @@ a:hover {
 #itemDetails img {
   width: 100%;
 }
+#itemDetails .backLink {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  display: inline-block;
+}
 #itemDetails .sectionHeader {
   font-weight: 600;
   color: rgb(192, 192, 192);
