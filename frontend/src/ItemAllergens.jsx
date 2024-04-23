@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import InfoBox from './InfoBox';
 
 function ItemAllergens({ item }) {
   const [noteOpen, setNoteOpen] = useState(false);
@@ -11,13 +12,15 @@ function ItemAllergens({ item }) {
 
   return (
     <div className="infoBoxContainer">
-      <div className={noteOpen ? 'infoBox' : 'infoBox hidden'}>
-        <span className="closeBtn" onClick={() => setNoteOpen(false)}>
-          ✖️
-        </span>
-        <p className="sectionHeader">{selectedAllergen.name}</p>
-        <p>{selectedAllergen.notes}</p>
-      </div>
+      {noteOpen && (
+        <InfoBox
+          boxState={noteOpen}
+          setBoxState={setNoteOpen}
+          title={selectedAllergen.name}
+          content={selectedAllergen.notes}
+        />
+      )}
+
       <ul id="allergenContainer">
         {item.allergens.map((allergen) => (
           <li className="allergen" key={allergen.name}>
