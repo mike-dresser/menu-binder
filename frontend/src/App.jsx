@@ -1,10 +1,8 @@
 import { Outlet } from 'react-router-dom';
-import Item from './Item';
-import MenuList from './MenuList';
+import { useEffect, useState } from 'react';
 
 function App() {
   return <Outlet />;
-  // return <Item />;
 }
 
 export default App;

@@ -85,6 +85,7 @@
           { "name": "nightshade", "notes": "" }
         ],
         "mise": "Soup Spoon",
+        "image": "../public/soup.jpg",
         "category": "Apps"
       },
       {

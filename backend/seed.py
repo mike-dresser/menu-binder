@@ -33,26 +33,28 @@ with app.app_context():
                 new_item = Item(name = item['name'], description = item['description'], mise = item['mise'])
                 db.session.add(new_item)
                 db.session.commit()
+
+                # add allergens listed by name...
+                for allergen in item['allergies']:
+                    existing_allergen = Allergen.query.filter_by(name = allergen['name']).first()
+
+                    # add new allergen to allergens table if doesn't exist 
+                    if not existing_allergen:
+                        new_allergen = Allergen(name=allergen['name'])
+                        db.session.add(new_allergen)
+                        db.session.commit()
+                        existing_allergen = new_allergen
+                    
+                    # create ItemAllergen record
+                    # existing_item_allergen = ItemAllergen.query.filter(ItemAllergen.item_id == new_item.to_dict()['id'], ItemAllergen.allergen_id == existing_allergen.to_dict()['id'])
+                    # if not existing_item_allergen:
+                    new_item_allergen = ItemAllergen(item_id = new_item.to_dict()['id'], 
+                                                    allergen_id = existing_allergen.to_dict()['id'],
+                                                    notes = allergen.get('notes'))
+                    db.session.add(new_item_allergen)
+                    db.session.commit()
             else:
                 new_item = existing_item
-
-            # add allergens listed by name...
-            for allergen in item['allergies']:
-                existing_allergen = Allergen.query.filter_by(name = allergen['name']).first()
-
-                # add new allergen to allergens table if doesn't exist 
-                if not existing_allergen:
-                    new_allergen = Allergen(name=allergen['name'])
-                    db.session.add(new_allergen)
-                    db.session.commit()
-                
-                # create ItemAllergen record
-                current_allergen_id = Allergen.query.filter_by(name = allergen['name']).first().to_dict()['id']
-                new_item_allergen = ItemAllergen(item_id = new_item.to_dict()['id'], 
-                                                allergen_id = current_allergen_id,
-                                                notes = allergen.get('notes'))
-                db.session.add(new_item_allergen)
-                db.session.commit()
 
             # adding item to category...
             category = item.get('category')
