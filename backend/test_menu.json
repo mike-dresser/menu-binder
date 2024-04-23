@@ -607,5 +607,61 @@
         "category": "To Share"
       }
     ]
+  },
+  {
+    "name": "Dessert",
+    "items": [
+      {
+        "name": "Chocolate Panna Cotta",
+        "description": "“Cooked Cream” Panna Cotta (milk, heavy cream, sugar, cinnamon, guajillo, cardamom pods, star anise, semi-sweet chocolate, gelatin, espresso)\nSpiced Cream (gelatin, heavy cream, sugar, cinnamon, salt)\nAlmond crumble topping (AP flour, roasted almonds, whole wheat flour, sugar, butter, salt)",
+        "allergies": [
+          {
+            "name": "gluten",
+            "notes": "(can be avoided remove crumble),"
+          },
+          { "name": "dairy", "notes": "" },
+          { "name": "pork", "notes": "Gelatin contains pork" }
+        ],
+        "mise": "Spoon"
+      },
+      {
+        "name": "Olive Oil Cake",
+        "description": "EVOO, mochi flour, cornmeal, eggs, sugar, orange juice, eggs, oat milk\nTopped with honey syrup (honey, water)\nServed 2 slices, garnished with candied rosemary-orange glace (from orange peel)\n\nGluten-free and dairy-free.",
+        "allergies": [
+          {
+            "name": "citrus",
+            "notes": ""
+          }
+        ],
+        "mise": "Fork, Knife"
+      },
+      {
+        "name": "Key Lime Tart",
+        "description": "Filling: Egg yolks, key lime juice, sweetened condensed milk, lime zest\nTart shell: Wheat flour, graham flour, sugar, palm oil, corn syrup, molasses, honey, salt, baking soda\nTopping: Whipped vanilla cream (vanilla extract, sugar, heavy cream)",
+        "allergies": [
+          {
+            "name": "gluten",
+            "notes": ""
+          },
+          { "name": "dairy", "notes": "" },
+          { "name": "citrus", "notes": "" },
+          { "name": "eggs", "notes": "" }
+        ],
+        "mise": "Spoon"
+      },
+      {
+        "name": "Oatmeal Raisin Cookies",
+        "description": "Cookies (butter, brown sugar, sugar, eggs, vanilla extract, date molasses, ap flour, baking soda, cinnamon, oats, raisins)\nServed 4 per order, warmed",
+        "allergies": [
+          {
+            "name": "gluten",
+            "notes": ""
+          },
+          { "name": "dairy", "notes": "" },
+          { "name": "eggs", "notes": "" }
+        ],
+        "mise": "None"
+      }
+    ]
   }
 ]

@@ -64,7 +64,7 @@ class CategoryItem(db.Model, SerializerMixin):
 
     id = db.Column(db.Integer, primary_key=True)
     item_id = db.Column(db.Integer, db.ForeignKey('items.id'), nullable=False)
-    category_id = db.Column(db.Integer, db.ForeignKey('categories.id'), nullable=False)
+    category_id = db.Column(db.Integer, db.ForeignKey('categories.id'))
 
     item = db.relationship('Item', back_populates = 'category_item')
     category = db.relationship('Category', back_populates = 'category_items')
@@ -75,7 +75,7 @@ class Category(db.Model, SerializerMixin):
     __tablename__ = 'categories'
 
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String, nullable=False)
+    name = db.Column(db.String)
     menu_id = db.Column(db.Integer, db.ForeignKey('menus.id'), nullable=False)
  
     category_items = db.relationship('CategoryItem', back_populates = 'category') 
