@@ -406,5 +406,206 @@
         "category": "Sides"
       }
     ]
+  },
+  {
+    "name": "Brunch",
+    "items": [
+      {
+        "name": "Pancakes",
+        "description": "3 ea pancakes (ap flour, sugar, baking powder, baking soda, salt, buttermilk, milk, whole eggs, melted butter)\nMaine Blueberry Compote (maine blueberries, sugar, salt, vanilla)\nCinnamon butter (butter, vanilla extract, cinnamon, mace, salt, sugar)\nVanilla-whipped cream\nSide of maple syrup",
+        "allergies": [
+          { "name": "gluten", "notes": "" },
+          { "name": "dairy", "notes": "" }
+        ],
+        "mise": "Fork, Knife",
+        "category": "Brunch"
+      },
+      {
+        "name": "Avocado & Lox Tartine",
+        "description": "House Gravlax (ASC certified Atlantic Salmon, cured with salt, sugar, gin, dill and coriander), made in house, sliced thin to 2 ounces. Avocado – Avocado, red onion, cilantro, jalapeno, lemon, EVOO, salt. Garnish: fried shallots, sesame seeds, dill",
+        "allergies": [
+          { "name": "allium", "notes": "" },
+          { "name": "sesame", "notes": "" },
+          { "name": "gluten", "notes": "" },
+          { "name": "nightshade", "notes": "" }
+        ],
+        "mise": "Fork, Steak Knife",
+        "category": "Brunch"
+      },
+      {
+        "name": "Lobster Omelet",
+        "description": "2 egg omelet\nFilling: 3 ounces picked lobster meat, blend of spinach, ricotta, mozzarella\nGarnish – chives\nServed w/ a side salad",
+        "allergies": [
+          { "name": "allium", "notes": "" },
+          { "name": "shellfish", "notes": "" },
+          { "name": "egg", "notes": "" },
+          { "name": "dairy", "notes": "" }
+        ],
+        "mise": "Fork, Knife",
+        "category": "Brunch"
+      },
+      {
+        "name": "Eggs & Hash",
+        "description": "2 fried eggs over sweet potato hash (sweet potato, herbs, onions, garlic, hot italian sausage), garnished with cilantro",
+        "allergies": [
+          { "name": "allium", "notes": "" },
+          { "name": "pork", "notes": "Can be removed, ring Veg Hash." },
+          { "name": "nightshade", "notes": "" },
+          { "name": "dairy", "notes": "" }
+        ],
+        "mise": "Fork, Knife",
+        "category": "Brunch"
+      },
+      {
+        "name": "Spicy Egg Sandwich",
+        "description": "Egg served over medium, topped with chili crisp, smoked cheddar, 1 fried latke, black pepper ranch on a seeded Martin’s roll\nChili Crisp: arbol chilies, ginger, star anise, sugar, cumin, black pepper, canola, shallots, garlic, fresno\nBP Ranch: sour cream, mayonnaise, buttermilk, black pepper, oregano, onion powder, roasted garlic puree lemon juice\nLatkes: Russet potatoes, onion, scallion, flour, butter, black pepper\nComes with side of fries (can sub salad or chips)",
+        "allergies": [
+          { "name": "allium", "notes": "" },
+          { "name": "gluten", "notes": "In latkes, cannot be removed." },
+          { "name": "nightshade", "notes": "" },
+          { "name": "dairy", "notes": "" }
+        ],
+        "mise": "Fork, Knife",
+        "category": "Sandwiches"
+      },
+      {
+        "name": "Lobster Roll",
+        "description": "4 ounce cooked Maine lobster tossed with herb mayonnaise (celery, chives, lemon juice, parsley, lobster oil) Pickled cucumbers (cucumbers, rice vinegar, salt, sugar) Brioche hot dog buns (buttered) Chopped herbs (parsley, chives, tarragon) Served with chips",
+        "allergies": [
+          { "name": "allium", "notes": "" },
+          { "name": "dairy", "notes": "" },
+          { "name": "shellfish", "notes": "" },
+          { "name": "gluten", "notes": "" },
+          { "name": "nightshade", "notes": "" }
+        ],
+        "mise": "Fork, Knife",
+        "category": "Sandwiches"
+      },
+      {
+        "name": "Crispy Chicken Sandwich",
+        "description": "Boneless chicken thigh, marinated in buttermilk and spices\nDredged in a seasoned flour and deep-fried\nServed on a sesame potato bun\nPickled Cucumber\nShredded lettuce\nBasil aioli\nHot honey - red pepper flakes, honey, vinegar\nServed with a side salad of petit lettuces (can sub for fries or chips)",
+        "allergies": [
+          { "name": "allium", "notes": "" },
+          { "name": "dairy", "notes": "" },
+          { "name": "shellfish", "notes": "" },
+          { "name": "gluten", "notes": "" },
+          { "name": "nightshade", "notes": "" },
+          { "name": "egg", "notes": "" },
+          { "name": "sesame", "notes": "" }
+        ],
+        "mise": "Fork, Knife",
+        "category": "Sandwiches"
+      },
+      {
+        "name": "JG Burger",
+        "description": "6 oz burger (blend of brisket and chuck) bacon jam (bacon, maple syrup, brown sugar, sherry vinegar, soy sauce, chopped onion). Dansk blue cheese (from Denmark, pastuerized, cow’s milk) - creamy, distinctly buttery, and bursting with tangy, savory notes of sour cream and onion. Pickles, Sliced Raw Red Onion, Dijon sauce, Chips inside the bun,Sesame potato bun. Served with potato chips on the side (can sub)",
+        "allergies": [
+          { "name": "dairy", "notes": "Bun and cheese" },
+          { "name": "pork", "notes": "" },
+          { "name": "gluten", "notes": "" },
+          { "name": "allium", "notes": "" },
+          { "name": "sesame", "notes": "" }
+        ],
+        "mise": "Fork, Steak Knife",
+        "category": "Sandwiches"
+      },
+      {
+        "name": "Crab Melt",
+        "description": "The crab melt is a crabby grilled cheese. Our creamy crab dip with extra scallions, mozzarella, and smoked cheddar, spread between white bread sourdough, slathered w/ Old Bay butter, griddled until golden.\nCrab Dip: Blue Crab claw meat (from Venezuela) cauliflower, mayonnaise, sour cream, cheddar cheese, mozzarella, white onion, jalapenos, goya adobo, worcestershire, chives, tarragon parsley, smoked paprika, cayenne, lemon juice, Green tabasco, black pepper\nOld Bay Butter: old bay, butter\nServed w/ a side salad",
+        "allergies": [
+          { "name": "dairy", "notes": "Bun and cheese" },
+          { "name": "shellfish", "notes": "" },
+          { "name": "gluten", "notes": "" },
+          { "name": "allium", "notes": "" },
+          { "name": "nightshade", "notes": "" }
+        ],
+        "mise": "Fork, Knife",
+        "category": "Sandwiches"
+      },
+      {
+        "name": "French Fries",
+        "description": "Old bay, malt vinegar aioli (mayo, malt vinegar powder)",
+        "allergies": [
+          { "name": "gluten", "notes": "cross-contamination" },
+          { "name": "nightshade", "notes": "" }
+        ],
+        "mise": "Fork",
+        "category": "Sides"
+      },
+      {
+        "name": "Avocado Toast",
+        "description": "(not listed on the menu, but can be made) There is a button in Square that you can search for.\nAvocado – Avocado, lemon, EVOO, salt\nGarnish: crispy onions, chili flakes",
+        "allergies": [
+          { "name": "gluten", "notes": "" },
+          { "name": "allium", "notes": "" }
+        ],
+        "mise": "Fork, Knife",
+        "category": "Sides"
+      },
+      {
+        "name": "Avocado Mash",
+        "description": "Avocado, red onion, cilantro, jalapeno, lemon, EVOO, salt",
+        "allergies": [
+          { "name": "nightshade", "notes": "" },
+          { "name": "allium", "notes": "" }
+        ],
+        "mise": "Spoon",
+        "category": "Sides"
+      },
+      {
+        "name": "Sourdough Toast",
+        "description": "sourdough, 2 slices, toasted",
+        "allergies": [{ "name": "gluten", "notes": "" }],
+        "mise": "Knife",
+        "category": "Sides"
+      },
+
+      {
+        "name": "Petit Lettuces",
+        "description": "Mix of seasonal mesclun style mix and house chicory mix (Castelfranco + radicchio + frisee)",
+        "allergies": [],
+        "mise": "Fork, Knife",
+        "category": "Sides"
+      },
+      {
+        "name": "Mochi Corn Bread",
+        "description": "Ingredients: Butter, parmesan, aleppo, corn kernels, sour cream, eggs, sugar, salt, mochi sweet rice flour, AP flour\nServed w/ honey butter",
+        "allergies": [
+          { "name": "gluten", "notes": "" },
+          { "name": "dairy", "notes": "" },
+          { "name": "nightshade", "notes": "" }
+        ],
+        "mise": "Fork, Knife",
+        "category": "Sides"
+      },
+      {
+        "name": "Potato Latkes",
+        "description": "Served 2 per with creme fraiche topped w/ chives\nShredded potatoes, onion, eggs, scallion, flour, butter, black pepper, baking powder\nCook a la plancha and then deep fried in canola",
+        "allergies": [
+          { "name": "gluten", "notes": "" },
+          { "name": "dairy", "notes": "" },
+          { "name": "allium", "notes": "" }
+        ],
+        "mise": "Fork, Knife",
+        "category": "Sides"
+      },
+      {
+        "name": "Fresser Platter for 2",
+        "description": "1⁄2 Smoked rainbow trout, smoked salmon, house gravlax, whitefish salad (in a jar), scrambled eggs with 1 oz Grinnel caviar (all served with chive cream cheese, tomato, capers, red onion, Dill, bagels, latkes (shredded potatoes, onion, eggs, scallion, flour, butter, black pepper, baking powder) and whole wheat toast\nAllergies: Seafood, dairy, allium, nightshade, gluten\n\nSmoked Rainbow Trout (x1/2)\nFarm-raised in Idaho – smoked at Samaki in NJ or Acme in Brooklyn\n\nSmoked Salmon – about 3 ounces of sliced Atlantic smoked salmon, from Samaki in NJ or Acme in Brooklyn\n\nHouse Gravlax (ASC certified Atlantic Salmon, cured with salt, sugar, gin, dill and coriander), made in house, sliced thin to 2 ounces.\n\nWhitefish served in a jar with bagel chips\nWild-caught in the Great Lakes, smoked, whipped with mayonnaise\n\nBagel & Lox\n1 ea bagel – everything is default, toasted\n2 ounces smoked salmon sliced tomato, red onion, capers, chive cream cheese\n\nScrambled Eggs & Caviar\n2 ea scrambled eggs topped with 1 oz Grinnel caviar",
+        "allergies": [
+          {
+            "name": "gluten",
+            "notes": "Gluten-free bread may be available, ask the kitchen"
+          },
+          { "name": "dairy", "notes": "" },
+          { "name": "allium", "notes": "" },
+          { "name": "fish", "notes": "" },
+          { "name": "sesame", "notes": "On everything bagel" },
+          { "name": "eggs", "notes": "" }
+        ],
+        "mise": "Fork, Knife",
+        "category": "To Share"
+      }
+    ]
   }
 ]

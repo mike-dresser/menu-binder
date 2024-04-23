@@ -32,6 +32,7 @@
   text-align: center;
 }
 #itemDetails {
+  white-space: pre-wrap;
   #imageFrame {
     height: 30vh;
     overflow: hidden;
@@ -44,8 +45,9 @@
   }
   #allergenContainer {
     max-height: 4em;
+    margin: 0 1em;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
 
     @each $allergen, $color in $allergen-colors {
@@ -85,11 +87,13 @@
   right: 50%;
   transform: translateX(50%);
   z-index: 1;
+  min-width: 50%;
   border-radius: 5px;
+  box-shadow: 3px 3px 10px #999;
   text-align: center;
   background-color: white;
   padding: 1em;
-  border: 1px solid #000;
+  border: 1px solid black;
 
   .closeBtn {
     position: absolute;
