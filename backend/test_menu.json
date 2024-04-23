@@ -1,5 +1,200 @@
 [
   {
+    "name": "Lunch",
+    "items": [
+      {
+        "name": "Marinated Olives",
+        "description": "mixed Greek olives, lemon, garlic, olive oil",
+        "allergies": [{ "name": "allium", "notes": "" }],
+        "mise": "Small ramekin for pits",
+        "category": "Snacks"
+      },
+      {
+        "name": "Chips & Dip",
+        "description": "House fried (in canola) sweet potato and idaho potato chips. Served with black pepper ranch (sour cream, mayonnaise, lemon juice, garlic, buttermilk, black pepper, onion powder, garlic powder) topped with 1⁄2 ounce Grinnel caviar (from bowfin fish, harvested in Alabama) and chives",
+        "allergies": [
+          { "name": "gluten", "notes": "fryer cc" },
+          { "name": "dairy", "notes": "" },
+          { "name": "allium", "notes": "" }
+        ],
+        "mise": "mark w/ demi spoon",
+        "category": "Snacks"
+      },
+      {
+        "name": "Whitefish",
+        "description": "Whipped whitefish salad (whitefish, mayonnaise), served in a jar.\nServed with bagel chips",
+        "allergies": [
+          { "name": "gluten", "notes": "can be omitted - no crackers" },
+          { "name": "seeds", "notes": "from crackers" }
+        ],
+        "mise": "Fork, Knife, Tea Spoon (Share)",
+        "category": "Snacks"
+      },
+      {
+        "name": "Crab Dip",
+        "description": "Crab Mix: Claw Crabmeat (from blue crabs, Venezuela), roasted cauliflower, jalapeno, cream cheese, smoked cheddar cheese, mayonnaise, sour cream, white onion, adobo seasoning, Worcestershire, fines herbs, smoked paprika, cayenne, lemon juice, Green Tabasco, black pepper. Served with Ritz Crackers (wheat flour, sugar, salt, corn syrup, soy lecithin)",
+        "allergies": [
+          {
+            "name": "gluten",
+            "notes": "can be omitted - no crackers, ask kitchen if can sub tortilla chips or crudite"
+          },
+          { "name": "dairy", "notes": "" },
+          { "name": "allium", "notes": "" },
+          { "name": "shellfish", "notes": "" },
+          { "name": "nightshade", "notes": "" }
+        ],
+        "mise": "Fork, Knife, Tea Spoon (Share)",
+        "category": "Snacks"
+      },
+      {
+        "name": "Caesar Salad",
+        "description": "Kale, napa cabbage, shaved radish, bagel chips (may contain sesame), lemon juice Caesar dressing: anchovy, egg, canola, EVOO, lemon juice, parmesan. Garnish: grated parmesan, bonito flakes, sesame seeds",
+        "allergies": [
+          {
+            "name": "gluten",
+            "notes": "can be omitted"
+          },
+          { "name": "dairy", "notes": "" },
+          { "name": "fish", "notes": "(dressing, bonito garnish)" }
+        ],
+        "mise": "Fork, Knife",
+        "category": "Apps"
+      },
+      {
+        "name": "Farro Grain Bowl",
+        "description": "Farro and chickpeas mixed w/ preserved lemon vinaigrette (preserved lemon, ginger, chili, honey, lemon juice, EVOO. Roasted sweet potatoes. Corn Relish: corn and scallion - charred on the plancha, mixed with fines herbs. 1⁄2 Avocado. Harissa Yogurt (harissa chili paste, yogurt, lemon). Kale and shaved radish salad (mixed w/ lemon vinaigrette)",
+        "allergies": [
+          {
+            "name": "gluten",
+            "notes": ""
+          },
+          { "name": "dairy", "notes": "" }
+        ],
+        "mise": "Fork, Knife, Soup Spoon (share)",
+        "category": "Apps"
+      },
+      {
+        "name": "Chilled Pepper Soup",
+        "description": "Puree of canola, shallot, garlic, ginger, red curry paste, roasted red peppers, white wine, rice vinegar, vegetable stock, oat milk, EVOO Garnish: marinated blue crab (blue crab, lemon vinaigrette, fines herbs) + crispy shallot (GF)",
+        "allergies": [
+          { "name": "allium", "notes": "" },
+          {
+            "name": "shellfish",
+            "notes": "red curry paste, cannot be omitted"
+          },
+          { "name": "nightshade", "notes": "" }
+        ],
+        "mise": "Soup Spoon",
+        "category": "Apps"
+      },
+      {
+        "name": "Lobster Roll",
+        "description": "4 ounce cooked Maine lobster tossed with herb mayonnaise (celery, chives, lemon juice, parsley, lobster oil) Pickled cucumbers (cucumbers, rice vinegar, salt, sugar) Brioche hot dog buns (buttered) Chopped herbs (parsley, chives, tarragon) Served with chips",
+        "allergies": [
+          { "name": "allium", "notes": "" },
+          { "name": "dairy", "notes": "" },
+          { "name": "shellfish", "notes": "" },
+          { "name": "gluten", "notes": "" },
+          { "name": "nightshade", "notes": "" }
+        ],
+        "mise": "Fork, Knife",
+        "category": "Mains"
+      },
+      {
+        "name": "Avocado & Lox Tartine",
+        "description": "House Gravlax (ASC certified Atlantic Salmon, cured with salt, sugar, gin, dill and coriander), made in house, sliced thin to 2 ounces. Avocado – Avocado, red onion, cilantro, jalapeno, lemon, EVOO, salt. Garnish: fried shallots, sesame seeds, dill",
+        "allergies": [
+          { "name": "allium", "notes": "" },
+          { "name": "sesame", "notes": "" },
+          { "name": "gluten", "notes": "" },
+          { "name": "nightshade", "notes": "" }
+        ],
+        "mise": "Fork, Steak Knife",
+        "category": "Mains"
+      },
+      {
+        "name": "Smoked Turkey Sandwich",
+        "description": "Smoked turkey, chili aioli, artichoke tapenade (cooked artichokes, castelvetrano olives, lemon,herbs), arugula, manchego, whole wheat sourdough",
+        "allergies": [
+          { "name": "dairy", "notes": "" },
+          { "name": "egg", "notes": "" },
+          { "name": "gluten", "notes": "" },
+          { "name": "nightshade", "notes": "" }
+        ],
+        "mise": "Fork, Steak Knife",
+        "category": "Mains"
+      },
+      {
+        "name": "Egg Sandwich",
+        "description": "Egg served over medium, topped with smoked cheddar, spinach, BBQ aioli, pickled fresno, on a seeded brioche roll. BBQ aioli: house bbq (onions, beer, worcestershire, A-1 sauce, garlic, ), mayonnaise. Pickled fresnos: thin-sliced fresno chilies, rice wine vinegar, salt, sugar",
+        "allergies": [
+          { "name": "dairy", "notes": "Bun and cheese" },
+          { "name": "egg", "notes": "" },
+          { "name": "gluten", "notes": "" },
+          { "name": "allium", "notes": "" },
+          { "name": "nightshade", "notes": "" }
+        ],
+        "mise": "Fork, Steak Knife",
+        "category": "Mains"
+      },
+      {
+        "name": "JG Burger",
+        "description": "6 oz burger (blend of brisket and chuck) bacon jam (bacon, maple syrup, brown sugar, sherry vinegar, soy sauce, chopped onion). Dansk blue cheese (from Denmark, pastuerized, cow’s milk) - creamy, distinctly buttery, and bursting with tangy, savory notes of sour cream and onion. Pickles, Sliced Raw Red Onion, Dijon sauce, Chips inside the bun,Sesame potato bun. Served with potato chips on the side (can sub)",
+        "allergies": [
+          { "name": "dairy", "notes": "Bun and cheese" },
+          { "name": "pork", "notes": "" },
+          { "name": "gluten", "notes": "" },
+          { "name": "allium", "notes": "" },
+          { "name": "sesame", "notes": "" }
+        ],
+        "mise": "Fork, Steak Knife",
+        "category": "Mains"
+      },
+      {
+        "name": "Fish and Chips",
+        "description": "5.5 oz hake or pollock or MSC certified Cod (all from Northeast Atlantic), dredged in beer batter (AP flour, corn starch, beer, vodka, salt), deep fried. Served over our french fries (old bay). Served with charred lemon and caper aioli (capers, lemon, cornichons, garlic, mayonnaise, lobster oil, chives)",
+        "allergies": [
+          { "name": "shellfish", "notes": "(lobster oil in the aioli)," },
+          { "name": "egg", "notes": "aioli" },
+          { "name": "gluten", "notes": "" },
+          { "name": "allium", "notes": "" }
+        ],
+        "mise": "Fork, Steak Knife",
+        "category": "Mains"
+      },
+      {
+        "name": "Fried Artichokes",
+        "description": "Deep-fried artichoke hearts (5 oz), topped with fresh grated parmesan cheese and fines herbs. Served with buttermilk ranch (sour cream, mayonnaise, lemon juice, garlic, buttermilk, black pepper, onion powder, garlic powder)",
+        "allergies": [
+          { "name": "dairy", "notes": "" },
+          { "name": "gluten", "notes": "cross-contamination" },
+          { "name": "nightshade", "notes": "" },
+          { "name": "allium", "notes": "" }
+        ],
+        "mise": "Fork",
+        "category": "Sides"
+      },
+      {
+        "name": "French Fries",
+        "description": "Old bay, malt vinegar aioli (mayo, malt vinegar powder)",
+        "allergies": [
+          { "name": "gluten", "notes": "cross-contamination" },
+          { "name": "nightshade", "notes": "" }
+        ],
+        "mise": "Fork",
+        "category": "Sides"
+      },
+
+      {
+        "name": "Petit Lettuces",
+        "description": "Mix of seasonal mesclun style mix and house chicory mix (Castelfranco + radicchio + frisee)",
+        "allergies": "",
+        "mise": "Fork, Knife",
+        "category": "Sides"
+      }
+    ]
+  },
+  {
     "name": "Dinner",
     "items": [
       {
