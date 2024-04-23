@@ -21,33 +21,8 @@ img {
   width: 100%;
 }
 
-#menuList ul {
+.hidden {
   display: none;
-}
-#menuList .expanded {
-  display: block;
-}
-#menuList li {
-  cursor: pointer;
-}
-#menuList li div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#menuList li.itemLink {
-  font-weight: 600;
-  font-size: 1.2em;
-  line-height: 1.4em;
-}
-#menuList span.expandGlyph {
-  font-size: 1.5em;
-}
-
-.sectionHeader {
-  font-weight: 600;
-  color: rgb(192, 192, 192);
-  text-align: center;
 }
 
 #itemDetails {
@@ -70,87 +45,81 @@ img {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-#itemDetails #allergenContainer .shellfishItem {
-  color: #f94144;
-}
-#itemDetails #allergenContainer .nutsItem {
-  color: #f3722c;
-}
-#itemDetails #allergenContainer .sesameItem {
-  color: #f8961e;
-}
-#itemDetails #allergenContainer .porkItem {
-  color: #f9844a;
-}
-#itemDetails #allergenContainer .eggsItem {
-  color: #f9c74f;
-}
-#itemDetails #allergenContainer .glutenItem {
-  color: #90be6d;
-}
-#itemDetails #allergenContainer .dairyItem {
-  color: #43aa8b;
-}
-#itemDetails #allergenContainer .nightshadeItem {
-  color: #4d908e;
-}
-#itemDetails #allergenContainer .fishItem {
-  color: #577590;
-}
-#itemDetails #allergenContainer .alliumItem {
-  color: #277da1;
-}
-#itemDetails #allergenContainer .shellfishItem::before {
-  content: "●";
-  margin-right: 0.5em;
-}
-#itemDetails #allergenContainer .nutsItem::before {
-  content: "■";
-  margin-right: 0.5em;
-}
-#itemDetails #allergenContainer .sesameItem::before {
-  content: "◆";
-  margin-right: 0.5em;
-}
-#itemDetails #allergenContainer .porkItem::before {
-  content: "▲";
-  margin-right: 0.5em;
-}
-#itemDetails #allergenContainer .eggsItem::before {
-  content: "●";
-  margin-right: 0.5em;
-}
-#itemDetails #allergenContainer .glutenItem::before {
-  content: "■";
-  margin-right: 0.5em;
-}
-#itemDetails #allergenContainer .dairyItem::before {
-  content: "◆";
-  margin-right: 0.5em;
-}
-#itemDetails #allergenContainer .nightshadeItem::before {
-  content: "▲";
-  margin-right: 0.5em;
-}
-#itemDetails #allergenContainer .fishItem::before {
-  content: "●";
-  margin-right: 0.5em;
-}
-#itemDetails #allergenContainer .alliumItem::before {
-  content: "■";
-  margin-right: 0.5em;
-}
-#itemDetails #allergenContainer .infoGlyph {
-  color: rgb(192, 192, 192);
-  font-size: 1.3em;
-  padding-right: 1em;
-}
 #itemDetails #allergenContainer li.allergen {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 40%;
   height: 1.5em;
+}
+#itemDetails #allergenContainer li.allergen span:first-child::before {
+  content: "■";
+  margin-right: 0.5em;
+}
+#itemDetails #allergenContainer li.allergen .shellfishItem {
+  color: #f94144;
+}
+#itemDetails #allergenContainer li.allergen .nutsItem {
+  color: #f3722c;
+}
+#itemDetails #allergenContainer li.allergen .sesameItem {
+  color: #f8961e;
+}
+#itemDetails #allergenContainer li.allergen .porkItem {
+  color: #f9844a;
+}
+#itemDetails #allergenContainer li.allergen .eggsItem {
+  color: #f9c74f;
+}
+#itemDetails #allergenContainer li.allergen .glutenItem {
+  color: #90be6d;
+}
+#itemDetails #allergenContainer li.allergen .dairyItem {
+  color: #43aa8b;
+}
+#itemDetails #allergenContainer li.allergen .nightshadeItem {
+  color: #4d908e;
+}
+#itemDetails #allergenContainer li.allergen .fishItem {
+  color: #577590;
+}
+#itemDetails #allergenContainer li.allergen .alliumItem {
+  color: #277da1;
+}
+#itemDetails #allergenContainer li.allergen span.shellfishItem::before {
+  content: "●";
+}
+#itemDetails #allergenContainer li.allergen span.nutsItem::before {
+  content: "■";
+}
+#itemDetails #allergenContainer li.allergen span.sesameItem::before {
+  content: "◆";
+}
+#itemDetails #allergenContainer li.allergen span.porkItem::before {
+  content: "▲";
+}
+#itemDetails #allergenContainer li.allergen span.eggsItem::before {
+  content: "●";
+}
+#itemDetails #allergenContainer li.allergen span.glutenItem::before {
+  content: "■";
+}
+#itemDetails #allergenContainer li.allergen span.dairyItem::before {
+  content: "◆";
+}
+#itemDetails #allergenContainer li.allergen span.nightshadeItem::before {
+  content: "▲";
+}
+#itemDetails #allergenContainer li.allergen span.fishItem::before {
+  content: "●";
+}
+#itemDetails #allergenContainer li.allergen span.alliumItem::before {
+  content: "■";
+}
+#itemDetails #allergenContainer .infoGlyph {
+  color: rgb(192, 192, 192);
+  font-size: 1.3em;
+  padding-right: 1em;
 }
 
 #infoBoxContainer {
@@ -181,6 +150,34 @@ img {
   margin: 0 0 0.5em 0;
 }
 
-.hidden {
+#menuList ul {
   display: none;
+}
+#menuList .expanded {
+  display: block;
+}
+#menuList li {
+  cursor: pointer;
+}
+#menuList li div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#menuList li div h2 {
+  margin: 0.6em;
+}
+#menuList li.itemLink {
+  font-weight: 600;
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
+#menuList span.expandGlyph {
+  font-size: 1.5em;
+}
+
+.sectionHeader {
+  font-weight: 600;
+  color: rgb(192, 192, 192);
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

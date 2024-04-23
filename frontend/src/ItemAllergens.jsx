@@ -21,9 +21,8 @@ function ItemAllergens({ item }) {
       <ul id="allergenContainer">
         {item.allergens.map((allergen) => (
           <li className="allergen" key={allergen.name}>
-            <span>
-              <span className={`${allergen.name}Item`}>{allergen.name}</span>
-            </span>
+            <span className={`${allergen.name}Item`}>{allergen.name}</span>
+
             {allergen.notes ? (
               <span
                 className="infoGlyph"
