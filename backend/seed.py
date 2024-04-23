@@ -23,18 +23,24 @@ with app.app_context():
             db.session.add(new_menu)
             db.session.commit()
             menu_id = new_menu.to_dict()['id']
+        else:
+            menu_id = existing_menu['id']
 
         # iterate through items
         for item in menu['items']:
-            new_item = Item(name = item['name'], description = item['description'], mise = item['mise'])
-            db.session.add(new_item)
-            db.session.commit()
+            existing_item = Item.query.filter_by(name = item['name']).first()
+            if not existing_item:
+                new_item = Item(name = item['name'], description = item['description'], mise = item['mise'])
+                db.session.add(new_item)
+                db.session.commit()
+            else:
+                new_item = existing_item
 
             # add allergens listed by name...
             for allergen in item['allergies']:
                 existing_allergen = Allergen.query.filter_by(name = allergen['name']).first()
 
-                # add new allergen to allergens table if doesn't exist
+                # add new allergen to allergens table if doesn't exist 
                 if not existing_allergen:
                     new_allergen = Allergen(name=allergen['name'])
                     db.session.add(new_allergen)
@@ -50,7 +56,7 @@ with app.app_context():
 
             # adding item to category...
             category = item.get('category')
-            existing_category = Category.query.filter_by(name = category).first()
+            existing_category = Category.query.filter(Category.name == category, Category.menu_id == menu_id).first()
 
             # add category if does not exist
             if not existing_category:
