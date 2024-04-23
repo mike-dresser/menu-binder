@@ -35,3 +35,30 @@
   color: $header-color;
   text-align: center;
 }
+.infoBoxContainer {
+  position: relative;
+}
+.infoBox {
+  position: absolute;
+  top: -2em;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 1;
+  min-width: 50%;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px #999;
+  text-align: center;
+  background-color: white;
+  padding: 1em;
+  border: 1px solid black;
+
+  .closeBtn {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    font-size: 1.1em;
+  }
+  p {
+    margin: 0 0 0.5em 0;
+  }
+}

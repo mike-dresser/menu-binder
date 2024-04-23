@@ -10,7 +10,7 @@ function ItemAllergens({ item }) {
   }
 
   return (
-    <div id="infoBoxContainer">
+    <div className="infoBoxContainer">
       <div className={noteOpen ? 'infoBox' : 'infoBox hidden'}>
         <span className="closeBtn" onClick={() => setNoteOpen(false)}>
           ✖️

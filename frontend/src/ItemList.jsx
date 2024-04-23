@@ -12,6 +12,7 @@ function ItemList({ menu: { name, categories } }) {
         <h2>{name}</h2>
         <span className="expandGlyph">{expanded ? '▿' : '▹'}</span>
       </div>
+      {expanded && <button>Filter...</button>}
       {categories.map((each) => {
         return (
           <ul
