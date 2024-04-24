@@ -26,15 +26,13 @@ function ItemAllergens({ item }) {
           <li className="allergen" key={allergen.name}>
             <span className={`${allergen.name}Item`}>{allergen.name}</span>
 
-            {allergen.notes ? (
+            {allergen.notes && (
               <span
                 className="infoGlyph"
                 onClick={() => displayAllergenInfo(allergen)}
               >
                 ℹ︎
               </span>
-            ) : (
-              ''
             )}
           </li>
         ))}

@@ -19,6 +19,9 @@
         margin: 0.6em;
       }
     }
+    .infoBox {
+      display: block;
+    }
     &.itemLink {
       font-weight: 600;
       font-size: 1.2em;
@@ -60,5 +63,19 @@
   }
   p {
     margin: 0 0 0.5em 0;
+  }
+}
+
+.filterForm {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  input[type='submit'] {
+    align-self: center;
   }
 }

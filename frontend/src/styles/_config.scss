@@ -51,7 +51,8 @@ img {
   display: none;
 }
 
-button {
+button,
+input[type='submit'] {
   background-color: white;
   border: 1px solid black;
   border-radius: 5px;

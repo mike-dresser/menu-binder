@@ -1,10 +1,16 @@
 import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import InfoBox from './InfoBox';
+import ItemFilter from './ItemFilter';
 
 function ItemList({ menu: { name, categories } }) {
   const [expanded, setExpanded] = useState(false);
+  const [showFilterOptions, setShowFilterOptions] = useState(false);
   function handleExpand() {
     setExpanded(!expanded);
+  }
+  function handleShowFilter() {
+    setShowFilterOptions(true);
   }
   return (
     <li key={name}>
@@ -12,7 +18,15 @@ function ItemList({ menu: { name, categories } }) {
         <h2>{name}</h2>
         <span className="expandGlyph">{expanded ? '▿' : '▹'}</span>
       </div>
-      {expanded && <button>Filter...</button>}
+      {showFilterOptions && (
+        <InfoBox
+          boxState={showFilterOptions}
+          setBoxState={setShowFilterOptions}
+          title={'Filter By'}
+          content={<ItemFilter />}
+        />
+      )}
+      {expanded && <button onClick={handleShowFilter}>Filter...</button>}
       {categories.map((each) => {
         return (
           <ul

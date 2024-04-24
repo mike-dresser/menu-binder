@@ -25,7 +25,8 @@ img {
   display: none;
 }
 
-button {
+button,
+input[type=submit] {
   background-color: white;
   border: 1px solid black;
   border-radius: 5px;
@@ -148,6 +149,9 @@ button {
 #menuList li div h2 {
   margin: 0.6em;
 }
+#menuList li .infoBox {
+  display: block;
+}
 #menuList li.itemLink {
   font-weight: 600;
   font-size: 1.2em;
@@ -189,4 +193,16 @@ button {
 }
 .infoBox p {
   margin: 0 0 0.5em 0;
+}
+
+.filterForm {
+  display: flex;
+  flex-direction: column;
+}
+.filterForm label {
+  display: flex;
+  justify-content: space-between;
+}
+.filterForm input[type=submit] {
+  align-self: center;
 }/*# sourceMappingURL=style.css.map */
