@@ -1,59 +1,66 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Checkbox from './Checkbox';
 
-function ItemFilter() {
+function ItemFilter({
+  menuName,
+  setFilteredMenu,
+  setIsFilteredBy,
+  setShowFilterOptions,
+}) {
+  const [filterItems, setFilterItems] = useState({
+    shellfish: false,
+    nuts: false,
+    sesame: false,
+    pork: false,
+    gluten: false,
+    eggs: false,
+    fish: false,
+    allium: false,
+    nightshade: false,
+    dairy: false,
+  });
+  function populateFilterForm() {
+    const filters = [];
+    for (let item in filterItems) {
+      filters.push(
+        <Checkbox
+          label={item}
+          name={item.toLowerCase()}
+          checked={filterItems[item]}
+          onFilterChange={onFilterChange}
+        />
+      );
+    }
+    return filters;
+  }
+  function onFilterChange(label, state) {
+    const currentState = { ...filterItems };
+    currentState[label] = state;
+    setFilterItems({ ...currentState });
+  }
+  async function handleSubmit() {
+    const allergen_query = [];
+    for (let item in filterItems) {
+      if (filterItems[item]) allergen_query.push(item);
+    }
+    console.log(allergen_query);
+    await fetch(
+      `http://127.0.0.1:5555/filter?menu=${menuName}&allergens=${allergen_query}`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setFilteredMenu(data);
+        setIsFilteredBy([allergen_query]);
+        setShowFilterOptions(false);
+      });
+  }
+
   return (
-    <form className="filterForm">
-      <label>
-        Vegetarian
-        <input type="checkbox" name="vegetarian"></input>
-      </label>
-      <label>
-        Vegan
-        <input type="checkbox" name="vegan"></input>
-      </label>
-      <p className="sectionHeader">No</p>
-      <label>
-        Shellfish
-        <input type="checkbox" name="shellfish"></input>
-      </label>
-      <label>
-        Nuts
-        <input type="checkbox" name="nuts"></input>
-      </label>
-      <label>
-        Sesame
-        <input type="checkbox" name="sesame"></input>
-      </label>
-      <label>
-        Pork
-        <input type="checkbox" name="pork"></input>
-      </label>
-      <label>
-        Gluten
-        <input type="checkbox" name="gluten"></input>
-      </label>
-      <label>
-        Dairy
-        <input type="checkbox" name="dairy"></input>
-      </label>
-      <label>
-        Eggs
-        <input type="checkbox" name="eggs"></input>
-      </label>
-      <label>
-        Fish
-        <input type="checkbox" name="fish"></input>
-      </label>
-      <label>
-        Allium
-        <input type="checkbox" name="allium"></input>
-      </label>
-      <label>
-        Nightshade
-        <input type="checkbox" name="nightshade"></input>
-      </label>
-      <input type="submit" value="Filter Items" />
-    </form>
+    <div className="filterForm">
+      {populateFilterForm()}
+
+      <button onClick={handleSubmit}>Filter</button>
+    </div>
   );
 }
 

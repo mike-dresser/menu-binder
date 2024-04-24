@@ -8,7 +8,7 @@ BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 DATABASE = os.environ.get("DB_URI", f"sqlite:///{os.path.join(BASE_DIR, 'app.db')}")
 app = Flask(__name__)
 # this proved unecessary with the jsonify.headers add approach
-# cors = CORS(app, resources={r"/": {"origins": "*"}})
+cors = CORS(app, resources={r"/": {"origins": "*"}})
 app.config["SQLALCHEMY_DATABASE_URI"] = DATABASE
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.json.compact = False
@@ -80,7 +80,6 @@ def items_by_menu():
 def filtered_items():
     # Search query is formatted ' .../filter?menu=Lunch&allergens=gluten,shellfish '
     query = request.args
-    print(request.args)
     response = {"categories": []}
     for category in Menu.query.filter(Menu.name == query.get('menu')).first().categories:
         category = category.to_dict()

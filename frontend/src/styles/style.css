@@ -199,10 +199,13 @@ input[type=submit] {
   display: flex;
   flex-direction: column;
 }
-.filterForm label {
+.filterForm div {
   display: flex;
+  width: 100%;
   justify-content: space-between;
+  margin: 0.5em;
 }
 .filterForm input[type=submit] {
+  margin-top: 0.75em;
   align-self: center;
 }/*# sourceMappingURL=style.css.map */
