@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 import os
 from flask_migrate import Migrate;
 from flask_cors import CORS
@@ -74,6 +74,28 @@ def get_item(id):
 @app.route('/menus')
 def items_by_menu():
     response = [menu.to_dict() for menu in Menu.query.all()]
+    return add_cors(response), 200
+
+@app.route('/filter')
+def filtered_items():
+    # Search query is formatted ' .../filter?menu=Lunch&allergens=gluten,shellfish '
+    query = request.args
+    print(request.args)
+    response = {"categories": []}
+    for category in Menu.query.filter(Menu.name == query.get('menu')).first().categories:
+        category = category.to_dict()
+        filtered = []
+        for each in category.get('category_items'):
+            allergen_present = False
+            for allergen in each['item']['item_allergens']:
+                for query_allergen in query.get('allergens').split(','):
+                    if allergen['allergen']['name'] == query_allergen:
+                        allergen_present = True
+            if not allergen_present:
+                    filtered.append(each)
+        filtered_cat = {"name": category.get('name'),
+                    "category_items": filtered}
+        response['categories'].append(filtered_cat)
     return add_cors(response), 200
 
 if __name__ == "__main__":

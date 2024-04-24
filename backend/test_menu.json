@@ -401,7 +401,7 @@
       {
         "name": "Petit Lettuces",
         "description": "Mix of seasonal mesclun style mix and house chicory mix (Castelfranco + radicchio + frisee)",
-        "allergies": "",
+        "allergies": [],
         "mise": "Fork, Knife",
         "category": "Sides"
       }
