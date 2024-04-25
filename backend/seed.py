@@ -30,7 +30,7 @@ with app.app_context():
         for item in menu['items']:
             existing_item = Item.query.filter_by(name = item['name']).first()
             if not existing_item:
-                new_item = Item(name = item['name'], description = item['description'], mise = item['mise'])
+                new_item = Item(name = item['name'], description = item['description'], mise = item['mise'], image = item.get('image'))
                 db.session.add(new_item)
                 db.session.commit()
 
