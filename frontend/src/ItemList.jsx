@@ -15,6 +15,10 @@ function ItemList({ menu }) {
   function handleShowFilter() {
     setShowFilterOptions(true);
   }
+  function handleClearFilter() {
+    setFilteredMenu(menu);
+    setIsFilteredBy([]);
+  }
   useEffect(() => {
     setFilteredMenu(menu);
   }, []);
@@ -40,7 +44,22 @@ function ItemList({ menu }) {
           }
         />
       )}
-      {expanded && <button onClick={handleShowFilter}>Filter...</button>}
+      {expanded &&
+        (isFilteredBy.length ? (
+          <>
+            <p className="sectionHeader">Filtered By</p>
+            <div className="filteredByContainer">
+              <div>
+                {isFilteredBy.map((allergen) => {
+                  return <div className="filteredByBadge">{allergen}</div>;
+                })}
+              </div>
+              <button onClick={handleClearFilter}>Clear ✖️</button>
+            </div>
+          </>
+        ) : (
+          <button onClick={handleShowFilter}>Filter...</button>
+        ))}
       {categories &&
         categories.map((each) => {
           return (

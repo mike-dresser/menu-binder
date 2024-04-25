@@ -31,6 +31,25 @@
   span.expandGlyph {
     font-size: 1.5em;
   }
+  div.filteredByContainer {
+    div {
+      flex-wrap: wrap;
+    }
+    button {
+      flex-shrink: 0;
+    }
+    align-items: flex-end;
+    border-bottom: 2px solid lightgrey;
+    margin-top: -1.5em;
+    padding: 1em;
+  }
+  .filteredByBadge {
+    background-color: $modal-translucent;
+    color: white;
+    margin: 0.25em;
+    padding: 0.25em 0.5em;
+    border-radius: 5px;
+  }
 }
 
 .sectionHeader {

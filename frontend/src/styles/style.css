@@ -160,6 +160,25 @@ input[type=submit] {
 #menuList span.expandGlyph {
   font-size: 1.5em;
 }
+#menuList div.filteredByContainer {
+  align-items: flex-end;
+  border-bottom: 2px solid lightgrey;
+  margin-top: -1.5em;
+  padding: 1em;
+}
+#menuList div.filteredByContainer div {
+  flex-wrap: wrap;
+}
+#menuList div.filteredByContainer button {
+  flex-shrink: 0;
+}
+#menuList .filteredByBadge {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  margin: 0.25em;
+  padding: 0.25em 0.5em;
+  border-radius: 5px;
+}
 
 .sectionHeader {
   font-weight: 600;
