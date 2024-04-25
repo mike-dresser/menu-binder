@@ -227,4 +227,11 @@ input[type=submit] {
 .filterForm input[type=submit] {
   margin-top: 0.75em;
   align-self: center;
+}
+
+.filteredByBadge {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0.25em;
+  border-radius: 5px;
 }/*# sourceMappingURL=style.css.map */

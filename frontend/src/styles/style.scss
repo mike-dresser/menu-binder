@@ -101,3 +101,10 @@
     align-self: center;
   }
 }
+
+.filteredByBadge {
+  background-color: $modal-translucent;
+  color: white;
+  padding: 0.25em;
+  border-radius: 5px;
+}
