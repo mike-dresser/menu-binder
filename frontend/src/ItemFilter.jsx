@@ -24,8 +24,8 @@ function ItemFilter({
     for (let item in filterItems) {
       filters.push(
         <Checkbox
-          label={item}
-          name={item.toLowerCase()}
+          label={`${item[0].toUpperCase()}${item.substring(1)}`}
+          name={item}
           checked={filterItems[item]}
           onFilterChange={onFilterChange}
         />
@@ -43,7 +43,6 @@ function ItemFilter({
     for (let item in filterItems) {
       if (filterItems[item]) allergen_query.push(item);
     }
-    console.log(allergen_query);
     await fetch(
       `http://127.0.0.1:5555/filter?menu=${menuName}&allergens=${allergen_query}`
     )
@@ -52,6 +51,7 @@ function ItemFilter({
         setFilteredMenu(data);
         setIsFilteredBy([allergen_query]);
         setShowFilterOptions(false);
+        setIsFilteredBy(allergen_query);
       });
   }
 
