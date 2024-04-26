@@ -1,14 +1,19 @@
 import { Outlet } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import Header from './Header';
 
+const EditModeContext = createContext(false);
 function App() {
+  const [editMode, setEditMode] = useState(false);
   return (
-    <div id="main">
-      <Header />
-      <Outlet />
-    </div>
+    <EditModeContext.Provider value={editMode}>
+      <div id="main">
+        <Header editMode={editMode} setEditMode={setEditMode} />
+        <Outlet />
+      </div>
+    </EditModeContext.Provider>
   );
 }
 
 export default App;
+export { EditModeContext };

@@ -195,6 +195,9 @@ input[type=submit] {
 }
 
 #header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   border-bottom: 2px solid lightgrey;
   padding-bottom: 1.2em;
 }
@@ -266,4 +269,31 @@ input[type=submit] {
     background-color: white;
     padding: 1em;
   }
+}
+.editableField {
+  display: flex;
+  justify-content: space-between;
+}
+
+span.editGlyph {
+  display: block;
+  align-self: center;
+  margin: 0 0.5em;
+  font-size: 1.6rem;
+  transform: rotate(90deg);
+  color: rgb(192, 192, 192);
+}
+
+.fieldEdit {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5em;
+}
+.fieldEdit textarea {
+  flex-grow: 1;
+  font: inherit;
+}
+.fieldEdit div {
+  display: inherit;
+  gap: 0.5em;
 }/*# sourceMappingURL=style.css.map */
