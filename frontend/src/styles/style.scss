@@ -83,14 +83,15 @@
 .editableField {
   display: flex;
   justify-content: space-between;
-}
-span.editGlyph {
-  display: block;
-  align-self: center;
-  margin: 0 0.5em;
-  font-size: 1.6rem;
-  transform: rotate(90deg);
-  color: $header-color;
+
+  .editGlyph {
+    display: block;
+    align-self: center;
+    margin: 0 0.5em;
+    font-size: 1.6rem;
+    transform: rotate(90deg);
+    color: $header-color;
+  }
 }
 
 .fieldEdit {
@@ -100,9 +101,11 @@ span.editGlyph {
   textarea {
     flex-grow: 1;
     font: inherit;
+    height: 4rem;
   }
   div {
     display: inherit;
     gap: 0.5em;
+    align-self: center;
   }
 }

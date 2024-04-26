@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Dialog from './Dialog';
+import Dialog from '../../Dialog';
 
 function ItemAllergens({ item }) {
   const [noteOpen, setNoteOpen] = useState(false);

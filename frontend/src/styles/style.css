@@ -274,8 +274,7 @@ input[type=submit] {
   display: flex;
   justify-content: space-between;
 }
-
-span.editGlyph {
+.editableField .editGlyph {
   display: block;
   align-self: center;
   margin: 0 0.5em;
@@ -292,8 +291,10 @@ span.editGlyph {
 .fieldEdit textarea {
   flex-grow: 1;
   font: inherit;
+  height: 4rem;
 }
 .fieldEdit div {
   display: inherit;
   gap: 0.5em;
+  align-self: center;
 }/*# sourceMappingURL=style.css.map */

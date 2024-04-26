@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useOutletContext, useParams } from 'react-router-dom';
-import ItemAllergens from '../ItemAllergens';
-import Field from '../Field';
+import ItemAllergens from './ItemAllergens';
+import EditableTextField from './EditableTextField';
+import EditableH2 from './EditableH2';
+import EditableImg from './EditableImg';
 
 function Item() {
   const { id } = useParams();
@@ -22,39 +24,31 @@ function Item() {
         ◁ Back
       </Link>
       {item['image'] && (
-        <div id="imageFrame">
-          <Field>
+        <EditableImg>
+          <div id="imageFrame">
             <img src={item.image} />
-          </Field>
-        </div>
+          </div>
+        </EditableImg>
       )}
 
-      <h2>
-        <Field>{item.name}</Field>
-      </h2>
+      <EditableH2>{item.name}</EditableH2>
 
       <p className="sectionHeader">Description</p>
 
-      <p>
-        <Field>{item.description}</Field>
-      </p>
+      <EditableTextField>{item.description}</EditableTextField>
 
       <p className="sectionHeader">Allergens</p>
 
-      <Field>{item.allergens && <ItemAllergens item={item} />}</Field>
+      {item.allergens && <ItemAllergens item={item} />}
 
       <p className="sectionHeader">Mise</p>
 
-      <p>
-        <Field>{item.mise}</Field>
-      </p>
+      <EditableTextField>{item.mise}</EditableTextField>
 
       <p className="sectionHeader">Available</p>
-      <Field>
-        <ul>
-          {item.menus && item.menus.map((menu) => <li key={menu}>{menu}</li>)}
-        </ul>
-      </Field>
+      <ul>
+        {item.menus && item.menus.map((menu) => <li key={menu}>{menu}</li>)}
+      </ul>
     </div>
   );
 }
