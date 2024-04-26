@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import './styles/style.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Item from './Item.jsx';
-import MenuList from './MenuList.jsx';
+import Item from './pages/Item.jsx';
+import MenuList from './pages/MenuList.jsx';
 
 const router = createBrowserRouter([
   {

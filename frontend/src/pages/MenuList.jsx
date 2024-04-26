@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import ItemList from './ItemList';
+import ItemList from '../ItemList';
 
 function MenuList() {
   const [testMenu, setTestMenu] = useState([]);

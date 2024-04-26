@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useOutletContext, useParams } from 'react-router-dom';
-import ItemAllergens from './ItemAllergens';
+import ItemAllergens from '../ItemAllergens';
 
 function Item() {
   const { id } = useParams();

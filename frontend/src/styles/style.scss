@@ -1,58 +1,12 @@
 @import 'config';
 @import 'item';
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+@import 'menuList';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nanum+Brush+Script&display=swap');
 
-#menuList {
-  ul {
-    display: none;
-  }
-  .expanded {
-    display: block;
-  }
-
-  li {
-    cursor: pointer;
-    div {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      h2 {
-        margin: 0.6em;
-      }
-    }
-    .infoBox {
-      display: block;
-    }
-    &.itemLink {
-      font-weight: 600;
-      font-size: 1.2em;
-      line-height: 1.4em;
-    }
-  }
-  span.expandGlyph {
-    font-size: 1.5em;
-  }
-  div.filteredByContainer {
-    div {
-      flex-wrap: wrap;
-    }
-    button {
-      flex-shrink: 0;
-    }
-    align-items: flex-end;
-    border-bottom: 2px solid lightgrey;
-    margin-top: -1.5em;
-    padding: 1em;
-  }
-  .filteredByBadge {
-    background-color: $modal-translucent;
-    color: white;
-    margin: 0.25em;
-    padding: 0.25em 0.5em;
-    border-radius: 5px;
-  }
+#header {
+  border-bottom: 2px solid lightgrey;
+  padding-bottom: 1.2em;
 }
-
 .sectionHeader {
   font-weight: 600;
   color: $header-color;
@@ -108,4 +62,17 @@
   color: white;
   padding: 0.25em;
   border-radius: 5px;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    background-color: bisque;
+    height: 100vh;
+  }
+  #main {
+    max-width: 600px;
+    margin: auto;
+    background-color: white;
+    padding: 1em;
+  }
 }
