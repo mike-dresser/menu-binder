@@ -163,7 +163,7 @@ input[type=submit] {
 #menuList li div h2 {
   margin: 0.6em;
 }
-#menuList li .infoBox {
+#menuList li .dialog {
   display: block;
 }
 #menuList li.itemLink {
@@ -205,11 +205,11 @@ input[type=submit] {
   text-align: center;
 }
 
-.infoBoxContainer {
+.dialogContainer {
   position: relative;
 }
 
-.infoBox {
+.dialog {
   position: absolute;
   top: -2em;
   right: 50%;
@@ -223,13 +223,13 @@ input[type=submit] {
   padding: 1em;
   border: 1px solid black;
 }
-.infoBox .closeBtn {
+.dialog .closeBtn {
   position: absolute;
   top: 0.5em;
   right: 0.5em;
   font-size: 1.1em;
 }
-.infoBox p {
+.dialog p {
   margin: 0 0 0.5em 0;
 }
 

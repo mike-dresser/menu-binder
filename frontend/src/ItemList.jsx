@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import InfoBox from './InfoBox';
+import Dialog from './Dialog';
 import ItemFilter from './ItemFilter';
 
 function ItemList({ menu }) {
@@ -30,7 +30,7 @@ function ItemList({ menu }) {
         <span className="expandGlyph">{expanded ? '▿' : '▹'}</span>
       </div>
       {showFilterOptions && (
-        <InfoBox
+        <Dialog
           boxState={showFilterOptions}
           setBoxState={setShowFilterOptions}
           title={'Remove Items Including'}

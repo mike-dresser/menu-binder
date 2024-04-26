@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import InfoBox from './InfoBox';
+import Dialog from './Dialog';
 
 function ItemAllergens({ item }) {
   const [noteOpen, setNoteOpen] = useState(false);
@@ -11,9 +11,9 @@ function ItemAllergens({ item }) {
   }
 
   return (
-    <div className="infoBoxContainer">
+    <div className="dialogContainer">
       {noteOpen && (
-        <InfoBox
+        <Dialog
           boxState={noteOpen}
           setBoxState={setNoteOpen}
           title={selectedAllergen.name}

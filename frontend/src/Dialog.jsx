@@ -1,8 +1,8 @@
 import React from 'react';
 
-function InfoBox({ boxState, setBoxState, title, content }) {
+function Dialog({ boxState, setBoxState, title, content }) {
   return (
-    <div className={boxState ? 'infoBox' : 'infoBox hidden'}>
+    <div className={boxState ? 'dialog' : 'dialog hidden'}>
       <span className="closeBtn" onClick={() => setBoxState(false)}>
         ✖️
       </span>
@@ -12,4 +12,4 @@ function InfoBox({ boxState, setBoxState, title, content }) {
   );
 }
 
-export default InfoBox;
+export default Dialog;

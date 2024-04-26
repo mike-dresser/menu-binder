@@ -15,7 +15,7 @@ function MenuList() {
   return (
     <ul id="menuList">
       {testMenu.map((menu) => (
-        <div className="infoBoxContainer">
+        <div className="dialogContainer">
           <ItemList menu={menu} />
         </div>
       ))}
