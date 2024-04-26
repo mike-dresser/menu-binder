@@ -1,5 +1,6 @@
 $header-color: rgb(192, 192, 192);
 $primary-color: #000;
+$logo-background: rgb(125, 147, 255);
 $modal-translucent: rgba(0, 0, 0, 0.5);
 $allergen-colors: (
   'shellfish': #f94144,
@@ -32,6 +33,15 @@ body {
   padding: 0.5em;
 }
 
+h1.logo {
+  font-family: 'Nanum Brush Script', cursive;
+  font-size: 2.5em;
+  margin: 0;
+  padding: 0 1rem;
+  background-color: $logo-background;
+  display: inline-block;
+  transform: rotate(3deg);
+}
 ul {
   padding: 0;
   list-style-type: none;
