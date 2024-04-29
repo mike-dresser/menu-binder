@@ -51,10 +51,9 @@ class Allergen(db.Model, SerializerMixin):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, nullable=False)
-    description = db.Column(db.String)
 
     item_allergens = db.relationship('ItemAllergen', back_populates = 'allergen')
-    serialize_rules = ('-item_allergens.allergen',)
+    serialize_only = ('id', 'name')
 
     def __repr__(self):
         return f'<Allergen {self.id} {self.name}>'
