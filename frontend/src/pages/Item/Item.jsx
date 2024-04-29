@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useOutletContext, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import ItemAllergens from './ItemAllergens';
 import EditableTextField from './EditableTextField';
 import EditableH2 from './EditableH2';
@@ -8,7 +8,6 @@ import EditableImg from './EditableImg';
 function Item() {
   const { id } = useParams();
   const [item, setItem] = useState({});
-  const editMode = useOutletContext();
   useEffect(() => {
     fetch(`http://127.0.0.1:5555/items/${id}`)
       .then((res) => res.json())
@@ -31,7 +30,9 @@ function Item() {
         </EditableImg>
       )}
 
-      <EditableH2>{item.name}</EditableH2>
+      <EditableH2 itemField="name" item={item} setItem={setItem}>
+        {item.name}
+      </EditableH2>
 
       <p className="sectionHeader">Description</p>
 

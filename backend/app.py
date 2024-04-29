@@ -8,7 +8,9 @@ BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 DATABASE = os.environ.get("DB_URI", f"sqlite:///{os.path.join(BASE_DIR, 'app.db')}")
 app = Flask(__name__)
 # this proved unecessary with the jsonify.headers add approach
-cors = CORS(app, resources={r"/": {"origins": "*"}})
+# cors = CORS(app, resources={r"/": {"origins": "*"}})
+# vv This was necessary to allow patch requests
+cors = CORS(app);
 app.config["SQLALCHEMY_DATABASE_URI"] = DATABASE
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.json.compact = False
@@ -20,7 +22,8 @@ db.init_app(app)
 def add_cors(response):
     '''Add cross-origin headers to keep CORS happy
     
-    response: a non-JSONified Python object'''
+    Parameters:
+        response: a non-JSONified Python object'''
 
     updated_response = jsonify(response)
     updated_response.headers.add('Access-Control-Allow-Origin', '*')
@@ -63,13 +66,23 @@ def all_items():
     response = [allergy_serialize(item) for item in Item.query.all()]
     return add_cors(response), 200
 
-@app.route('/items/<int:id>')
-def get_item(id):
+@app.route('/items/<int:id>', methods = ['GET', 'PATCH'])
+def one_item(id):
     item = Item.query.filter_by(id = id).first()
     if not item:
         return {"error": f"No item with id {id} found."}, 404
-    response = allergy_serialize(item)
-    return add_cors(response), 200
+    if request.method == 'GET':
+        response = allergy_serialize(item)
+        return add_cors(response), 200
+    if request.method == 'PATCH':
+        req_data = request.get_json()
+        for key, value in req_data.items():
+            setattr(item, key, value)
+        db.session.add(item)
+        db.session.commit()
+        response = allergy_serialize(item)
+        return add_cors(response), 202
+
 
 @app.route('/menus')
 def items_by_menu():
