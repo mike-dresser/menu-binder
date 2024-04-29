@@ -5,7 +5,7 @@ import './styles/style.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Item from './pages/Item/Item.jsx';
 import MenuList from './pages/MenuList.jsx';
-import NewItem from './pages/NewItem.jsx';
+import NewItem from './pages/NewItem';
 
 const router = createBrowserRouter([
   {

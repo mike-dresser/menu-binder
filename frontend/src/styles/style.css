@@ -63,88 +63,90 @@ input[type=submit] {
   margin-bottom: 0.5em;
   display: inline-block;
 }
-#itemDetails #allergenContainer {
-  max-height: 4em;
-  margin: 0 1em;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-#itemDetails #allergenContainer li.allergen {
+
+li.allergen {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 40%;
   height: 1.5em;
 }
-#itemDetails #allergenContainer li.allergen span:first-child::before {
+li.allergen span:first-child::before {
   content: "■";
   margin-right: 0.5em;
 }
-#itemDetails #allergenContainer li.allergen .shellfishItem {
+li.allergen .shellfishItem {
   color: #f94144;
 }
-#itemDetails #allergenContainer li.allergen .nutsItem {
+li.allergen .nutsItem {
   color: #f3722c;
 }
-#itemDetails #allergenContainer li.allergen .sesameItem {
+li.allergen .sesameItem {
   color: #f8961e;
 }
-#itemDetails #allergenContainer li.allergen .porkItem {
+li.allergen .porkItem {
   color: #f9844a;
 }
-#itemDetails #allergenContainer li.allergen .eggsItem {
+li.allergen .eggsItem {
   color: #f9c74f;
 }
-#itemDetails #allergenContainer li.allergen .glutenItem {
+li.allergen .glutenItem {
   color: #90be6d;
 }
-#itemDetails #allergenContainer li.allergen .dairyItem {
+li.allergen .dairyItem {
   color: #43aa8b;
 }
-#itemDetails #allergenContainer li.allergen .nightshadeItem {
+li.allergen .nightshadeItem {
   color: #4d908e;
 }
-#itemDetails #allergenContainer li.allergen .fishItem {
+li.allergen .fishItem {
   color: #577590;
 }
-#itemDetails #allergenContainer li.allergen .alliumItem {
+li.allergen .alliumItem {
   color: #277da1;
 }
-#itemDetails #allergenContainer li.allergen span.shellfishItem::before {
+li.allergen span.shellfishItem::before {
   content: "●";
 }
-#itemDetails #allergenContainer li.allergen span.nutsItem::before {
+li.allergen span.nutsItem::before {
   content: "■";
 }
-#itemDetails #allergenContainer li.allergen span.sesameItem::before {
+li.allergen span.sesameItem::before {
   content: "◆";
 }
-#itemDetails #allergenContainer li.allergen span.porkItem::before {
+li.allergen span.porkItem::before {
   content: "▲";
 }
-#itemDetails #allergenContainer li.allergen span.eggsItem::before {
+li.allergen span.eggsItem::before {
   content: "●";
 }
-#itemDetails #allergenContainer li.allergen span.glutenItem::before {
+li.allergen span.glutenItem::before {
   content: "■";
 }
-#itemDetails #allergenContainer li.allergen span.dairyItem::before {
+li.allergen span.dairyItem::before {
   content: "◆";
 }
-#itemDetails #allergenContainer li.allergen span.nightshadeItem::before {
+li.allergen span.nightshadeItem::before {
   content: "▲";
 }
-#itemDetails #allergenContainer li.allergen span.fishItem::before {
+li.allergen span.fishItem::before {
   content: "●";
 }
-#itemDetails #allergenContainer li.allergen span.alliumItem::before {
+li.allergen span.alliumItem::before {
   content: "■";
 }
-#itemDetails #allergenContainer .infoGlyph {
+
+.infoGlyph {
   color: rgb(192, 192, 192);
   font-size: 1.3em;
   padding-right: 1em;
+}
+
+.allergenContainer {
+  margin: 0 1em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 #menuList ul {
@@ -215,7 +217,6 @@ input[type=submit] {
 
 .dialog {
   position: absolute;
-  top: -2em;
   right: 50%;
   transform: translateX(50%);
   z-index: 1;
@@ -300,32 +301,23 @@ input[type=submit] {
   align-self: center;
 }
 
-#newItem input {
-  width: 100%;
-  box-sizing: border-box;
+#newItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 #newItem input[type=submit] {
-  display: block;
-  width: auto;
-  margin: auto;
+  align-self: center;
 }
 #newItem textarea {
-  width: 100%;
   height: 20vh;
+  font: inherit;
 }
 #newItem #newImage {
-  margin-top: 1em;
-  padding: 0.5em;
+  padding: 1em 0;
   border: 2px solid rgb(192, 192, 192);
-  background-color: #f3f3f3;
   border-radius: 5px;
   text-align: center;
-}
-#newItem #newImage button {
-  margin-bottom: 0.5rem;
-  font-size: 2em;
-  padding: 0.25em 0.5em;
-  color: rgb(192, 192, 192);
 }
 #newItem #newImage p {
   margin: 0;

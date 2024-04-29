@@ -21,7 +21,7 @@ function ItemAllergens({ item }) {
         />
       )}
 
-      <ul id="allergenContainer">
+      <ul className="allergenContainer">
         {item.allergens.map((allergen) => (
           <li className="allergen" key={allergen.name}>
             <span className={`${allergen.name}Item`}>{allergen.name}</span>
