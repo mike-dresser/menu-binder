@@ -5,6 +5,7 @@ import './styles/style.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Item from './pages/Item/Item.jsx';
 import MenuList from './pages/MenuList.jsx';
+import NewItem from './pages/NewItem.jsx';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: '/items/:id',
         element: <Item />,
+      },
+      {
+        path: '/new',
+        element: <NewItem />,
       },
     ],
   },

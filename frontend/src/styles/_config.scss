@@ -31,6 +31,7 @@ $allergen-glyphs: (
 body {
   font-family: Inter, system-ui, Helvetica, sans-serif;
   padding: 0.5em;
+  box-sizing: border-box;
 }
 
 h1.logo {
