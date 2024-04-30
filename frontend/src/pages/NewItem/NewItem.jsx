@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import NewItemAllergenList from './NewItemAllergenList';
+import NewItemCategoryList from './NewItemCategoryList';
 
 function NewItem() {
   const [newItem, setNewItem] = useState({
@@ -55,7 +56,8 @@ function NewItem() {
         value={newItem['mise']}
         onChange={onTextChange}
       ></input>
-      <p className="sectionHeader">Available</p>
+      <p className="sectionHeader">Menu Categories</p>
+      <NewItemCategoryList />
       <input type="submit" value="Add New Item"></input>
     </form>
   );

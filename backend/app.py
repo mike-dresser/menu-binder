@@ -113,6 +113,18 @@ def all_allergens():
     response = [allergen.to_dict() for allergen in Allergen.query.all()]
     return add_cors(response), 200
 
+@app.route('/categories')
+def menu_categories():
+    response = []
+    all_categories = [category.to_dict() for category in Category.query.all()]
+    for cat in all_categories:
+       cat_response = {"name": cat.get('name'),
+                       "category_id": cat.get('id'),
+                       "menu_id": cat.get('menu_id'),
+                       "menu": cat.get('menu').get('name')}
+       response.append(cat_response)
+    return add_cors(response), 200
+
 @app.route('/filter')
 def filtered_items():
     # Search query is formatted ' .../filter?menu=Lunch&allergens=gluten,shellfish '

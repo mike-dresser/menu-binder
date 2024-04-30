@@ -308,6 +308,7 @@ li.allergen span.alliumItem::before {
 }
 #newItem input[type=submit] {
   align-self: center;
+  margin-top: 1em;
 }
 #newItem textarea {
   height: 20vh;
