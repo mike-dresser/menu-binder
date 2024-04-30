@@ -1,8 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import ItemList from '../ItemList';
+import { EditModeContext } from '../App';
+import { useNavigate } from 'react-router-dom';
 
 function MenuList() {
   const [testMenu, setTestMenu] = useState([]);
+  const editMode = useContext(EditModeContext);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch('http://127.0.0.1:5555/menus')
@@ -13,13 +17,20 @@ function MenuList() {
       });
   }, []);
   return (
-    <ul id="menuList">
-      {testMenu.map((menu) => (
-        <div className="dialogContainer">
-          <ItemList menu={menu} />
-        </div>
-      ))}
-    </ul>
+    <>
+      {editMode && (
+        <button className="newItemBtn" onClick={() => navigate('/new')}>
+          Add New Item
+        </button>
+      )}
+      <ul id="menuList">
+        {testMenu.map((menu) => (
+          <div className="dialogContainer">
+            <ItemList menu={menu} />
+          </div>
+        ))}
+      </ul>
+    </>
   );
 }
 

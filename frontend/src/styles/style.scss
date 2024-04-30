@@ -10,6 +10,10 @@
   border-bottom: 2px solid lightgrey;
   padding-bottom: 1.2em;
 }
+.newItemBtn {
+  display: block;
+  margin: 1em auto;
+}
 .sectionHeader {
   font-weight: 600;
   color: $header-color;
@@ -65,19 +69,6 @@
   color: white;
   padding: 0.25em;
   border-radius: 5px;
-}
-
-@media screen and (min-width: 600px) {
-  body {
-    background-color: bisque;
-    height: 100vh;
-  }
-  #main {
-    max-width: 600px;
-    margin: auto;
-    background-color: white;
-    padding: 1em;
-  }
 }
 
 .editableField {
@@ -137,5 +128,18 @@
     display: flex;
     justify-content: space-between;
     width: 50%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    background-color: bisque;
+    height: 100vh;
+  }
+  #main {
+    max-width: 600px;
+    margin: auto;
+    background-color: white;
+    padding: 1em;
   }
 }
