@@ -39,7 +39,7 @@ function NewItemCategoryList({ newItem, setNewItem }) {
         <ul>
           {newItem.menuCategories.map((categoryId) => {
             return (
-              <li>
+              <li className="newCategory">
                 {menuDict[categoryId]}
                 <span onClick={() => deleteCategory(categoryId)}>✖️</span>
               </li>

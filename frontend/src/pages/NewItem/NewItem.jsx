@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import NewItemAllergenList from './NewItemAllergenList';
 import NewItemCategoryList from './NewItemCategoryList';
+import { useNavigate } from 'react-router-dom';
 
 function NewItem() {
+  const navigate = useNavigate();
   const [newItem, setNewItem] = useState({
     name: '',
     description: '',
@@ -18,7 +20,6 @@ function NewItem() {
 
   function onSubmit(e) {
     e.preventDefault();
-    console.log(newItem);
     fetch(`http://127.0.0.1:5555/items`, {
       method: 'POST',
       headers: {
@@ -27,7 +28,7 @@ function NewItem() {
       body: JSON.stringify(newItem),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => navigate(`/items/${data.id}`));
   }
   return (
     <form id="newItem" onSubmit={onSubmit}>

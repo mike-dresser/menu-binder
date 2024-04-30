@@ -81,6 +81,10 @@ def all_items():
                                              allergen_id=allergen.get('allergen_id'),
                                              notes=allergen.get('notes'))
             db.session.add(new_item_allergen)
+        for category in r.get('menuCategories'):
+            new_category_item = CategoryItem(item_id=new_item.to_dict()['id'],
+                                             category_id=category)
+            db.session.add(new_category_item)
         db.session.commit()
         response = new_item.to_dict()
         return add_cors(response), 201
