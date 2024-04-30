@@ -3,6 +3,7 @@ import NewItemAllergen from './NewItemAllergen';
 
 // This caches existing allergen names
 let allAllergens = [];
+const allergenDict = {};
 
 function NewItemAllergenList({ newItem, setNewItem }) {
   const [filteredAllergens, setFilteredAllergens] = useState([]);
@@ -14,6 +15,7 @@ function NewItemAllergenList({ newItem, setNewItem }) {
         .then((res) => res.json())
         .then((allergenData) => {
           allAllergens = allergenData;
+          createAllergenDict(allergenData);
           setFilteredAllergens(allAllergens);
         });
     }
@@ -30,10 +32,23 @@ function NewItemAllergenList({ newItem, setNewItem }) {
     setFilteredAllergens(unselectedAllergens);
   }, [newItem]);
 
+  function createAllergenDict(data) {
+    // Create dictionary of saved allergen ids / names
+    for (let entry of data) {
+      allergenDict[entry.name] = entry.id;
+    }
+    console.log(allergenDict);
+  }
+
   function onListChange(e) {
     // Add selected allergen to newItem
+    console.log(e);
     const itemAllergens = [...newItem.allergens];
-    itemAllergens.push({ name: e.target.value, notes: '' });
+    itemAllergens.push({
+      name: e.target.value,
+      allergen_id: allergenDict[e.target.value],
+      notes: '',
+    });
     setNewItem({ ...newItem, allergens: itemAllergens });
     e.target.value = '';
   }
@@ -54,7 +69,7 @@ function NewItemAllergenList({ newItem, setNewItem }) {
         <option value="">Select item allergens</option>
         {filteredAllergens.map((allergen) => {
           return (
-            <option key={allergen.name} value={allergen.name}>
+            <option key={allergen.name} value={allergen.name} id={allergen.id}>
               {allergen.name}
             </option>
           );

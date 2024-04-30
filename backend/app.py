@@ -49,11 +49,12 @@ def allergy_serialize(item):
         response_item["menus"].append(menu)
 
     for allergen in i["item_allergens"]:
-        allergen_response = {
-            "name": allergen["allergen"]["name"],
-            "notes": allergen["notes"]
-        }
-        response_item["allergens"].append(allergen_response)
+        if allergen:
+            allergen_response = {
+                "name": allergen["allergen"]["name"],
+                "notes": allergen["notes"]
+            }
+            response_item["allergens"].append(allergen_response)
 
     return response_item
 
@@ -61,10 +62,28 @@ def allergy_serialize(item):
 def home():
     return 'Welcome to the Menu API', 200
 
-@app.route('/items', methods = ['GET'])
+@app.route('/items', methods = ['GET', 'POST'])
 def all_items():
-    response = [allergy_serialize(item) for item in Item.query.all()]
-    return add_cors(response), 200
+    if request.method == 'GET':
+        response = [allergy_serialize(item) for item in Item.query.all()]
+        return add_cors(response), 200
+    if request.method == 'POST':
+        r = request.get_json()
+        new_item = Item(name=r.get('name'),
+                        price=r.get('price'),
+                        description=r.get('description'),
+                        mise=r.get('mise'),
+                        active=r.get('active'))
+        db.session.add(new_item)
+        db.session.commit()
+        for allergen in r.get('allergens'):
+            new_item_allergen = ItemAllergen(item_id=new_item.to_dict()['id'],
+                                             allergen_id=allergen.get('allergen_id'),
+                                             notes=allergen.get('notes'))
+            db.session.add(new_item_allergen)
+        db.session.commit()
+        response = new_item.to_dict()
+        return add_cors(response), 201
 
 @app.route('/items/<int:id>', methods = ['GET', 'PATCH'])
 def one_item(id):

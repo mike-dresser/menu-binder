@@ -17,7 +17,15 @@ function NewItem() {
 
   function onSubmit(e) {
     e.preventDefault();
-    console.log(newItem);
+    fetch(`http://127.0.0.1:5555/items`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newItem),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
   }
   return (
     <form id="newItem" onSubmit={onSubmit}>
