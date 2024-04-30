@@ -8,7 +8,7 @@ function NewItem() {
     description: '',
     allergens: [],
     mise: '',
-    menus: [],
+    menuCategories: [],
     active: true,
   });
 
@@ -18,6 +18,7 @@ function NewItem() {
 
   function onSubmit(e) {
     e.preventDefault();
+    console.log(newItem);
     fetch(`http://127.0.0.1:5555/items`, {
       method: 'POST',
       headers: {
@@ -57,7 +58,7 @@ function NewItem() {
         onChange={onTextChange}
       ></input>
       <p className="sectionHeader">Menu Categories</p>
-      <NewItemCategoryList />
+      <NewItemCategoryList newItem={newItem} setNewItem={setNewItem} />
       <input type="submit" value="Add New Item"></input>
     </form>
   );

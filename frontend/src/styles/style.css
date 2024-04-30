@@ -322,4 +322,9 @@ li.allergen span.alliumItem::before {
 }
 #newItem #newImage p {
   margin: 0;
+}
+#newItem li {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
 }/*# sourceMappingURL=style.css.map */
