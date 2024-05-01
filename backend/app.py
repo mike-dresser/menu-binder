@@ -1,7 +1,8 @@
 from flask import Flask, jsonify, request
-import os
+import os, random
 from flask_migrate import Migrate;
 from flask_cors import CORS
+from werkzeug.utils import secure_filename
 from models import db, Item, ItemAllergen, Allergen, CategoryItem, Category, Menu
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
@@ -14,10 +15,20 @@ cors = CORS(app);
 app.config["SQLALCHEMY_DATABASE_URI"] = DATABASE
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.json.compact = False
+# imports to allow file uploads
+UPLOAD_FOLDER = '../frontend/public'
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'avif', 'heif', 'heic', 'tiff'}
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 migrate = Migrate(app, db)
 
 db.init_app(app)
+
+def allowed_file(filename):
+    """ Checks uploaded image for valid filename """
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
 
 def add_cors(response):
     '''Add cross-origin headers to keep CORS happy
@@ -58,9 +69,25 @@ def allergy_serialize(item):
 
     return response_item
 
-@app.route('/')
-def home():
-    return 'Welcome to the Menu API', 200
+@app.route('/', methods=['GET', 'POST'])
+def upload_file():
+    if request.method == 'GET':
+        return 'Welcome to the Menu API', 200
+    if request.method == 'POST':
+        # check if the post request has the file part
+        if 'file' not in request.files:
+            return {'error': 'no file part'}, 400
+        file = request.files['file']
+        # If the user does not select a file, the browser submits an
+        # empty file without a filename.
+        if file.filename == '':
+            return {'error': 'no selected file'}, 400
+        if file and allowed_file(file.filename):
+            file_extension = file.filename.rsplit('.', 1)[1].lower()
+            rand_file_name = f'{random.randrange(100000)}.{file_extension}'
+            file_location = os.path.join(app.config['UPLOAD_FOLDER'], rand_file_name) 
+            file.save(file_location)
+            return {"filename": rand_file_name}, 200
 
 @app.route('/items', methods = ['GET', 'POST'])
 def all_items():
@@ -73,6 +100,7 @@ def all_items():
                         price=r.get('price'),
                         description=r.get('description'),
                         mise=r.get('mise'),
+                        image=r.get('image'),
                         active=r.get('active'))
         db.session.add(new_item)
         db.session.commit()

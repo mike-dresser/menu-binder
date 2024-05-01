@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import NewItemAllergenList from './NewItemAllergenList';
 import NewItemCategoryList from './NewItemCategoryList';
 import { useNavigate } from 'react-router-dom';
+import ImgUpload from './ImgUpload';
 
 function NewItem() {
   const navigate = useNavigate();
@@ -12,6 +13,7 @@ function NewItem() {
     mise: '',
     menuCategories: [],
     active: true,
+    image: '',
   });
 
   function onTextChange(e) {
@@ -31,37 +33,37 @@ function NewItem() {
       .then((data) => navigate(`/items/${data.id}`));
   }
   return (
-    <form id="newItem" onSubmit={onSubmit}>
+    <>
       <p className="sectionHeader">Image</p>
-      <div id="newImage">
-        <input type="file" />
-      </div>
-      <p className="sectionHeader">Name</p>
-      <input
-        type="text"
-        name="name"
-        value={newItem['name']}
-        onChange={onTextChange}
-      ></input>
-      <p className="sectionHeader">Description</p>
-      <textarea
-        name="description"
-        value={newItem['description']}
-        onChange={onTextChange}
-      ></textarea>
-      <p className="sectionHeader">Allergens</p>
-      <NewItemAllergenList newItem={newItem} setNewItem={setNewItem} />
-      <p className="sectionHeader">Mise</p>
-      <input
-        type="text"
-        name="mise"
-        value={newItem['mise']}
-        onChange={onTextChange}
-      ></input>
-      <p className="sectionHeader">Menu Categories</p>
-      <NewItemCategoryList newItem={newItem} setNewItem={setNewItem} />
-      <input type="submit" value="Add New Item"></input>
-    </form>
+      <ImgUpload newItem={newItem} setNewItem={setNewItem} />
+      <form id="newItem" onSubmit={onSubmit}>
+        <p className="sectionHeader">Name</p>
+        <input
+          type="text"
+          name="name"
+          value={newItem['name']}
+          onChange={onTextChange}
+        ></input>
+        <p className="sectionHeader">Description</p>
+        <textarea
+          name="description"
+          value={newItem['description']}
+          onChange={onTextChange}
+        ></textarea>
+        <p className="sectionHeader">Allergens</p>
+        <NewItemAllergenList newItem={newItem} setNewItem={setNewItem} />
+        <p className="sectionHeader">Mise</p>
+        <input
+          type="text"
+          name="mise"
+          value={newItem['mise']}
+          onChange={onTextChange}
+        ></input>
+        <p className="sectionHeader">Menu Categories</p>
+        <NewItemCategoryList newItem={newItem} setNewItem={setNewItem} />
+        <input type="submit" value="Add New Item"></input>
+      </form>
+    </>
   );
 }
 

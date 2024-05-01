@@ -36,17 +36,17 @@
   padding: 1em;
   border: 1px solid black;
 
-  .closeBtn {
-    position: absolute;
-    top: 0.5em;
-    right: 0.5em;
-    font-size: 1.1em;
-  }
   p {
     margin: 0 0 0.5em 0;
   }
 }
 
+.closeBtn {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  font-size: 1.1em;
+}
 .filterForm {
   display: flex;
   flex-direction: column;
@@ -114,16 +114,6 @@
     font: inherit;
   }
 
-  #newImage {
-    padding: 1em 0;
-    border: 2px solid $header-color;
-    border-radius: 5px;
-    text-align: center;
-
-    p {
-      margin: 0;
-    }
-  }
   li.newCategory {
     display: flex;
     justify-content: space-between;
@@ -131,6 +121,17 @@
   }
 }
 
+#newImage {
+  position: relative;
+  padding: 1em 0;
+  border: 2px solid $header-color;
+  border-radius: 5px;
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+}
 @media screen and (min-width: 600px) {
   body {
     background-color: bisque;

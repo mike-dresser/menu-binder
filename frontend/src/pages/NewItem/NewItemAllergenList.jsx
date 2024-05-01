@@ -37,7 +37,6 @@ function NewItemAllergenList({ newItem, setNewItem }) {
     for (let entry of data) {
       allergenDict[entry.name] = entry.id;
     }
-    console.log(allergenDict);
   }
 
   function onListChange(e) {

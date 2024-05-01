@@ -233,14 +233,15 @@ li.allergen span.alliumItem::before {
   padding: 1em;
   border: 1px solid black;
 }
-.dialog .closeBtn {
+.dialog p {
+  margin: 0 0 0.5em 0;
+}
+
+.closeBtn {
   position: absolute;
   top: 0.5em;
   right: 0.5em;
   font-size: 1.1em;
-}
-.dialog p {
-  margin: 0 0 0.5em 0;
 }
 
 .filterForm {
@@ -307,19 +308,21 @@ li.allergen span.alliumItem::before {
   height: 20vh;
   font: inherit;
 }
-#newItem #newImage {
+#newItem li.newCategory {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+#newImage {
+  position: relative;
   padding: 1em 0;
   border: 2px solid rgb(192, 192, 192);
   border-radius: 5px;
   text-align: center;
 }
-#newItem #newImage p {
+#newImage p {
   margin: 0;
-}
-#newItem li.newCategory {
-  display: flex;
-  justify-content: space-between;
-  width: 50%;
 }
 
 @media screen and (min-width: 600px) {
