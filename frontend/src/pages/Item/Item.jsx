@@ -23,7 +23,7 @@ function Item() {
         ◁ Back
       </Link>
       {item['image'] && (
-        <EditableImg>
+        <EditableImg item={item} setItem={setItem}>
           <div id="imageFrame">
             <img src={item.image} />
           </div>

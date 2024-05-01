@@ -56,6 +56,7 @@ input[type=submit] {
 #itemDetails #imageFrame {
   height: 30vh;
   overflow: hidden;
+  width: 100%;
 }
 #itemDetails .backLink {
   font-size: 1.2em;
