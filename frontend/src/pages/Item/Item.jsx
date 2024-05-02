@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { EditModeContext } from '../../App';
 import ItemAllergens from './ItemAllergens';
 import EditableTextField from './EditableTextField';
 import EditableH2 from './EditableH2';
 import EditableImg from './EditableImg';
+import ImgUpload from '../NewItem/ImgUpload';
 
 function Item() {
+  const editMode = useContext(EditModeContext);
   const { id } = useParams();
   const [item, setItem] = useState({});
   useEffect(() => {
@@ -22,12 +25,16 @@ function Item() {
       <Link to="/" className="backLink">
         ◁ Back
       </Link>
-      {item['image'] && (
-        <EditableImg item={item} setItem={setItem}>
+      {item['image'] ? (
+        <EditableImg itemField="image" item={item} setItem={setItem}>
           <div id="imageFrame">
             <img src={item.image} />
           </div>
         </EditableImg>
+      ) : editMode ? (
+        <ImgUpload newItem={item} setNewItem={setItem} />
+      ) : (
+        ''
       )}
 
       <EditableH2 itemField="name" item={item} setItem={setItem}>
