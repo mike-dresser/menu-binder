@@ -1,47 +1,51 @@
 import React, { useEffect, useState } from 'react';
 
-let menuDict = {};
+let categoryDict = {};
 function NewItemCategoryList({ newItem, setNewItem }) {
-  const [allMenus, setAllMenus] = useState([]);
+  const [allCategories, setAllCategories] = useState([]);
   useEffect(() => {
-    fetch(`http://127.0.0.1:5555/menus`)
+    fetch(`http://127.0.0.1:5555/categories`)
       .then((res) => res.json())
       .then((data) => {
-        setAllMenus(data);
-        createMenuDict(data);
+        setAllCategories(data);
+        createCategoryDict(data);
       });
   }, []);
 
-  function createMenuDict(menuData) {
-    for (let menu of menuData) {
-      for (let category of menu.categories) {
-        menuDict[category.id] = `${menu.name} - ${category.name || menu.name}`;
-      }
+  function createCategoryDict(data) {
+    for (let category of data) {
+      categoryDict[category.category_id] = {
+        menu: { name: category.menu, id: category.menu_id },
+        category: { name: category.name, id: category.category_id },
+      };
     }
   }
+
   function onListChange(e) {
     // Add selected category to newItem
-    const itemCategories = [...newItem.menuCategories];
-    itemCategories.push(e.target.value);
-    setNewItem({ ...newItem, menuCategories: itemCategories });
+    const itemCategories = [...newItem.categories];
+    itemCategories.push(categoryDict[e.target.value]);
+    setNewItem({ ...newItem, categories: itemCategories });
     e.target.value = '';
   }
 
   function deleteCategory(id) {
-    const filtered = newItem.menuCategories.filter(
-      (categoryId) => categoryId != id
+    const filtered = newItem.categories.filter(
+      (category) => category.category.id != id
     );
-    setNewItem({ ...newItem, menuCategories: filtered });
+    setNewItem({ ...newItem, categories: filtered });
   }
   return (
     <>
-      {newItem.menuCategories.length > 0 && (
+      {newItem.categories.length > 0 && (
         <ul>
-          {newItem.menuCategories.map((categoryId) => {
+          {newItem.categories.map((category) => {
             return (
               <li className="newCategory">
-                {menuDict[categoryId]}
-                <span onClick={() => deleteCategory(categoryId)}>✖️</span>
+                {categoryDict[category.category.id].menu.name}
+                <span onClick={() => deleteCategory(category.category.id)}>
+                  ✖️
+                </span>
               </li>
             );
           })}
@@ -49,19 +53,15 @@ function NewItemCategoryList({ newItem, setNewItem }) {
       )}
       <select onChange={onListChange}>
         <option value="">Select menu category</option>
-        {allMenus.map((menu) => {
-          return (
-            <optgroup label={menu.name}>
-              {menu.categories.map((category) => {
-                return (
-                  <option value={category.id}>
-                    {category.name || menu.name}
-                  </option>
-                );
-              })}
-            </optgroup>
-          );
-        })}
+
+        {allCategories &&
+          allCategories.map((category) => {
+            return (
+              <option value={category.category_id}>
+                {category.menu} {category.name && ` - ${category.name}`}
+              </option>
+            );
+          })}
       </select>
     </>
   );
