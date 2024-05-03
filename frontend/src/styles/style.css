@@ -141,6 +141,7 @@ li.allergen span.alliumItem::before {
   color: rgb(192, 192, 192);
   font-size: 1.3em;
   padding-right: 1em;
+  cursor: pointer;
 }
 
 .allergenContainer {
@@ -237,12 +238,17 @@ li.allergen span.alliumItem::before {
 .dialog p {
   margin: 0 0 0.5em 0;
 }
+.dialog textarea {
+  display: block;
+  margin-bottom: 0.5em;
+}
 
 .closeBtn {
   position: absolute;
   top: 0.5em;
   right: 0.5em;
   font-size: 1.1em;
+  cursor: pointer;
 }
 
 .filterForm {
