@@ -41,7 +41,7 @@ function NewItemCategoryList({ newItem, setNewItem }) {
         <ul>
           {newItem.categories.map((category) => {
             return (
-              <li className="newCategory">
+              <li key={category.category.id} className="newCategory">
                 {categoryDict[category.category.id].menu.name}
                 <span onClick={() => deleteCategory(category.category.id)}>
                   ✖️
@@ -52,12 +52,14 @@ function NewItemCategoryList({ newItem, setNewItem }) {
         </ul>
       )}
       <select onChange={onListChange}>
-        <option value="">Select menu category</option>
+        <option key="0" value="">
+          Select menu category
+        </option>
 
         {allCategories &&
           allCategories.map((category) => {
             return (
-              <option value={category.category_id}>
+              <option key={category.category_id} value={category.category_id}>
                 {category.menu} {category.name && ` - ${category.name}`}
               </option>
             );

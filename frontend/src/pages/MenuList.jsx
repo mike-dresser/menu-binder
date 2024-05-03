@@ -25,8 +25,8 @@ function MenuList() {
       )}
       <ul id="menuList">
         {testMenu.map((menu) => (
-          <div className="dialogContainer">
-            <ItemList menu={menu} />
+          <div key={`${menu.name}Dialog`} className="dialogContainer">
+            <ItemList key={menu.id} menu={menu} />
           </div>
         ))}
       </ul>

@@ -41,7 +41,6 @@ function NewItemAllergenList({ newItem, setNewItem }) {
 
   function onListChange(e) {
     // Add selected allergen to newItem
-    console.log(e);
     const itemAllergens = [...newItem.allergens];
     itemAllergens.push({
       name: e.target.value,

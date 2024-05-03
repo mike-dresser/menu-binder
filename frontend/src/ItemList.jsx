@@ -51,7 +51,11 @@ function ItemList({ menu }) {
             <div className="filteredByContainer">
               <div>
                 {isFilteredBy.map((allergen) => {
-                  return <div className="filteredByBadge">{allergen}</div>;
+                  return (
+                    <div key={allergen} className="filteredByBadge">
+                      {allergen}
+                    </div>
+                  );
                 })}
               </div>
               <button onClick={handleClearFilter}>Clear ✖️</button>

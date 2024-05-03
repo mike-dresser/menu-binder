@@ -24,6 +24,7 @@ function ItemFilter({
     for (let item in filterItems) {
       filters.push(
         <Checkbox
+          key={item}
           label={`${item[0].toUpperCase()}${item.substring(1)}`}
           name={item}
           checked={filterItems[item]}

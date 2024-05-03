@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import NewItemAllergenList from './NewItemAllergenList';
 import NewItemCategoryList from './NewItemCategoryList';
 import { useNavigate } from 'react-router-dom';
