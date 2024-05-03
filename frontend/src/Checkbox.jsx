@@ -3,7 +3,7 @@ import React from 'react';
 function Checkbox({ label, name, checked = false, onFilterChange }) {
   return (
     <div>
-      <label>{label}</label>
+      <label htmlFor={name}>{label}</label>
       <input
         type="checkbox"
         name={name}

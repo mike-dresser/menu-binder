@@ -7,7 +7,7 @@ function Dialog({ boxState, setBoxState, title, content }) {
         ✖️
       </span>
       <p className="sectionHeader">{title}</p>
-      <p>{content}</p>
+      <div>{content}</div>
     </div>
   );
 }

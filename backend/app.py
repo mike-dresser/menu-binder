@@ -2,7 +2,6 @@ from flask import Flask, jsonify, request
 import os, random
 from flask_migrate import Migrate;
 from flask_cors import CORS
-from werkzeug.utils import secure_filename
 from models import db, Item, ItemAllergen, Allergen, CategoryItem, Category, Menu
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))

@@ -57,7 +57,7 @@ function Item() {
       <ul>
         {item.categories &&
           item.categories.map((category) => (
-            <li key={category.id}>{category.menu.name}</li>
+            <li key={category.category.id}>{category.menu.name}</li>
           ))}
       </ul>
     </div>
