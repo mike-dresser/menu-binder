@@ -55,7 +55,10 @@ function Item() {
 
       <p className="sectionHeader">Available</p>
       <ul>
-        {item.menus && item.menus.map((menu) => <li key={menu}>{menu}</li>)}
+        {item.categories &&
+          item.categories.map((category) => (
+            <li key={category.id}>{category.menu.name}</li>
+          ))}
       </ul>
     </div>
   );
