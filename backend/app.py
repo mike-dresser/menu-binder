@@ -52,17 +52,21 @@ def allergy_serialize(item):
                      "image": i["image"],
                      "price": i["price"],
                      "allergens": [],
-                     "menus": []
+                     "categories": []
                      }
 
     for entry in i["category_item"]:
-        menu = entry["category"]["menu"]["name"]
-        response_item["menus"].append(menu)
+        category = {"menu": {"name": entry["category"]["menu"]["name"],
+                             "id": entry["category"]["menu"]["id"]},
+                    "category": {"name": entry["category"]["name"],
+                                 "id": entry["category_id"]}}
+        response_item["categories"].append(category)
 
     for allergen in i["item_allergens"]:
         if allergen:
             allergen_response = {
                 "name": allergen["allergen"]["name"],
+                "id": allergen["allergen"]["id"],
                 "notes": allergen["notes"]
             }
             response_item["allergens"].append(allergen_response)
