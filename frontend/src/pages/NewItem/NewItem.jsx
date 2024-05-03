@@ -11,7 +11,7 @@ function NewItem() {
     description: '',
     allergens: [],
     mise: '',
-    price: '',
+    price: 0,
     categories: [],
     active: true,
     image: '',
