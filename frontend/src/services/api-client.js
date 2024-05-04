@@ -30,6 +30,19 @@ class ApiClient {
       });
     return result;
   }
+
+  async delete(endpoint) {
+    console.log(`deleting: ${this.baseUrl}${endpoint}`);
+    const result = await fetch(`${this.baseUrl}${endpoint}`, {
+      method: 'DELETE',
+    }).then((res) => {
+      if (res.ok) {
+        console.log(`successful delete`);
+        return {};
+      }
+    });
+    return result;
+  }
 }
 
 const api = new ApiClient('http://127.0.0.1:5555');

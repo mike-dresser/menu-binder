@@ -1,13 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Dialog from './Dialog';
 import ItemFilter from './ItemFilter';
+import { EditModeContext } from './App';
+import api from './services/api-client';
 
 function ItemList({ menu }) {
   const [expanded, setExpanded] = useState(false);
   const [showFilterOptions, setShowFilterOptions] = useState(false);
   const [filteredMenu, setFilteredMenu] = useState({});
   const [isFilteredBy, setIsFilteredBy] = useState([]);
+  const editMode = useContext(EditModeContext);
 
   function handleExpand() {
     setExpanded(!expanded);
@@ -18,6 +21,27 @@ function ItemList({ menu }) {
   function handleClearFilter() {
     setFilteredMenu(menu);
     setIsFilteredBy([]);
+  }
+  function handleItemDelete(id) {
+    async function fetchDelete() {
+      const result = await api.delete(`/items/${id}`);
+      return result;
+    }
+    fetchDelete();
+    function updateMenu() {
+      const updated = { categories: [] };
+      for (let category of filteredMenu.categories) {
+        const updatedCategoryItems = category.category_items.filter((each) => {
+          return each.item.id !== id;
+        });
+        updated.categories.push({
+          ...category,
+          category_items: updatedCategoryItems,
+        });
+      }
+      setFilteredMenu(updated);
+    }
+    updateMenu();
   }
   useEffect(() => {
     setFilteredMenu(menu);
@@ -75,6 +99,11 @@ function ItemList({ menu }) {
                 return (
                   <li key={`${name}${item.item.id}`} className="itemLink">
                     <Link to={`./items/${item.item.id}`}>{item.item.name}</Link>
+                    {editMode && (
+                      <button onClick={() => handleItemDelete(item.item.id)}>
+                        ✖️
+                      </button>
+                    )}
                   </li>
                 );
               })}
