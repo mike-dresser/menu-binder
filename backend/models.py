@@ -21,8 +21,8 @@ class Item(db.Model, SerializerMixin):
     mise = db.Column(db.String)
     active = db.Column(db.Boolean, default=True)
 
-    item_allergens = db.relationship('ItemAllergen', back_populates = 'item')
-    category_item = db.relationship('CategoryItem', back_populates = 'item')
+    item_allergens = db.relationship('ItemAllergen', back_populates = 'item', cascade='all, delete-orphan')
+    category_item = db.relationship('CategoryItem', back_populates = 'item', cascade='all, delete-orphan')
 
     serialize_rules = ('-item_allergens.item', '-category_item.item')
 

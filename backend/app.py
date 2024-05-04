@@ -120,7 +120,7 @@ def all_items():
         response = allergy_serialize(new_item);
         return add_cors(response), 201
 
-@app.route('/items/<int:id>', methods = ['GET', 'PATCH'])
+@app.route('/items/<int:id>', methods = ['GET', 'PATCH', 'DELETE'])
 def one_item(id):
     item = Item.query.filter_by(id = id).first()
     if not item:
@@ -136,7 +136,10 @@ def one_item(id):
         db.session.commit()
         response = allergy_serialize(item)
         return add_cors(response), 202
-
+    if request.method == 'DELETE':
+        db.session.delete(item)
+        db.session.commit()
+        return add_cors({}), 204
 
 @app.route('/menus')
 def items_by_menu():
