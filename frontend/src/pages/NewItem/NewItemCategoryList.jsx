@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import api from '../../services/api-client';
 
 let categoryDict = {};
 function NewItemCategoryList({ newItem, setNewItem }) {
   const [allCategories, setAllCategories] = useState([]);
   useEffect(() => {
-    fetch(`http://127.0.0.1:5555/categories`)
-      .then((res) => res.json())
-      .then((data) => {
-        setAllCategories(data);
-        createCategoryDict(data);
-      });
+    const fetchCategories = async () => {
+      const categories = await api.get('/categories');
+      setAllCategories(categories);
+      createCategoryDict(categories);
+    };
+    fetchCategories();
   }, []);
 
   function createCategoryDict(data) {

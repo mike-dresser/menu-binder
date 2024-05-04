@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Checkbox from './Checkbox';
+import api from './services/api-client';
 
 function ItemFilter({
   menuName,
@@ -44,16 +45,13 @@ function ItemFilter({
     for (let item in filterItems) {
       if (filterItems[item]) allergen_query.push(item);
     }
-    await fetch(
-      `http://127.0.0.1:5555/filter?menu=${menuName}&allergens=${allergen_query}`
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        setFilteredMenu(data);
-        setIsFilteredBy([allergen_query]);
-        setShowFilterOptions(false);
-        setIsFilteredBy(allergen_query);
-      });
+    const result = await api.get(
+      `/filter?menu=${menuName}&allergens=${allergen_query}`
+    );
+    setFilteredMenu(result);
+    setIsFilteredBy([allergen_query]);
+    setShowFilterOptions(false);
+    setIsFilteredBy(allergen_query);
   }
 
   return (

@@ -6,17 +6,18 @@ import EditableTextField from './EditableTextField';
 import EditableH2 from './EditableH2';
 import EditableImg from './EditableImg';
 import ImgUpload from '../NewItem/ImgUpload';
+import api from '../../services/api-client';
 
 function Item() {
   const editMode = useContext(EditModeContext);
   const { id } = useParams();
   const [item, setItem] = useState({});
   useEffect(() => {
-    fetch(`http://127.0.0.1:5555/items/${id}`)
-      .then((res) => res.json())
-      .then((menuData) => {
-        setItem(menuData);
-      });
+    const fetchItem = async () => {
+      const itemData = await api.get(`/items/${id}`);
+      setItem(itemData);
+    };
+    fetchItem();
   }, []);
   {
   }

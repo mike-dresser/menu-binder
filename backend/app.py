@@ -117,7 +117,7 @@ def all_items():
                                              category_id=category['category']['id'])
             db.session.add(new_category_item)
         db.session.commit()
-        response = new_item.to_dict()
+        response = allergy_serialize(new_item);
         return add_cors(response), 201
 
 @app.route('/items/<int:id>', methods = ['GET', 'PATCH'])

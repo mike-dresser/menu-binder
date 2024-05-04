@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import NewItemAllergen from './NewItemAllergen';
+import api from '../../services/api-client';
 
 // This caches existing allergen names
 let allAllergens = [];
@@ -11,13 +12,13 @@ function NewItemAllergenList({ newItem, setNewItem }) {
   // Query all existing allergens to populate select box
   useEffect(() => {
     if (!allAllergens.length) {
-      fetch(`http://127.0.0.1:5555/allergens`)
-        .then((res) => res.json())
-        .then((allergenData) => {
-          allAllergens = allergenData;
-          createAllergenDict(allergenData);
-          setFilteredAllergens(allAllergens);
-        });
+      const fetchAllergens = async () => {
+        const allergens = await api.get('/allergens');
+        allAllergens = allergens;
+        createAllergenDict(allergens);
+        setFilteredAllergens(allAllergens);
+      };
+      fetchAllergens();
     }
     // Selected allergens are removed from select options
     let unselectedAllergens = allAllergens.filter((savedAllergen) => {

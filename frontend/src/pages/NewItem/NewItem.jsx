@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import NewItemAllergenList from './NewItemAllergenList';
 import NewItemCategoryList from './NewItemCategoryList';
 import { useNavigate } from 'react-router-dom';
 import ImgUpload from './ImgUpload';
+import api from '../../services/api-client';
 
 function NewItem() {
   const navigate = useNavigate();
@@ -17,22 +18,25 @@ function NewItem() {
     image: '',
   });
 
+  useEffect(() => {
+    if (newItem.id) {
+      navigate(`../items/${newItem.id}`);
+    }
+  }, [newItem]);
+
   function onTextChange(e) {
     setNewItem({ ...newItem, [e.target.name]: e.target.value });
   }
 
   function onSubmit(e) {
     e.preventDefault();
-    fetch(`http://127.0.0.1:5555/items`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(newItem),
-    })
-      .then((res) => res.json())
-      .then((data) => navigate(`/items/${data.id}`));
+    const postItem = async () => {
+      const response = await api.post('/items', newItem);
+      setNewItem(response);
+    };
+    postItem();
   }
+
   return (
     <>
       <p className="sectionHeader">Image</p>

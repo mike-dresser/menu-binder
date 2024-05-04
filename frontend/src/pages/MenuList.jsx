@@ -2,6 +2,7 @@ import { useEffect, useState, useContext } from 'react';
 import ItemList from '../ItemList';
 import { EditModeContext } from '../App';
 import { useNavigate } from 'react-router-dom';
+import api from '../services/api-client';
 
 function MenuList() {
   const [testMenu, setTestMenu] = useState([]);
@@ -9,12 +10,11 @@ function MenuList() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('http://127.0.0.1:5555/menus')
-      .then((res) => res.json())
-      .then((menuData) => {
-        setTestMenu(menuData);
-        // console.log(menuData);
-      });
+    const fetchMenuData = async () => {
+      const menuData = await api.get('/menus');
+      setTestMenu(menuData);
+    };
+    fetchMenuData();
   }, []);
   return (
     <>
@@ -24,11 +24,12 @@ function MenuList() {
         </button>
       )}
       <ul id="menuList">
-        {testMenu.map((menu) => (
-          <div key={`${menu.name}Dialog`} className="dialogContainer">
-            <ItemList key={menu.id} menu={menu} />
-          </div>
-        ))}
+        {testMenu &&
+          testMenu.map((menu) => (
+            <div key={`${menu.name}Dialog`} className="dialogContainer">
+              <ItemList key={menu.id} menu={menu} />
+            </div>
+          ))}
       </ul>
     </>
   );
