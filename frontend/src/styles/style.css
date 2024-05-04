@@ -151,6 +151,10 @@ li.allergen span.alliumItem::before {
   flex-wrap: wrap;
 }
 
+button.text {
+  border: none;
+}
+
 #menuList ul {
   display: none;
 }
@@ -172,6 +176,9 @@ li.allergen span.alliumItem::before {
   display: block;
 }
 #menuList li.itemLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-weight: 600;
   font-size: 1.2em;
   line-height: 1.4em;

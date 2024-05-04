@@ -4,6 +4,7 @@ import Dialog from './Dialog';
 import ItemFilter from './ItemFilter';
 import { EditModeContext } from './App';
 import api from './services/api-client';
+import Button from './components/Button';
 
 function ItemList({ menu }) {
   const [expanded, setExpanded] = useState(false);
@@ -100,9 +101,9 @@ function ItemList({ menu }) {
                   <li key={`${name}${item.item.id}`} className="itemLink">
                     <Link to={`./items/${item.item.id}`}>{item.item.name}</Link>
                     {editMode && (
-                      <button onClick={() => handleItemDelete(item.item.id)}>
-                        ✖️
-                      </button>
+                      <Button action={() => handleItemDelete(item.item.id)}>
+                        ✖
+                      </Button>
                     )}
                   </li>
                 );
