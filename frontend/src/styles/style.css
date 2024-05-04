@@ -40,16 +40,6 @@ img {
   display: none;
 }
 
-button,
-input[type=submit] {
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 0.5em 1em;
-  font-size: 0.9em;
-  margin: 0;
-}
-
 #itemDetails {
   white-space: pre-wrap;
 }
@@ -153,6 +143,24 @@ li.allergen span.alliumItem::before {
 
 button.text {
   border: none;
+  background-color: white;
+}
+button.outline {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+  margin: 0;
+}
+
+input[type=submit] {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+  margin: 0;
 }
 
 #menuList ul {
@@ -195,9 +203,6 @@ button.text {
 #menuList div.filteredByContainer div {
   flex-wrap: wrap;
 }
-#menuList div.filteredByContainer button {
-  flex-shrink: 0;
-}
 #menuList .filteredByBadge {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
@@ -214,9 +219,10 @@ button.text {
   padding-bottom: 1.2em;
 }
 
-.newItemBtn {
-  display: block;
-  margin: 1em auto;
+#newItemBtn {
+  display: flex;
+  justify-content: center;
+  padding-top: 1em;
 }
 
 .sectionHeader {

@@ -1,5 +1,23 @@
 button {
   &.text {
     border: none;
+    background-color: white;
   }
+  &.outline {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+    margin: 0;
+  }
+}
+// Still working out how to handle form submit
+input[type='submit'] {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+  margin: 0;
 }

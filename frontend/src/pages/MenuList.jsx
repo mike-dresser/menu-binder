@@ -1,5 +1,6 @@
 import { useEffect, useState, useContext } from 'react';
 import ItemList from '../ItemList';
+import Button from '../components/Button';
 import { EditModeContext } from '../App';
 import { useNavigate } from 'react-router-dom';
 import api from '../services/api-client';
@@ -19,9 +20,11 @@ function MenuList() {
   return (
     <>
       {editMode && (
-        <button className="newItemBtn" onClick={() => navigate('/new')}>
-          Add New Item
-        </button>
+        <div id="newItemBtn">
+          <Button type="outline" action={() => navigate('/new')}>
+            Add New Item
+          </Button>
+        </div>
       )}
       <ul id="menuList">
         {testMenu &&

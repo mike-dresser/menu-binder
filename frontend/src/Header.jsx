@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Button from './components/Button';
 
 function Header({ editMode, setEditMode }) {
   return (
@@ -7,9 +8,9 @@ function Header({ editMode, setEditMode }) {
       <h1 className="logo">
         <Link to="/">Menu Binder</Link>
       </h1>
-      <button onClick={() => setEditMode(!editMode)}>
+      <Button action={() => setEditMode(!editMode)} type="outline">
         {editMode ? 'Finish Editing' : 'Edit'}
-      </button>
+      </Button>
     </div>
   );
 }

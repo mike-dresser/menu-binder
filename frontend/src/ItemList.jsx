@@ -83,11 +83,15 @@ function ItemList({ menu }) {
                   );
                 })}
               </div>
-              <button onClick={handleClearFilter}>Clear ✖️</button>
+              <Button action={handleClearFilter} type="outline">
+                Clear ✖️
+              </Button>
             </div>
           </>
         ) : (
-          <button onClick={handleShowFilter}>Filter...</button>
+          <Button action={handleShowFilter} type="outline">
+            Filter...
+          </Button>
         ))}
       {categories &&
         categories.map((each) => {
@@ -101,7 +105,10 @@ function ItemList({ menu }) {
                   <li key={`${name}${item.item.id}`} className="itemLink">
                     <Link to={`./items/${item.item.id}`}>{item.item.name}</Link>
                     {editMode && (
-                      <Button action={() => handleItemDelete(item.item.id)}>
+                      <Button
+                        action={() => handleItemDelete(item.item.id)}
+                        type="text"
+                      >
                         ✖
                       </Button>
                     )}

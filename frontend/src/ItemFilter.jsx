@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Checkbox from './Checkbox';
+import Button from './components/Button';
 import api from './services/api-client';
 
 function ItemFilter({
@@ -58,7 +59,7 @@ function ItemFilter({
     <div className="filterForm">
       {populateFilterForm()}
 
-      <button onClick={handleSubmit}>Filter</button>
+      <Button action={handleSubmit}>Filter</Button>
     </div>
   );
 }

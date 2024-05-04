@@ -11,9 +11,10 @@
   border-bottom: 2px solid lightgrey;
   padding-bottom: 1.2em;
 }
-.newItemBtn {
-  display: block;
-  margin: 1em auto;
+#newItemBtn {
+  display: flex;
+  justify-content: center;
+  padding-top: 1em;
 }
 .sectionHeader {
   font-weight: 600;
