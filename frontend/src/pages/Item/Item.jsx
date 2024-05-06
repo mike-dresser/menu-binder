@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { EditModeContext } from '../../App';
-import ItemAllergens from './ItemAllergens';
 import EditableTextField from './EditableTextField';
 import EditableImg from './EditableImg';
 import ImgUpload from '../NewItem/ImgUpload';
 import api from '../../services/api-client';
+import EditableList from './EditableList';
 
 function Item() {
   const editMode = useContext(EditModeContext);
@@ -54,7 +54,7 @@ function Item() {
 
       <p className="sectionHeader">Allergens</p>
 
-      {item.allergens && <ItemAllergens item={item} />}
+      <EditableList item={item}>{item.allergens}</EditableList>
 
       <p className="sectionHeader">Mise</p>
 

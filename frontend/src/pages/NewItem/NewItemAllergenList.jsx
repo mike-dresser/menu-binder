@@ -55,14 +55,15 @@ function NewItemAllergenList({ newItem, setNewItem }) {
   return (
     <>
       <ul className="allergenContainer">
-        {newItem.allergens.map((allergen) => (
-          <NewItemAllergen
-            allergen={allergen}
-            key={allergen.name}
-            newItem={newItem}
-            setNewItem={setNewItem}
-          />
-        ))}
+        {newItem.allergens &&
+          newItem.allergens.map((allergen) => (
+            <NewItemAllergen
+              allergen={allergen}
+              key={allergen.name}
+              newItem={newItem}
+              setNewItem={setNewItem}
+            />
+          ))}
       </ul>
       <select name="allergens" onChange={onListChange}>
         <option value="">Select item allergens</option>
