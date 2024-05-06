@@ -16,7 +16,7 @@ function ImgUpload({ newItem, setNewItem }) {
       .then((data) => {
         console.log(data);
         if (data.filename) {
-          setNewItem({ ...newItem, image: `../public/${data.filename}` });
+          setNewItem({ ...newItem, image: `/${data.filename}` });
         }
       });
   }

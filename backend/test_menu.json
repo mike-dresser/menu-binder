@@ -8,7 +8,7 @@
         "allergies": [{ "name": "allium", "notes": "" }],
         "mise": "Small ramekin for pits",
         "category": "Snacks",
-        "image": "../public/olives.avif"
+        "image": "/olives.avif"
       },
       {
         "name": "Chips & Dip",
@@ -30,7 +30,7 @@
         ],
         "mise": "Fork, Knife, Tea Spoon (Share)",
         "category": "Snacks",
-        "image": "../public/whitefish.avif"
+        "image": "/whitefish.avif"
       },
       {
         "name": "Crab Dip",
@@ -47,7 +47,7 @@
         ],
         "mise": "Fork, Knife, Tea Spoon (Share)",
         "category": "Snacks",
-        "image": "../public/crab_dip.jpeg"
+        "image": "/crab_dip.jpeg"
       },
       {
         "name": "Caesar Salad",
@@ -62,7 +62,7 @@
         ],
         "mise": "Fork, Knife",
         "category": "Apps",
-        "image": "../public/caesar.avif"
+        "image": "/caesar.avif"
       },
       {
         "name": "Farro Grain Bowl",
@@ -89,7 +89,7 @@
           { "name": "nightshade", "notes": "" }
         ],
         "mise": "Soup Spoon",
-        "image": "../public/soup.jpg",
+        "image": "/soup.jpg",
         "category": "Apps"
       },
       {
@@ -104,7 +104,7 @@
         ],
         "mise": "Fork, Knife",
         "category": "Mains",
-        "image": "../public/lobster_roll.jpeg"
+        "image": "/lobster_roll.jpeg"
       },
       {
         "name": "Avocado & Lox Tartine",
@@ -117,7 +117,7 @@
         ],
         "mise": "Fork, Steak Knife",
         "category": "Mains",
-        "image": "../public/avo_lox_tartine.jpeg"
+        "image": "/avo_lox_tartine.jpeg"
       },
       {
         "name": "Smoked Turkey Sandwich",
@@ -130,7 +130,7 @@
         ],
         "mise": "Fork, Steak Knife",
         "category": "Mains",
-        "image": "../public/turkey_sandwich.avif"
+        "image": "/turkey_sandwich.avif"
       },
       {
         "name": "Egg Sandwich",
@@ -144,7 +144,7 @@
         ],
         "mise": "Fork, Steak Knife",
         "category": "Mains",
-        "image": "../public/egg_sandwich.avif"
+        "image": "/egg_sandwich.avif"
       },
       {
         "name": "JG Burger",
@@ -158,7 +158,7 @@
         ],
         "mise": "Fork, Steak Knife",
         "category": "Mains",
-        "image": "../public/burger.avif"
+        "image": "/burger.avif"
       },
       {
         "name": "Fish and Chips",
@@ -171,7 +171,7 @@
         ],
         "mise": "Fork, Steak Knife",
         "category": "Mains",
-        "image": "../public/fish_chips.jpeg"
+        "image": "/fish_chips.jpeg"
       },
       {
         "name": "Fried Artichokes",
@@ -184,7 +184,7 @@
         ],
         "mise": "Fork",
         "category": "Sides",
-        "image": "../public/artichokes.jpeg"
+        "image": "/artichokes.jpeg"
       },
       {
         "name": "French Fries",
@@ -195,7 +195,7 @@
         ],
         "mise": "Fork",
         "category": "Sides",
-        "image": "../public/fries.avif"
+        "image": "/fries.avif"
       },
 
       {
@@ -204,7 +204,7 @@
         "allergies": "",
         "mise": "Fork, Knife",
         "category": "Sides",
-        "image": "../public/lettuces.avif"
+        "image": "/lettuces.avif"
       }
     ]
   },
@@ -217,7 +217,7 @@
         "allergies": [{ "name": "allium", "notes": "" }],
         "mise": "Small ramekin for pits",
         "category": "Snacks",
-        "image": "../public/olives.avif"
+        "image": "/olives.avif"
       },
       {
         "name": "House Pickles",
@@ -238,7 +238,7 @@
         ],
         "mise": "Fork, Knife, Tea Spoon (Share)",
         "category": "Snacks",
-        "image": "../public/whitefish.avif"
+        "image": "/whitefish.avif"
       },
       {
         "name": "Chips & Dip",
@@ -305,7 +305,7 @@
         ],
         "mise": "teaspoon (tuck it in at the pass)",
         "category": "Apps",
-        "image": "../public/tartare.jpeg"
+        "image": "/tartare.jpeg"
       },
       {
         "name": "Summer Chicories",
@@ -331,7 +331,7 @@
         ],
         "mise": "Fork, Knife, Spoon, 2 bowls for shells",
         "category": "Mains",
-        "image": "../public/mussels.jpeg"
+        "image": "/mussels.jpeg"
       },
       {
         "name": "Lobster Roll",
@@ -355,7 +355,7 @@
         ],
         "mise": "Fork, Knife",
         "category": "Mains",
-        "image": "../public/char.jpeg"
+        "image": "/char.jpeg"
       },
       {
         "name": "Steak Frites",
@@ -437,7 +437,7 @@
         ],
         "mise": "Fork, Knife",
         "category": "Brunch",
-        "image": "../public/pancakes.jpeg"
+        "image": "/pancakes.jpeg"
       },
       {
         "name": "Avocado & Lox Tartine",
@@ -462,7 +462,7 @@
         ],
         "mise": "Fork, Knife",
         "category": "Brunch",
-        "image": "../public/lobster_omelet.jpeg"
+        "image": "/lobster_omelet.jpeg"
       },
       {
         "name": "Eggs & Hash",
@@ -475,7 +475,7 @@
         ],
         "mise": "Fork, Knife",
         "category": "Brunch",
-        "image": "../public/eggs_hash.jpg"
+        "image": "/eggs_hash.jpg"
       },
       {
         "name": "Spicy Egg Sandwich",
@@ -488,7 +488,7 @@
         ],
         "mise": "Fork, Knife",
         "category": "Sandwiches",
-        "image": "../public/egg_sandwich.avif"
+        "image": "/egg_sandwich.avif"
       },
       {
         "name": "Lobster Roll",
@@ -627,7 +627,7 @@
         ],
         "mise": "Fork, Knife",
         "category": "To Share",
-        "image": "../public/fresser.jpeg"
+        "image": "/fresser.jpeg"
       }
     ]
   },
@@ -646,7 +646,7 @@
           { "name": "pork", "notes": "Gelatin contains pork" }
         ],
         "mise": "Spoon",
-        "image": "../public/panna_cotta.jpeg"
+        "image": "/panna_cotta.jpeg"
       },
       {
         "name": "Olive Oil Cake",
@@ -685,7 +685,7 @@
           { "name": "eggs", "notes": "" }
         ],
         "mise": "None",
-        "image": "../public/cookies.jpeg"
+        "image": "/cookies.jpeg"
       }
     ]
   }
