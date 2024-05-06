@@ -345,7 +345,7 @@ input[type=submit] {
   margin: 0;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 425px) {
   body {
     background-color: bisque;
     height: 100vh;

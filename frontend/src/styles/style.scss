@@ -1,3 +1,4 @@
+@use 'sass:map';
 @import 'config';
 @import 'item';
 @import '../components/Button/button';
@@ -140,7 +141,7 @@
     margin: 0;
   }
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: map.get($screen-size, 'sm')) {
   body {
     background-color: bisque;
     height: 100vh;
