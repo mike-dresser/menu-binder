@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { EditModeContext } from '../../App';
 import api from '../../services/api-client';
 
-function EditableTextField({ itemField, item, setItem, children }) {
+function EditableTextField({ type = 'p', itemField, item, setItem, children }) {
   const editMode = useContext(EditModeContext);
   const [enableEdit, setEnableEdit] = useState(false);
 
@@ -18,7 +18,8 @@ function EditableTextField({ itemField, item, setItem, children }) {
         />
       ) : (
         <div className="editableField">
-          <p>{children}</p>
+          {React.createElement(type, { children })}
+          {/* <p>{children}</p> */}
           {editMode && (
             <span className="editGlyph" onClick={() => setEnableEdit(true)}>
               ✎

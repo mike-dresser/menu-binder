@@ -3,7 +3,6 @@ import { Link, useParams } from 'react-router-dom';
 import { EditModeContext } from '../../App';
 import ItemAllergens from './ItemAllergens';
 import EditableTextField from './EditableTextField';
-import EditableH2 from './EditableH2';
 import EditableImg from './EditableImg';
 import ImgUpload from '../NewItem/ImgUpload';
 import api from '../../services/api-client';
@@ -38,9 +37,14 @@ function Item() {
         ''
       )}
 
-      <EditableH2 itemField="name" item={item} setItem={setItem}>
+      <EditableTextField
+        type="h2"
+        itemField="name"
+        item={item}
+        setItem={setItem}
+      >
         {item.name}
-      </EditableH2>
+      </EditableTextField>
 
       <p className="sectionHeader">Description</p>
 
@@ -54,7 +58,9 @@ function Item() {
 
       <p className="sectionHeader">Mise</p>
 
-      <EditableTextField>{item.mise}</EditableTextField>
+      <EditableTextField itemField="mise" item={item} setItem={setItem}>
+        {item.mise}
+      </EditableTextField>
 
       <p className="sectionHeader">Available</p>
       <ul>
