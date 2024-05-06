@@ -14,7 +14,7 @@ class ApiClient {
     return result;
   }
 
-  async post(endpoint, content) {
+  async post(endpoint, content = {}) {
     console.log(`posting: ${this.baseUrl}${endpoint}`);
     const result = await fetch(`${this.baseUrl}${endpoint}`, {
       method: 'POST',

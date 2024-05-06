@@ -77,6 +77,7 @@ def upload_file():
     if request.method == 'GET':
         return 'Welcome to the Menu API', 200
     if request.method == 'POST':
+        """Endpoint for image file upload"""
         # check if the post request has the file part
         if 'file' not in request.files:
             return {'error': 'no file part'}, 400
@@ -95,9 +96,11 @@ def upload_file():
 @app.route('/items', methods = ['GET', 'POST'])
 def all_items():
     if request.method == 'GET':
-        response = [allergy_serialize(item) for item in Item.query.all()]
+        """Return all items sorted alphabetically (not grouped by menu)"""
+        response = [allergy_serialize(item) for item in Item.query.order_by(Item.name).all()]
         return add_cors(response), 200
     if request.method == 'POST':
+        """Create new item, add categories and allergens to appropriate tables"""
         r = request.get_json()
         new_item = Item(name=r.get('name'),
                         price=r.get('price'),
@@ -126,9 +129,11 @@ def one_item(id):
     if not item:
         return {"error": f"No item with id {id} found."}, 404
     if request.method == 'GET':
+        """Return item details"""
         response = allergy_serialize(item)
         return add_cors(response), 200
     if request.method == 'PATCH':
+        """Edit item details"""
         req_data = request.get_json()
         for key, value in req_data.items():
             setattr(item, key, value)
@@ -137,31 +142,50 @@ def one_item(id):
         response = allergy_serialize(item)
         return add_cors(response), 202
     if request.method == 'DELETE':
+        """Delete item"""
         db.session.delete(item)
         db.session.commit()
         return add_cors({}), 204
 
 @app.route('/menus')
 def items_by_menu():
+    """Return all items sorted by menu / category"""
     response = [menu.to_dict() for menu in Menu.query.all()]
     return add_cors(response), 200
 
 @app.route('/allergens')
 def all_allergens():
+    """Return all unique allergens in db"""
     response = [allergen.to_dict() for allergen in Allergen.query.all()]
     return add_cors(response), 200
 
-@app.route('/categories')
+@app.route('/categories', methods=['GET', 'POST'])
 def menu_categories():
-    response = []
-    all_categories = [category.to_dict() for category in Category.query.all()]
-    for cat in all_categories:
-       cat_response = {"name": cat.get('name'),
-                       "category_id": cat.get('id'),
-                       "menu_id": cat.get('menu_id'),
-                       "menu": cat.get('menu').get('name')}
-       response.append(cat_response)
-    return add_cors(response), 200
+    """Return all existing menu categories (name, id)"""
+    if request.method == 'GET':
+        response = []
+        all_categories = [category.to_dict() for category in Category.query.all()]
+        for cat in all_categories:
+            cat_response = {"name": cat.get('name'),
+                            "category_id": cat.get('id'),
+                            "menu_id": cat.get('menu_id'),
+                            "menu": cat.get('menu').get('name')}
+            response.append(cat_response)
+        return add_cors(response), 200
+    if request.method == 'POST':
+        """ Add an existing item to a category
+        
+        query format: /categories?item_id=[int]&category_id=[int]
+        (No post body)
+        Item record is returned to update client list"""
+        query = request.args
+        new_category_item= CategoryItem(item_id = query.get('item_id'),
+                                        category_id = query.get('category_id'))
+        db.session.add(new_category_item)
+        db.session.commit()
+        # response = new_category_item.to_dict()
+        response = Item.query.filter_by(id=query.get('item_id')).first().to_dict()
+        return add_cors(response), 201
 
 @app.route('/filter')
 def filtered_items():

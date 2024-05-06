@@ -5,8 +5,9 @@ import ItemFilter from './ItemFilter';
 import { EditModeContext } from './App';
 import api from './services/api-client';
 import Button from './components/Button';
+import ItemAdd from './ItemAdd';
 
-function ItemList({ menu }) {
+function ItemList({ menu, allItems }) {
   const [expanded, setExpanded] = useState(false);
   const [showFilterOptions, setShowFilterOptions] = useState(false);
   const [filteredMenu, setFilteredMenu] = useState({});
@@ -89,16 +90,30 @@ function ItemList({ menu }) {
             </div>
           </>
         ) : (
-          <Button action={handleShowFilter} type="outline">
-            Filter...
-          </Button>
+          !editMode && (
+            <Button action={handleShowFilter} type="outline">
+              Filter...
+            </Button>
+          )
         ))}
       {categories &&
         categories.map((each) => {
+          {
+          }
           return (
             <ul className={expanded ? 'expanded' : ''}>
               <li key={`${name}${each.name}`}>
                 <p className="sectionHeader">{each.name}</p>
+              </li>
+              <li key={`${name}${each.name}Add`}>
+                {editMode && (
+                  <ItemAdd
+                    allItems={allItems}
+                    categoryId={each.id}
+                    filteredMenu={filteredMenu}
+                    setFilteredMenu={setFilteredMenu}
+                  />
+                )}
               </li>
               {each.category_items.map((item) => {
                 return (

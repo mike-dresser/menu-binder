@@ -7,6 +7,7 @@ import api from '../services/api-client';
 
 function MenuList() {
   const [testMenu, setTestMenu] = useState([]);
+  const [allItems, setAllItems] = useState([]);
   const editMode = useContext(EditModeContext);
   const navigate = useNavigate();
 
@@ -16,6 +17,12 @@ function MenuList() {
       setTestMenu(menuData);
     };
     fetchMenuData();
+    const fetchAllItems = async () => {
+      const itemData = await api.get('/items');
+      setAllItems(itemData);
+    };
+    fetchMenuData();
+    fetchAllItems();
   }, []);
   return (
     <>
@@ -30,7 +37,7 @@ function MenuList() {
         {testMenu &&
           testMenu.map((menu) => (
             <div key={`${menu.name}Dialog`} className="dialogContainer">
-              <ItemList key={menu.id} menu={menu} />
+              <ItemList key={menu.id} menu={menu} allItems={allItems} />
             </div>
           ))}
       </ul>
