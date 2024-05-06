@@ -35,7 +35,7 @@ function ImgUpload({ newItem, setNewItem }) {
     <div id="newImage">
       {newItem.image ? (
         <>
-          <img src={newItem.image} />
+          <img src={`public${newItem.image}`} />
           <span className="closeBtn" onClick={handleImgDelete}>
             ✖️
           </span>

@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { EditModeContext } from '../../App';
+import api from '../../services/api-client';
 
 function EditableH2({ children, itemField, item, setItem }) {
   const editMode = useContext(EditModeContext);
@@ -37,17 +38,12 @@ function EditField({ content, setEnableEdit, itemField, item, setItem }) {
   function onCancel() {
     setEnableEdit(false);
   }
-  function onSubmit() {
-    fetch(`http://127.0.0.1:5555/items/${item.id}`, {
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ [itemField]: newContent }),
-    }).then(() => {
-      setEnableEdit(false);
-      setItem({ ...item, [itemField]: newContent });
-    });
+
+  async function onSubmit() {
+    const content = { [itemField]: newContent };
+    await api.patch(`/items/${item.id}`, content);
+    setEnableEdit(false);
+    setItem({ ...item, ...content });
   }
 
   return (

@@ -31,6 +31,23 @@ class ApiClient {
     return result;
   }
 
+  async patch(endpoint, content = {}) {
+    console.log(`patching: ${this.baseUrl}${endpoint}`);
+    const result = await fetch(`${this.baseUrl}${endpoint}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(content),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(`data:`, data);
+        return data;
+      });
+    return result;
+  }
+
   async delete(endpoint) {
     console.log(`deleting: ${this.baseUrl}${endpoint}`);
     const result = await fetch(`${this.baseUrl}${endpoint}`, {
