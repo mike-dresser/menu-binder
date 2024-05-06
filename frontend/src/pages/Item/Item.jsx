@@ -44,7 +44,9 @@ function Item() {
 
       <p className="sectionHeader">Description</p>
 
-      <EditableTextField>{item.description}</EditableTextField>
+      <EditableTextField itemField="description" item={item} setItem={setItem}>
+        {item.description}
+      </EditableTextField>
 
       <p className="sectionHeader">Allergens</p>
 
