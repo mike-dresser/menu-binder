@@ -6,6 +6,7 @@ import { EditModeContext } from './App';
 import api from './services/api-client';
 import Button from './components/Button';
 import ItemAdd from './ItemAdd';
+import { HiChevronRight, HiChevronDown, HiX } from 'react-icons/hi';
 
 function ItemList({ menu, allItems }) {
   const [expanded, setExpanded] = useState(false);
@@ -53,7 +54,9 @@ function ItemList({ menu, allItems }) {
     <li key={`${name}Item`}>
       <div key={`${name}Div`} onClick={handleExpand}>
         <h2>{name}</h2>
-        <span className="expandGlyph">{expanded ? '▿' : '▹'}</span>
+        <span className="expandGlyph">
+          {expanded ? <HiChevronDown /> : <HiChevronRight />}
+        </span>
       </div>
       {showFilterOptions && (
         <Dialog
@@ -124,7 +127,7 @@ function ItemList({ menu, allItems }) {
                         action={() => handleItemDelete(item.item.id)}
                         type="text"
                       >
-                        ✖
+                        <HiX />
                       </Button>
                     )}
                   </li>

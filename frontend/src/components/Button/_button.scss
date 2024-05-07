@@ -10,6 +10,12 @@ button {
     padding: 0.5em 1em;
     font-size: 0.9em;
     margin: 0;
+
+    .icon {
+      display: flex;
+      align-items: center;
+      gap: 0.25em;
+    }
   }
 }
 // Still working out how to handle form submit

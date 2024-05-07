@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { EditModeContext } from '../../App';
 import api from '../../services/api-client';
+import { HiOutlinePencil, HiCheck, HiX } from 'react-icons/hi';
 
 function EditableH2({ children, itemField, item, setItem }) {
   const editMode = useContext(EditModeContext);
@@ -21,7 +22,7 @@ function EditableH2({ children, itemField, item, setItem }) {
           <h2>{children}</h2>
           {editMode && (
             <span className="editGlyph" onClick={() => setEnableEdit(true)}>
-              ✎
+              <HiOutlinePencil />
             </span>
           )}
         </div>
@@ -52,8 +53,12 @@ function EditField({ content, setEnableEdit, itemField, item, setItem }) {
         <textarea value={newContent} onChange={onTextChange} />
       </h2>
       <div>
-        <span onClick={onSubmit}>✔︎</span>
-        <span onClick={onCancel}>𐄂️</span>
+        <span onClick={onSubmit}>
+          ︎<HiCheck />
+        </span>
+        <span onClick={onCancel}>
+          <HiX />
+        </span>
       </div>
     </div>
   );

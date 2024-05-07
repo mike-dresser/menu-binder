@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { HiX } from 'react-icons/hi';
 
 function ImgUpload({ newItem, setNewItem }) {
   const [file, setFile] = useState();
@@ -35,9 +36,9 @@ function ImgUpload({ newItem, setNewItem }) {
     <div id="newImage">
       {newItem.image ? (
         <>
-          <img src={`public${newItem.image}`} />
+          <img src={`/public${newItem.image}`} />
           <span className="closeBtn" onClick={handleImgDelete}>
-            ✖️
+            <HiX />
           </span>
         </>
       ) : (

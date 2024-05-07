@@ -39,9 +39,10 @@ li.allergen {
   }
 }
 .infoGlyph {
+  display: flex;
+  align-items: center;
   color: $header-color;
-  font-size: 1.3em;
-  padding-right: 1em;
+  padding-right: 0.8em;
   cursor: pointer;
 }
 .allergenContainer {

@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { EditModeContext } from '../../App';
 import ImgUpload from '../NewItem/ImgUpload';
+import { HiOutlinePencil, HiCheck, HiX } from 'react-icons/hi';
 
 function EditableImg({ children, itemField, item, setItem }) {
   const editMode = useContext(EditModeContext);
@@ -15,7 +16,7 @@ function EditableImg({ children, itemField, item, setItem }) {
           {children}
           {editMode && (
             <span className="editGlyph" onClick={() => setEnableEdit(true)}>
-              ✎
+              <HiOutlinePencil />
             </span>
           )}
         </div>
@@ -45,8 +46,12 @@ function EditableImg({ children, itemField, item, setItem }) {
       <div className="fieldEdit">
         <ImgUpload newItem={item} setNewItem={setItem} />
         <div>
-          <span onClick={onSubmit}>✔︎</span>
-          <span onClick={onCancel}>𐄂️</span>
+          <span onClick={onSubmit}>
+            <HiCheck />
+          </span>
+          <span onClick={onCancel}>
+            ️<HiX />
+          </span>
         </div>
       </div>
     );
