@@ -17,7 +17,7 @@ li.allergen {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 40%;
+  min-width: 40%;
   height: 1.5em;
   span:not(.closeBtn) {
     // generic styling for undefined allergens

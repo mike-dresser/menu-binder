@@ -3,8 +3,9 @@ import ItemAllergens from './ItemAllergens';
 import { EditModeContext } from '../../App';
 import NewItemAllergenList from '../NewItem/NewItemAllergenList';
 import NewItemCategoryList from '../NewItem/NewItemCategoryList';
-import { HiOutlinePencil, HiCheck, HiX } from 'react-icons/hi';
+import { HiOutlinePencil } from 'react-icons/hi';
 import api from '../../services/api-client';
+import Confirm from '../../components/Confirm';
 
 function EditableList({ field, item, setItem }) {
   const editMode = useContext(EditModeContext);
@@ -40,7 +41,7 @@ function EditableList({ field, item, setItem }) {
   }
   return (
     <div className="editableField">
-      {enableEdit ? (
+      {editMode && enableEdit ? (
         field === 'itemAllergens' ? (
           <NewItemAllergenList newItem={newItem} setNewItem={setNewItem} />
         ) : (
@@ -62,14 +63,7 @@ function EditableList({ field, item, setItem }) {
       )}
       {editMode &&
         (enableEdit ? (
-          <div>
-            <span onClick={() => onSubmit(field)}>
-              <HiCheck />
-            </span>
-            <span onClick={onCancel}>
-              <HiX />
-            </span>
-          </div>
+          <Confirm onConfirm={() => onSubmit(field)} onCancel={onCancel} />
         ) : (
           <span className="editGlyph" onClick={() => setEnableEdit(true)}>
             <HiOutlinePencil />

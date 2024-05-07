@@ -52,7 +52,7 @@ function NewItemAllergenList({ newItem, setNewItem }) {
   }
 
   return (
-    <>
+    <div>
       <ul className="allergenContainer">
         {newItem.allergens &&
           newItem.allergens.map((allergen) => (
@@ -74,7 +74,7 @@ function NewItemAllergenList({ newItem, setNewItem }) {
           );
         })}
       </select>
-    </>
+    </div>
   );
 }
 

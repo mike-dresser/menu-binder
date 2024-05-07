@@ -1,6 +1,6 @@
 import Dialog from '../../Dialog';
 import { useState } from 'react';
-import { HiOutlineInformationCircle } from 'react-icons/hi';
+import { HiOutlineInformationCircle, HiX } from 'react-icons/hi';
 
 function NewItemAllergen({ allergen, newItem, setNewItem }) {
   const [newAllergenNote, setNewAllergenNote] = useState('');
@@ -67,7 +67,10 @@ function NewItemAllergen({ allergen, newItem, setNewItem }) {
           ...
         </span>
       )}
-      <span onClick={() => deleteAllergen(allergen)}>✖️</span>
+      <span onClick={() => deleteAllergen(allergen)}>
+        ️
+        <HiX />
+      </span>
     </li>
   );
 }

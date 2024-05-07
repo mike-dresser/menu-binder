@@ -1,7 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { EditModeContext } from '../../App';
 import api from '../../services/api-client';
-import { HiOutlinePencil, HiCheck, HiX } from 'react-icons/hi';
+import { HiOutlinePencil } from 'react-icons/hi';
+import Confirm from '../../components/Confirm';
 
 function EditableTextField({ type = 'p', itemField, item, setItem, children }) {
   const editMode = useContext(EditModeContext);
@@ -49,14 +50,7 @@ function EditField({ content, setEnableEdit, itemField, item, setItem }) {
   return (
     <div className="fieldEdit">
       <textarea value={newContent} onChange={onTextChange} />
-      <div>
-        <span onClick={onSubmit}>
-          <HiCheck />
-        </span>
-        <span onClick={onCancel}>
-          <HiX />
-        </span>
-      </div>
+      <Confirm onConfirm={onSubmit} onCancel={onCancel} />
     </div>
   );
 }
