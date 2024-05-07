@@ -58,9 +58,7 @@ function Item() {
 
       <p className="sectionHeader">Allergens</p>
 
-      <EditableList item={item} setItem={setItem}>
-        {item.allergens}
-      </EditableList>
+      <EditableList field="itemAllergens" item={item} setItem={setItem} />
 
       <p className="sectionHeader">Mise</p>
 
