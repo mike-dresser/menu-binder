@@ -44,7 +44,7 @@ function NewItemAllergenList({ newItem, setNewItem }) {
     const itemAllergens = [...newItem.allergens];
     itemAllergens.push({
       name: e.target.value,
-      allergen_id: allergenDict[e.target.value],
+      id: allergenDict[e.target.value],
       notes: '',
     });
     setNewItem({ ...newItem, allergens: itemAllergens });

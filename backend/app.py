@@ -136,7 +136,17 @@ def one_item(id):
         """Edit item details"""
         req_data = request.get_json()
         for key, value in req_data.items():
-            setattr(item, key, value)
+            if key == 'allergens':
+                existing_item_allergens = ItemAllergen.query.filter_by(item_id=item.to_dict()['id']).all()
+                for record in existing_item_allergens:
+                    db.session.delete(record)
+                for new_allergen in req_data.get('allergens'):
+                    new_item_allergen = ItemAllergen(item_id = item.to_dict()['id'],
+                                                     allergen_id = new_allergen['id'],
+                                                     notes = new_allergen['notes'])
+                    db.session.add(new_item_allergen)
+            else:
+                setattr(item, key, value)
         db.session.add(item)
         db.session.commit()
         response = allergy_serialize(item)

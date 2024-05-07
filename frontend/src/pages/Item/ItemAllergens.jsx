@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Dialog from '../../Dialog';
-import { BsInfoCircle } from 'react-icons/bs';
+import { HiOutlineInformationCircle } from 'react-icons/hi';
 
 function ItemAllergens({ item }) {
   const [noteOpen, setNoteOpen] = useState(false);
@@ -32,7 +32,7 @@ function ItemAllergens({ item }) {
                 className="infoGlyph"
                 onClick={() => displayAllergenInfo(allergen)}
               >
-                <BsInfoCircle />
+                <HiOutlineInformationCircle />
               </span>
             )}
           </li>

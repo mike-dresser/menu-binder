@@ -1,5 +1,6 @@
 import Dialog from '../../Dialog';
 import { useState } from 'react';
+import { HiOutlineInformationCircle } from 'react-icons/hi';
 
 function NewItemAllergen({ allergen, newItem, setNewItem }) {
   const [newAllergenNote, setNewAllergenNote] = useState('');
@@ -56,7 +57,7 @@ function NewItemAllergen({ allergen, newItem, setNewItem }) {
           className="infoGlyph"
           onClick={() => updateAllergenNote(allergen)}
         >
-          ℹ︎
+          <HiOutlineInformationCircle />
         </span>
       ) : (
         <span

@@ -42,12 +42,13 @@ li.allergen {
   display: flex;
   align-items: center;
   color: $header-color;
-  padding-right: 0.8em;
+  padding-left: 0.8em;
   cursor: pointer;
 }
 .allergenContainer {
   margin: 0 1em;
   display: flex;
+  width: 100%;
   justify-content: space-between;
   flex-wrap: wrap;
 }
