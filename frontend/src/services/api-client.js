@@ -8,7 +8,7 @@ class ApiClient {
     const result = await fetch(`${this.baseUrl}${endpoint}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(`data:`, data);
+        // console.log(`data:`, data);
         return data;
       });
     return result;
@@ -25,7 +25,7 @@ class ApiClient {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(`data:`, data);
+        // console.log(`data:`, data);
         return data;
       });
     return result;
@@ -42,7 +42,7 @@ class ApiClient {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(`data:`, data);
+        // console.log(`data:`, data);
         return data;
       });
     return result;

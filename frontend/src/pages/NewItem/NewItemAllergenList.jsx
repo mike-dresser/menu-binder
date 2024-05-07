@@ -8,7 +8,6 @@ const allergenDict = {};
 
 function NewItemAllergenList({ newItem, setNewItem }) {
   const [filteredAllergens, setFilteredAllergens] = useState([]);
-
   // Query all existing allergens to populate select box
   useEffect(() => {
     if (!allAllergens.length) {
