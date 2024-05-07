@@ -25,17 +25,20 @@ function ItemList({ menu, allItems }) {
     setFilteredMenu(menu);
     setIsFilteredBy([]);
   }
-  function handleItemDelete(id) {
+  function handleItemCategoryDelete(itemId, catId) {
     async function fetchDelete() {
-      const result = await api.delete(`/items/${id}`);
-      return result;
+      await api.delete(`/categories?item_id=${itemId}&category_id=${catId}`);
+      console.log(menu);
     }
     fetchDelete();
-    function updateMenu() {
+    function updateMenu(itemId, catId) {
       const updated = { categories: [] };
       for (let category of filteredMenu.categories) {
         const updatedCategoryItems = category.category_items.filter((each) => {
-          return each.item.id !== id;
+          return (
+            each.item.id !== itemId ||
+            (each.item.id === itemId && category.id !== catId)
+          );
         });
         updated.categories.push({
           ...category,
@@ -44,7 +47,7 @@ function ItemList({ menu, allItems }) {
       }
       setFilteredMenu(updated);
     }
-    updateMenu();
+    updateMenu(itemId, catId);
   }
   useEffect(() => {
     setFilteredMenu(menu);
@@ -124,7 +127,9 @@ function ItemList({ menu, allItems }) {
                     <Link to={`./items/${item.item.id}`}>{item.item.name}</Link>
                     {editMode && (
                       <Button
-                        action={() => handleItemDelete(item.item.id)}
+                        action={() =>
+                          handleItemCategoryDelete(item.item.id, each.id)
+                        }
                         type="text"
                       >
                         <HiX />

@@ -169,7 +169,7 @@ def all_allergens():
     response = [allergen.to_dict() for allergen in Allergen.query.all()]
     return add_cors(response), 200
 
-@app.route('/categories', methods=['GET', 'POST'])
+@app.route('/categories', methods=['GET', 'POST', 'DELETE'])
 def menu_categories():
     """Return all existing menu categories (name, id)"""
     if request.method == 'GET':
@@ -196,6 +196,21 @@ def menu_categories():
         # response = new_category_item.to_dict()
         response = Item.query.filter_by(id=query.get('item_id')).first().to_dict()
         return add_cors(response), 201
+    if request.method == 'DELETE':
+        """Remove an item from a category 
+        
+        query format: /categories?item_id=[int]&category_id=[int]
+        (No post body)
+        Item record is returned to update client list"""
+        del_query = request.args
+        to_remove = CategoryItem.query.filter_by(item_id = del_query.get('item_id'), category_id = del_query.get('category_id')).first()
+        if to_remove:
+            db.session.delete(to_remove)
+            db.session.commit()
+            response = Item.query.filter_by(id=del_query.get('item_id')).first().to_dict()
+            return add_cors(response), 202
+        else:
+            return add_cors({'error': 'No category_item record matches'}), 404
 
 @app.route('/filter')
 def filtered_items():
