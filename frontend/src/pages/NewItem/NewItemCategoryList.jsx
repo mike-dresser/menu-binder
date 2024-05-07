@@ -41,7 +41,7 @@ function NewItemCategoryList({ newItem, setNewItem }) {
     console.log('newItem', newItem);
   }
   return (
-    <>
+    <div>
       <ul>
         {newItem.categories &&
           newItem.categories.map(({ category, menu }) => {
@@ -70,7 +70,7 @@ function NewItemCategoryList({ newItem, setNewItem }) {
             );
           })}
       </select>
-    </>
+    </div>
   );
 }
 

@@ -1,10 +1,10 @@
-import React, { useContext, useEffect, useState } from 'react';
-import ItemAllergens from './ItemAllergens';
+import { useContext, useEffect, useState } from 'react';
+import api from '../../services/api-client';
 import { EditModeContext } from '../../App';
+import { HiOutlinePencil } from 'react-icons/hi';
+import ItemAllergens from './ItemAllergens';
 import NewItemAllergenList from '../NewItem/NewItemAllergenList';
 import NewItemCategoryList from '../NewItem/NewItemCategoryList';
-import { HiOutlinePencil } from 'react-icons/hi';
-import api from '../../services/api-client';
 import Confirm from '../../components/Confirm';
 
 function EditableList({ field, item, setItem }) {
@@ -20,9 +20,11 @@ function EditableList({ field, item, setItem }) {
     active: true,
     image: '',
   });
+
   useEffect(() => {
     setNewItem({ ...item });
   }, [editMode]);
+
   async function onSubmit(field) {
     let content = {};
     if (field === 'itemAllergens') {
@@ -30,15 +32,15 @@ function EditableList({ field, item, setItem }) {
     } else if (field === 'itemCategories') {
       content = { categories: newItem.categories };
     }
-    console.log('content to patch', content);
     const response = await api.patch(`/items/${item.id}`, content);
-    console.log('response', response);
     setEnableEdit(false);
     setItem({ ...item, ...content });
   }
+
   function onCancel() {
     setEnableEdit(false);
   }
+
   return (
     <div className="editableField">
       {editMode && enableEdit ? (
@@ -55,8 +57,8 @@ function EditableList({ field, item, setItem }) {
         field === 'itemCategories' && (
           <ul>
             {item.categories &&
-              item.categories.map((category) => (
-                <li key={category.category.id}>{category.menu.name}</li>
+              item.categories.map(({ category, menu }) => (
+                <li key={category.id}>{menu.name}</li>
               ))}
           </ul>
         )
