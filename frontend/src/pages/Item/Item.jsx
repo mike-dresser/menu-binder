@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { EditModeContext } from '../../App';
 import EditableTextField from './EditableTextField';
 import EditableImg from './EditableImg';
+import EditableList from './EditableList';
 import ImgUpload from '../NewItem/ImgUpload';
 import api from '../../services/api-client';
 import { HiChevronLeft } from 'react-icons/hi';

@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import ItemAllergens from './ItemAllergens';
 import { EditModeContext } from '../../App';
 import NewItemAllergenList from '../NewItem/NewItemAllergenList';
+import { HiOutlinePencil, HiCheck, HiX } from 'react-icons/hi';
 
 function EditableList({ children, item }) {
   const editMode = useContext(EditModeContext);
@@ -21,7 +22,7 @@ function EditableList({ children, item }) {
   }, [editMode]);
 
   return (
-    <>
+    <div className="editableField">
       <div>
         {enableEdit ? (
           <NewItemAllergenList newItem={newItem} setNewItem={setNewItem} />
@@ -31,10 +32,10 @@ function EditableList({ children, item }) {
       </div>
       {editMode && (
         <span className="editGlyph" onClick={() => setEnableEdit(true)}>
-          ✎
+          <HiOutlinePencil />
         </span>
       )}
-    </>
+    </div>
   );
 }
 
