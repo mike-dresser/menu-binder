@@ -67,12 +67,7 @@ function Item() {
       </EditableTextField>
 
       <p className="sectionHeader">Available</p>
-      <ul>
-        {item.categories &&
-          item.categories.map((category) => (
-            <li key={category.category.id}>{category.menu.name}</li>
-          ))}
-      </ul>
+      <EditableList field="itemCategories" item={item} setItem={setItem} />
     </div>
   );
 }

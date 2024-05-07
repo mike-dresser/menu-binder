@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import api from '../../services/api-client';
+import { HiX } from 'react-icons/hi';
 
 let categoryDict = {};
 function NewItemCategoryList({ newItem, setNewItem }) {
@@ -36,22 +37,25 @@ function NewItemCategoryList({ newItem, setNewItem }) {
     );
     setNewItem({ ...newItem, categories: filtered });
   }
+  {
+    console.log('newItem', newItem);
+  }
   return (
     <>
-      {newItem.categories.length > 0 && (
-        <ul>
-          {newItem.categories.map((category) => {
+      <ul>
+        {newItem.categories &&
+          newItem.categories.map(({ category, menu }) => {
             return (
-              <li key={category.category.id} className="newCategory">
-                {categoryDict[category.category.id].menu.name}
-                <span onClick={() => deleteCategory(category.category.id)}>
-                  ✖️
+              <li key={category.id} className="newCategory">
+                {/* {categoryDict[category.id].menu.name} */}
+                {menu.name}
+                <span onClick={() => deleteCategory(category.id)}>
+                  <HiX />
                 </span>
               </li>
             );
           })}
-        </ul>
-      )}
+      </ul>
       <select onChange={onListChange}>
         <option key="0" value="">
           Select menu category

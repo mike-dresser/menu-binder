@@ -14,6 +14,7 @@ cors = CORS(app);
 app.config["SQLALCHEMY_DATABASE_URI"] = DATABASE
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.json.compact = False
+
 # imports to allow file uploads
 UPLOAD_FOLDER = '../frontend/public'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'avif', 'heif', 'heic', 'tiff'}
@@ -145,6 +146,14 @@ def one_item(id):
                                                      allergen_id = new_allergen['id'],
                                                      notes = new_allergen['notes'])
                     db.session.add(new_item_allergen)
+            if key == 'categories':
+                existing_item_categories = CategoryItem.query.filter_by(item_id=item.to_dict()['id']).all()
+                for record in existing_item_categories:
+                    db.session.delete(record)
+                for new_category in req_data.get('categories'):
+                    new_item_category = CategoryItem(item_id = item.to_dict()['id'],
+                                                     category_id = new_category['category']['id'])
+                    db.session.add(new_item_category)
             else:
                 setattr(item, key, value)
         db.session.add(item)
