@@ -3,7 +3,7 @@ import { EditModeContext } from '../../App';
 import api from '../../services/api-client';
 import { HiOutlinePencil, HiCheck, HiX } from 'react-icons/hi';
 
-function EditableTextField({ type = 'p', itemField, item, setItem, children }) {
+function EditableH2({ children, itemField, item, setItem }) {
   const editMode = useContext(EditModeContext);
   const [enableEdit, setEnableEdit] = useState(false);
 
@@ -19,8 +19,7 @@ function EditableTextField({ type = 'p', itemField, item, setItem, children }) {
         />
       ) : (
         <div className="editableField">
-          {React.createElement(type, { children })}
-          {/* <p>{children}</p> */}
+          <h2>{children}</h2>
           {editMode && (
             <span className="editGlyph" onClick={() => setEnableEdit(true)}>
               <HiOutlinePencil />
@@ -40,18 +39,22 @@ function EditField({ content, setEnableEdit, itemField, item, setItem }) {
   function onCancel() {
     setEnableEdit(false);
   }
+
   async function onSubmit() {
     const content = { [itemField]: newContent };
     await api.patch(`/items/${item.id}`, content);
     setEnableEdit(false);
     setItem({ ...item, ...content });
   }
+
   return (
     <div className="fieldEdit">
-      <textarea value={newContent} onChange={onTextChange} />
+      <h2>
+        <textarea value={newContent} onChange={onTextChange} />
+      </h2>
       <div>
         <span onClick={onSubmit}>
-          <HiCheck />
+          ︎<HiCheck />
         </span>
         <span onClick={onCancel}>
           <HiX />
@@ -61,4 +64,4 @@ function EditField({ content, setEnableEdit, itemField, item, setItem }) {
   );
 }
 
-export default EditableTextField;
+export default EditableH2;

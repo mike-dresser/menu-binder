@@ -5,7 +5,7 @@ import EditableTextField from './EditableTextField';
 import EditableImg from './EditableImg';
 import ImgUpload from '../NewItem/ImgUpload';
 import api from '../../services/api-client';
-import EditableList from './EditableList';
+import { HiChevronLeft } from 'react-icons/hi';
 
 function Item() {
   const editMode = useContext(EditModeContext);
@@ -23,7 +23,10 @@ function Item() {
   return (
     <div id="itemDetails">
       <Link to="/" className="backLink">
-        ◁ Back
+        <span className="backBtn">
+          <HiChevronLeft />
+          Back
+        </span>
       </Link>
       {item['image'] ? (
         <EditableImg itemField="image" item={item} setItem={setItem}>

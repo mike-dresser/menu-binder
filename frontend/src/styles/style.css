@@ -128,9 +128,10 @@ li.allergen span.alliumItem::before {
 }
 
 .infoGlyph {
+  display: flex;
+  align-items: center;
   color: rgb(192, 192, 192);
-  font-size: 1.3em;
-  padding-right: 1em;
+  padding-right: 0.8em;
   cursor: pointer;
 }
 
@@ -152,6 +153,11 @@ button.outline {
   padding: 0.5em 1em;
   font-size: 0.9em;
   margin: 0;
+}
+button.outline .icon {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
 }
 
 input[type=submit] {
@@ -294,8 +300,7 @@ input[type=submit] {
   display: block;
   align-self: center;
   margin: 0 0.5em;
-  font-size: 1.6rem;
-  transform: rotate(90deg);
+  font-size: 1.2rem;
   color: rgb(192, 192, 192);
 }
 
@@ -313,6 +318,11 @@ input[type=submit] {
   display: inherit;
   gap: 0.5em;
   align-self: center;
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
 }
 
 #newItem {
