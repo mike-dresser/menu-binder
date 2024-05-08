@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Dialog from '../../Dialog';
+import Dialog from '../../components/Dialog';
 import { HiOutlineInformationCircle } from 'react-icons/hi';
 import capitalize from '../../services/capitalize';
 import Button from '../../components/Button';

@@ -1,4 +1,4 @@
-import Dialog from '../../Dialog';
+import Dialog from '../../components/Dialog';
 import { useState } from 'react';
 import { HiOutlineInformationCircle, HiX } from 'react-icons/hi';
 import capitalize from '../../services/capitalize';

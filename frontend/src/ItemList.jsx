@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Dialog from './Dialog';
+import Dialog from './components/Dialog';
 import ItemFilter from './ItemFilter';
 import { EditModeContext } from './App';
 import api from './services/api-client';
@@ -92,10 +92,8 @@ function ItemList({ menu, allItems }) {
                   );
                 })}
               </div>
-              <Button action={handleClearFilter} type="outline">
-                <span className="closeIcon">
-                  Clear <HiX />
-                </span>
+              <Button action={handleClearFilter} type="outline closeIcon">
+                Clear <HiX />
               </Button>
             </div>
           </>
@@ -132,11 +130,9 @@ function ItemList({ menu, allItems }) {
                         action={() =>
                           handleItemCategoryDelete(item.item.id, each.id)
                         }
-                        type="text"
+                        type="closeIcon"
                       >
-                        <span className="closeIcon">
-                          <HiX />
-                        </span>
+                        <HiX />
                       </Button>
                     )}
                   </li>

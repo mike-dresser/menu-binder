@@ -18,6 +18,13 @@ button {
       font-size: $icon-md;
     }
   }
+  &.closeBtn {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    font-size: $icon-sm;
+    cursor: pointer;
+  }
   &.infoGlyph {
     display: flex;
     align-items: center;

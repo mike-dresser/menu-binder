@@ -1,6 +1,6 @@
 @use 'sass:map';
 @import 'config', 'item', '../components/Confirm/confirm'; // @import 'item';
-@import '../components/Button/button';
+@import '../components/Button/button', '../components/Dialog/dialog';
 @import 'menuList';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nanum+Brush+Script&display=swap');
 
@@ -21,42 +21,7 @@
   color: $header-color;
   text-align: center;
 }
-.dialogContainer {
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
-}
-.dialog {
-  position: absolute;
-  // top: -2em;
-  right: 50%;
-  transform: translateX(50%);
-  z-index: 1;
-  min-width: 50%;
-  border-radius: 5px;
-  box-shadow: 3px 3px 10px #999;
-  text-align: center;
-  background-color: white;
-  padding: 1em;
-  border: 1px solid black;
 
-  p {
-    margin: 0 0 0.5em 0;
-  }
-
-  textarea {
-    display: block;
-    margin-bottom: 0.5em;
-  }
-}
-
-.closeBtn {
-  position: absolute;
-  top: 0.5em;
-  right: 0.5em;
-  font-size: 1.1em;
-  cursor: pointer;
-}
 .filterForm {
   display: flex;
   flex-direction: column;
