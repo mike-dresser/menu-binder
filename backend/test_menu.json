@@ -4,7 +4,7 @@
     "items": [
       {
         "name": "Marinated Olives",
-        "description": "mixed Greek olives, lemon, garlic, olive oil",
+        "description": "Mixed Greek olives, lemon, garlic, olive oil",
         "allergies": [{ "name": "allium", "notes": "" }],
         "mise": "Small ramekin for pits",
         "category": "Snacks",
@@ -14,19 +14,19 @@
         "name": "Chips & Dip",
         "description": "House fried (in canola) sweet potato and idaho potato chips. Served with black pepper ranch (sour cream, mayonnaise, lemon juice, garlic, buttermilk, black pepper, onion powder, garlic powder) topped with 1⁄2 ounce Grinnel caviar (from bowfin fish, harvested in Alabama) and chives",
         "allergies": [
-          { "name": "gluten", "notes": "fryer cc" },
+          { "name": "gluten", "notes": "Fryer cross-contamination" },
           { "name": "dairy", "notes": "" },
           { "name": "allium", "notes": "" }
         ],
-        "mise": "mark w/ demi spoon",
+        "mise": "Mark w/ demitasse spoon",
         "category": "Snacks"
       },
       {
         "name": "Whitefish",
-        "description": "Whipped whitefish salad (whitefish, mayonnaise), served in a jar.\nServed with bagel chips",
+        "description": "Whipped whitefish salad (whitefish, mayonnaise), served in a jar.\n\nServed with bagel chips",
         "allergies": [
-          { "name": "gluten", "notes": "can be omitted - no crackers" },
-          { "name": "seeds", "notes": "from crackers" }
+          { "name": "gluten", "notes": "Can be omitted - no crackers" },
+          { "name": "seeds", "notes": "From crackers" }
         ],
         "mise": "Fork, Knife, Tea Spoon (Share)",
         "category": "Snacks",
@@ -34,11 +34,11 @@
       },
       {
         "name": "Crab Dip",
-        "description": "Crab Mix: Claw Crabmeat (from blue crabs, Venezuela), roasted cauliflower, jalapeno, cream cheese, smoked cheddar cheese, mayonnaise, sour cream, white onion, adobo seasoning, Worcestershire, fines herbs, smoked paprika, cayenne, lemon juice, Green Tabasco, black pepper. Served with Ritz Crackers (wheat flour, sugar, salt, corn syrup, soy lecithin)",
+        "description": "Crab Mix: Claw Crabmeat (from blue crabs, Venezuela), roasted cauliflower, jalapeno, cream cheese, smoked cheddar cheese, mayonnaise, sour cream, white onion, adobo seasoning, Worcestershire, fines herbs, smoked paprika, cayenne, lemon juice, Green Tabasco, black pepper. \n\nServed with Ritz Crackers (wheat flour, sugar, salt, corn syrup, soy lecithin)",
         "allergies": [
           {
             "name": "gluten",
-            "notes": "can be omitted - no crackers, ask kitchen if can sub tortilla chips or crudite"
+            "notes": "Can be omitted - no crackers, ask kitchen if can sub tortilla chips or crudite"
           },
           { "name": "dairy", "notes": "" },
           { "name": "allium", "notes": "" },
@@ -51,14 +51,14 @@
       },
       {
         "name": "Caesar Salad",
-        "description": "Kale, napa cabbage, shaved radish, bagel chips (may contain sesame), lemon juice Caesar dressing: anchovy, egg, canola, EVOO, lemon juice, parmesan. Garnish: grated parmesan, bonito flakes, sesame seeds",
+        "description": "Kale, napa cabbage, shaved radish, bagel chips (may contain sesame), lemon juice Caesar dressing: anchovy, egg, canola, EVOO, lemon juice, parmesan. \n\nGarnish: grated parmesan, bonito flakes, sesame seeds",
         "allergies": [
           {
             "name": "gluten",
-            "notes": "can be omitted"
+            "notes": "Can be omitted"
           },
           { "name": "dairy", "notes": "" },
-          { "name": "fish", "notes": "(dressing, bonito garnish)" }
+          { "name": "fish", "notes": "Dressing, bonito garnish" }
         ],
         "mise": "Fork, Knife",
         "category": "Apps",
@@ -66,7 +66,7 @@
       },
       {
         "name": "Farro Grain Bowl",
-        "description": "Farro and chickpeas mixed w/ preserved lemon vinaigrette (preserved lemon, ginger, chili, honey, lemon juice, EVOO. Roasted sweet potatoes. Corn Relish: corn and scallion - charred on the plancha, mixed with fines herbs. 1⁄2 Avocado. Harissa Yogurt (harissa chili paste, yogurt, lemon). Kale and shaved radish salad (mixed w/ lemon vinaigrette)",
+        "description": "Farro and chickpeas mixed w/ preserved lemon vinaigrette (preserved lemon, ginger, chili, honey, lemon juice, EVOO. Roasted sweet potatoes. \n\nCorn Relish: corn and scallion - charred on the plancha, mixed with fines herbs. 1⁄2 Avocado. \n\nHarissa Yogurt (harissa chili paste, yogurt, lemon). \n\nKale and shaved radish salad (mixed w/ lemon vinaigrette)",
         "allergies": [
           {
             "name": "gluten",
@@ -79,12 +79,12 @@
       },
       {
         "name": "Chilled Pepper Soup",
-        "description": "Puree of canola, shallot, garlic, ginger, red curry paste, roasted red peppers, white wine, rice vinegar, vegetable stock, oat milk, EVOO Garnish: marinated blue crab (blue crab, lemon vinaigrette, fines herbs) + crispy shallot (GF)",
+        "description": "Puree of canola, shallot, garlic, ginger, red curry paste, roasted red peppers, white wine, rice vinegar, vegetable stock, oat milk, EVOO \n\nGarnish: marinated blue crab (blue crab, lemon vinaigrette, fines herbs) + crispy shallot (GF)",
         "allergies": [
           { "name": "allium", "notes": "" },
           {
             "name": "shellfish",
-            "notes": "red curry paste, cannot be omitted"
+            "notes": "Red curry paste, cannot be omitted"
           },
           { "name": "nightshade", "notes": "" }
         ],
@@ -94,10 +94,10 @@
       },
       {
         "name": "Lobster Roll",
-        "description": "4 ounce cooked Maine lobster tossed with herb mayonnaise (celery, chives, lemon juice, parsley, lobster oil) Pickled cucumbers (cucumbers, rice vinegar, salt, sugar) Brioche hot dog buns (buttered) Chopped herbs (parsley, chives, tarragon) Served with chips",
+        "description": "4 ounce cooked Maine lobster tossed with herb mayonnaise (celery, chives, lemon juice, parsley, lobster oil) \n\nPickled cucumbers (cucumbers, rice vinegar, salt, sugar) \n\nBrioche hot dog buns (buttered) Chopped herbs (parsley, chives, tarragon) Served with chips",
         "allergies": [
           { "name": "allium", "notes": "" },
-          { "name": "dairy", "notes": "" },
+          { "name": "dairy", "notes": "In the bun" },
           { "name": "shellfish", "notes": "" },
           { "name": "gluten", "notes": "" },
           { "name": "nightshade", "notes": "" }
@@ -108,7 +108,7 @@
       },
       {
         "name": "Avocado & Lox Tartine",
-        "description": "House Gravlax (ASC certified Atlantic Salmon, cured with salt, sugar, gin, dill and coriander), made in house, sliced thin to 2 ounces. Avocado – Avocado, red onion, cilantro, jalapeno, lemon, EVOO, salt. Garnish: fried shallots, sesame seeds, dill",
+        "description": "House Gravlax (ASC certified Atlantic Salmon, cured with salt, sugar, gin, dill and coriander), made in house, sliced thin to 2 ounces. \n\nAvocado – Avocado, red onion, cilantro, jalapeno, lemon, EVOO, salt. \n\nGarnish: fried shallots, sesame seeds, dill",
         "allergies": [
           { "name": "allium", "notes": "" },
           { "name": "sesame", "notes": "" },
@@ -124,7 +124,7 @@
         "description": "Smoked turkey, chili aioli, artichoke tapenade (cooked artichokes, castelvetrano olives, lemon,herbs), arugula, manchego, whole wheat sourdough",
         "allergies": [
           { "name": "dairy", "notes": "" },
-          { "name": "egg", "notes": "" },
+          { "name": "eggs", "notes": "" },
           { "name": "gluten", "notes": "" },
           { "name": "nightshade", "notes": "" }
         ],
@@ -134,7 +134,7 @@
       },
       {
         "name": "Egg Sandwich",
-        "description": "Egg served over medium, topped with smoked cheddar, spinach, BBQ aioli, pickled fresno, on a seeded brioche roll. BBQ aioli: house bbq (onions, beer, worcestershire, A-1 sauce, garlic, ), mayonnaise. Pickled fresnos: thin-sliced fresno chilies, rice wine vinegar, salt, sugar",
+        "description": "Egg served over medium, topped with smoked cheddar, spinach, BBQ aioli, pickled fresno, on a seeded brioche roll. \n\nBBQ aioli: house bbq (onions, beer, worcestershire, A-1 sauce, garlic, ), mayonnaise. \n\nPickled fresnos: thin-sliced fresno chilies, rice wine vinegar, salt, sugar",
         "allergies": [
           { "name": "dairy", "notes": "Bun and cheese" },
           { "name": "egg", "notes": "" },
@@ -148,7 +148,7 @@
       },
       {
         "name": "JG Burger",
-        "description": "6 oz burger (blend of brisket and chuck) bacon jam (bacon, maple syrup, brown sugar, sherry vinegar, soy sauce, chopped onion). Dansk blue cheese (from Denmark, pastuerized, cow’s milk) - creamy, distinctly buttery, and bursting with tangy, savory notes of sour cream and onion. Pickles, Sliced Raw Red Onion, Dijon sauce, Chips inside the bun,Sesame potato bun. Served with potato chips on the side (can sub)",
+        "description": "6 oz burger (blend of brisket and chuck) bacon jam (bacon, maple syrup, brown sugar, sherry vinegar, soy sauce, chopped onion). \n\nDansk blue cheese (from Denmark, pastuerized, cow’s milk) - creamy, distinctly buttery, and bursting with tangy, savory notes of sour cream and onion. \n\nPickles, Sliced Raw Red Onion, Dijon sauce, Chips inside the bun,Sesame potato bun. \n\nServed with potato chips on the side (can sub)",
         "allergies": [
           { "name": "dairy", "notes": "Bun and cheese" },
           { "name": "pork", "notes": "" },
@@ -162,10 +162,10 @@
       },
       {
         "name": "Fish and Chips",
-        "description": "5.5 oz hake or pollock or MSC certified Cod (all from Northeast Atlantic), dredged in beer batter (AP flour, corn starch, beer, vodka, salt), deep fried. Served over our french fries (old bay). Served with charred lemon and caper aioli (capers, lemon, cornichons, garlic, mayonnaise, lobster oil, chives)",
+        "description": "5.5 oz hake or pollock or MSC certified Cod (all from Northeast Atlantic), dredged in beer batter (AP flour, corn starch, beer, vodka, salt), deep fried. Served over our french fries (old bay) and charred lemon and caper aioli (capers, lemon, cornichons, garlic, mayonnaise, lobster oil, chives)",
         "allergies": [
-          { "name": "shellfish", "notes": "(lobster oil in the aioli)," },
-          { "name": "egg", "notes": "aioli" },
+          { "name": "shellfish", "notes": "Lobster oil in the aioli" },
+          { "name": "egg", "notes": "Aioli" },
           { "name": "gluten", "notes": "" },
           { "name": "allium", "notes": "" }
         ],
@@ -178,7 +178,7 @@
         "description": "Deep-fried artichoke hearts (5 oz), topped with fresh grated parmesan cheese and fines herbs. Served with buttermilk ranch (sour cream, mayonnaise, lemon juice, garlic, buttermilk, black pepper, onion powder, garlic powder)",
         "allergies": [
           { "name": "dairy", "notes": "" },
-          { "name": "gluten", "notes": "cross-contamination" },
+          { "name": "gluten", "notes": "Cross-contamination" },
           { "name": "nightshade", "notes": "" },
           { "name": "allium", "notes": "" }
         ],
@@ -190,7 +190,7 @@
         "name": "French Fries",
         "description": "Old bay, malt vinegar aioli (mayo, malt vinegar powder)",
         "allergies": [
-          { "name": "gluten", "notes": "cross-contamination" },
+          { "name": "gluten", "notes": "Cross-contamination" },
           { "name": "nightshade", "notes": "" }
         ],
         "mise": "Fork",
@@ -221,7 +221,7 @@
       },
       {
         "name": "House Pickles",
-        "description": "Vegetables (cauliflower, carrots, cucumber, jalapenos, radish,celery ) pickled with chili-infused white vinegar",
+        "description": "Vegetables (cauliflower, carrots, cucumber, jalapenos, radish,celery) pickled with chili-infused white vinegar",
         "allergies": [
           { "name": "allium", "notes": "" },
           { "name": "nightshade", "notes": "" }
@@ -253,11 +253,11 @@
       },
       {
         "name": "Crab Dip",
-        "description": "Crab Mix: Claw Crabmeat (from blue crabs, Venezuela), roasted cauliflower, jalapeno, cream cheese, smoked cheddar cheese, mayonnaise, sour cream, white onion, adobo seasoning, Worcestershire, fines herbs, smoked paprika, cayenne, lemon juice, Green Tabasco, black pepper. Served with Ritz Crackers (wheat flour, sugar, salt, corn syrup, soy lecithin)",
+        "description": "Crab Mix: Claw Crabmeat (from blue crabs, Venezuela), roasted cauliflower, jalapeno, cream cheese, smoked cheddar cheese, mayonnaise, sour cream, white onion, adobo seasoning, Worcestershire, fines herbs, smoked paprika, cayenne, lemon juice, Green Tabasco, black pepper. \n\nServed with Ritz Crackers (wheat flour, sugar, salt, corn syrup, soy lecithin)",
         "allergies": [
           {
             "name": "gluten",
-            "notes": "can be omitted - no crackers, ask kitchen if can sub tortilla chips or crudite"
+            "notes": "Can be omitted - no crackers, ask kitchen if can sub tortilla chips or crudite"
           },
           { "name": "dairy", "notes": "" },
           { "name": "allium", "notes": "" },
@@ -283,7 +283,7 @@
       },
       {
         "name": "Heirloom Tomatoes",
-        "description": "Straciatella: Stracciatella is shreds of fresh mozzarella soaked in sweet cream. Like a creamier burrata. Heirloom tomatoes: heirloom tomatoes, tossed w/ sherry vinaigrette (shallot, Dijon, honey, sherry vinegar, Aleppo pepper, EVOO) Anchovy Pesto: basil, parsley, garlic, green olives, anchovies, parmesan, EVOO Served w/ toasted seeded multigrain brushed w/ garlic clove and EVOO.",
+        "description": "Straciatella: Stracciatella is shreds of fresh mozzarella soaked in sweet cream. Like a creamier burrata. \n\nHeirloom tomatoes: heirloom tomatoes, tossed w/ sherry vinaigrette (shallot, Dijon, honey, sherry vinegar, Aleppo pepper, EVOO) \n\nAnchovy Pesto: basil, parsley, garlic, green olives, anchovies, parmesan, EVOO Served w/ toasted seeded multigrain brushed w/ garlic clove and EVOO.",
         "allergies": [
           { "name": "allium", "notes": "" },
           { "name": "dairy", "notes": "" },
@@ -296,20 +296,20 @@
       },
       {
         "name": "Tuna Tartare",
-        "description": "Served in the style of nacho chips. Tuna Tartare: 3 oz line-caught yellowfin tuna mixed with citrus ponzu, marinated cucumber (salt, rice wine vinegar, fresno pickling liquid, sesame), scallions Citrus ponzu: shallots, yuzu kosho, lemon juice, red pepper flakes, gf soy sauce, sesame oil Served over a bed of guacamole (avocado, lime, red onion, jalapeno, cilantro) Garnish: chili mayo (sriracha, mayonnaise, garlic), chives",
+        "description": "Served in the style of nacho chips. Tuna Tartare: 3 oz line-caught yellowfin tuna mixed with citrus ponzu, marinated cucumber (salt, rice wine vinegar, fresno pickling liquid, sesame), scallions \n\nCitrus ponzu: shallots, yuzu kosho, lemon juice, red pepper flakes, gf soy sauce, sesame oil Served over a bed of guacamole (avocado, lime, red onion, jalapeno, cilantro) \n\nGarnish: chili mayo (sriracha, mayonnaise, garlic), chives",
         "allergies": [
           { "name": "allium", "notes": "" },
           { "name": "nightshade", "notes": "" },
           { "name": "gluten", "notes": "cc w/ chips" },
           { "name": "seed", "notes": "" }
         ],
-        "mise": "teaspoon (tuck it in at the pass)",
+        "mise": "Teaspoon (tuck it in at the pass)",
         "category": "Apps",
         "image": "/tartare.jpeg"
       },
       {
         "name": "Summer Chicories",
-        "description": "Mix of Castelfranco + radicchio + frisee, mixed w/ sweet corn mix, roasted pumpkin seeds (aka pepitas) and tarragon vinaigrette (tarragon, feta, crème fraiche, lemon juice, shallot, EVOO). Garnish: cotija cheese (Cotija is an aged Mexican cheese made from cow's milk and named after the town of Cotija, Michoacán. White in color and firm in texture, its flavor is salty and milky. Cotija cheese has been described as akin to a mild feta or parmesan (depending on age). Corn Relish: corn and scallion - charred on the plancha, mixed with fines herbs",
+        "description": "Mix of Castelfranco + radicchio + frisee, mixed w/ sweet corn mix, roasted pumpkin seeds (aka pepitas) and tarragon vinaigrette (tarragon, feta, crème fraiche, lemon juice, shallot, EVOO). \n\nGarnish: cotija cheese (Cotija is an aged Mexican cheese made from cow's milk and named after the town of Cotija, Michoacán. White in color and firm in texture, its flavor is salty and milky. Cotija cheese has been described as akin to a mild feta or parmesan (depending on age). \n\nCorn Relish: corn and scallion - charred on the plancha, mixed with fines herbs",
         "allergies": [
           { "name": "allium", "notes": "" },
           { "name": "dairy", "notes": "" },
@@ -320,14 +320,14 @@
       },
       {
         "name": "Mussels",
-        "description": "3⁄4 # mussels, 3 ounces pork chorizo (pork, beef, chili pepper, paprika, mustard, garlic, vinegar, salt, sugar, sodium nitrite), steamed open with white wine, soffrito (fennel, garlic, shallots, red pepper flakes, EVOO), and garnished with chopped spring onions. Finished with herb butter (chives, parsley, basil, butter) Served with garlic bread (baguette, garlic-herb butter, parmesan) and 1⁄2 a charred lemon",
+        "description": "3⁄4 # mussels, 3 ounces pork chorizo (pork, beef, chili pepper, paprika, mustard, garlic, vinegar, salt, sugar, sodium nitrite), steamed open with white wine, soffrito (fennel, garlic, shallots, red pepper flakes, EVOO), and garnished with chopped spring onions. Finished with herb butter (chives, parsley, basil, butter) \n\nServed with garlic bread (baguette, garlic-herb butter, parmesan) and 1⁄2 a charred lemon",
         "allergies": [
           { "name": "allium", "notes": "" },
-          { "name": "dairy", "notes": "can be omitted-butter" },
+          { "name": "dairy", "notes": "Can be omitted-butter" },
           { "name": "shellfish", "notes": "" },
-          { "name": "gluten", "notes": "garlic bread" },
+          { "name": "gluten", "notes": "Garlic bread" },
           { "name": "alcohol", "notes": "" },
-          { "name": "pork", "notes": "can be omitted" }
+          { "name": "pork", "notes": "Can be omitted" }
         ],
         "mise": "Fork, Knife, Spoon, 2 bowls for shells",
         "category": "Mains",
@@ -348,7 +348,7 @@
       },
       {
         "name": "Arctic Char",
-        "description": "Charred Corn: corn and scallion - charred on the plancha, mixed with fines herbs. Pepper Coulis: garlic, shallot, harissa, smoked paprika, sherry vinegar, roasted red peppers, EVOO. Coulis→ A coulis is a form of thin sauce made from puréed and strained vegetables or fruits. Gremolata→parsley, mint, basil, lemon zest, lemon zest, garlic clove, capers, chili flakes, EVOO",
+        "description": "Charred Corn: corn and scallion - charred on the plancha, mixed with fines herbs. \n\nPepper Coulis: garlic, shallot, harissa, smoked paprika, sherry vinegar, roasted red peppers, EVOO. Coulis→ A coulis is a form of thin sauce made from puréed and strained vegetables or fruits. \n\nGremolata→parsley, mint, basil, lemon zest, lemon zest, garlic clove, capers, chili flakes, EVOO",
         "allergies": [
           { "name": "allium", "notes": "" },
           { "name": "nightshade", "notes": "" }
@@ -359,7 +359,7 @@
       },
       {
         "name": "Steak Frites",
-        "description": "8 oz terras major (aka petit filet or bistro filet), cooked to medium rare, unless otherwise specified. Served over our french fries (old bay), served w/ ramekin of au poivre. Au poivre (peppercorn sauce): shallot, clove, thyme, butter, black peppercorn, brandy, chicken stock, crème fraiche, Dijon mustard",
+        "description": "8 oz terras major (aka petit filet or bistro filet), cooked to medium rare, unless otherwise specified. Served over our french fries (old bay), served w/ ramekin of au poivre. \n\nAu poivre (peppercorn sauce): shallot, clove, thyme, butter, black peppercorn, brandy, chicken stock, crème fraiche, Dijon mustard",
         "allergies": [
           { "name": "dairy", "notes": "" },
           { "name": "gluten", "notes": "" },
@@ -373,8 +373,8 @@
         "name": "Lobster Spaghetti",
         "description": "4 oz spaghetti tossed with 3 ounces Maine lobster in a noteserately spicy fresh tomato sauce. Tomato sauce - EVOO, garlic, red pepper flakes, cherry tomatoes, capers, castelvetrano olives, fresno chili, white wine, vegetable stock. Finished with butter and fines herbs. Topped with parmesan and toasted panko breadcrumbs.",
         "allergies": [
-          { "name": "dairy", "notes": "" },
-          { "name": "gluten", "notes": "c.c." },
+          { "name": "dairy", "notes": "Can be omitted-butter" },
+          { "name": "gluten", "notes": "" },
           { "name": "nightshade", "notes": "" },
           { "name": "allium", "notes": "" },
           { "name": "shellfish", "notes": "" },
@@ -388,7 +388,7 @@
         "description": "Deep-fried artichoke hearts (5 oz), topped with fresh grated parmesan cheese and fines herbs. Served with buttermilk ranch (sour cream, mayonnaise, lemon juice, garlic, buttermilk, black pepper, onion powder, garlic powder)",
         "allergies": [
           { "name": "dairy", "notes": "" },
-          { "name": "gluten", "notes": "cross-contamination" },
+          { "name": "gluten", "notes": "Cross-contamination" },
           { "name": "nightshade", "notes": "" },
           { "name": "allium", "notes": "" }
         ],
@@ -399,7 +399,7 @@
         "name": "French Fries",
         "description": "Old bay, malt vinegar aioli (mayo, malt vinegar powder)",
         "allergies": [
-          { "name": "gluten", "notes": "cross-contamination" },
+          { "name": "gluten", "notes": "Cross-contamination" },
           { "name": "nightshade", "notes": "" }
         ],
         "mise": "Fork",
@@ -407,7 +407,7 @@
       },
       {
         "name": "Garlic Bread",
-        "description": "baguette, garlic butter, parmesan",
+        "description": "Baguette, garlic butter, parmesan",
         "allergies": [
           { "name": "gluten", "notes": "" },
           { "name": "dairy", "notes": "" },
@@ -430,9 +430,10 @@
     "items": [
       {
         "name": "Pancakes",
-        "description": "3 ea pancakes (ap flour, sugar, baking powder, baking soda, salt, buttermilk, milk, whole eggs, melted butter)\nMaine Blueberry Compote (maine blueberries, sugar, salt, vanilla)\nCinnamon butter (butter, vanilla extract, cinnamon, mace, salt, sugar)\nVanilla-whipped cream\nSide of maple syrup",
+        "description": "3 ea pancakes (ap flour, sugar, baking powder, baking soda, salt, buttermilk, milk, whole eggs, melted butter)\n\nMaine Blueberry Compote (maine blueberries, sugar, salt, vanilla)\n\nCinnamon butter (butter, vanilla extract, cinnamon, mace, salt, sugar)\n\nVanilla-whipped cream, Side of maple syrup",
         "allergies": [
           { "name": "gluten", "notes": "" },
+          { "name": "eggs", "notes": "" },
           { "name": "dairy", "notes": "" }
         ],
         "mise": "Fork, Knife",
@@ -453,7 +454,7 @@
       },
       {
         "name": "Lobster Omelet",
-        "description": "2 egg omelet\nFilling: 3 ounces picked lobster meat, blend of spinach, ricotta, mozzarella\nGarnish – chives\nServed w/ a side salad",
+        "description": "2 egg omelet. Filling: 3 ounces picked lobster meat, blend of spinach, ricotta, mozzarella\n\nGarnish – chives, served w/ a side salad",
         "allergies": [
           { "name": "allium", "notes": "" },
           { "name": "shellfish", "notes": "" },
@@ -469,7 +470,7 @@
         "description": "2 fried eggs over sweet potato hash (sweet potato, herbs, onions, garlic, hot italian sausage), garnished with cilantro",
         "allergies": [
           { "name": "allium", "notes": "" },
-          { "name": "pork", "notes": "Can be removed, ring Veg Hash." },
+          { "name": "pork", "notes": "Can be removed, ring as Veg Hash." },
           { "name": "nightshade", "notes": "" },
           { "name": "dairy", "notes": "" }
         ],
@@ -479,7 +480,7 @@
       },
       {
         "name": "Spicy Egg Sandwich",
-        "description": "Egg served over medium, topped with chili crisp, smoked cheddar, 1 fried latke, black pepper ranch on a seeded Martin’s roll\nChili Crisp: arbol chilies, ginger, star anise, sugar, cumin, black pepper, canola, shallots, garlic, fresno\nBP Ranch: sour cream, mayonnaise, buttermilk, black pepper, oregano, onion powder, roasted garlic puree lemon juice\nLatkes: Russet potatoes, onion, scallion, flour, butter, black pepper\nComes with side of fries (can sub salad or chips)",
+        "description": "Egg served over medium, topped with chili crisp, smoked cheddar, 1 fried latke, black pepper ranch on a seeded Martin’s roll\n\nChili Crisp: arbol chilies, ginger, star anise, sugar, cumin, black pepper, canola, shallots, garlic, fresno\n\nBP Ranch: sour cream, mayonnaise, buttermilk, black pepper, oregano, onion powder, roasted garlic puree lemon juice\n\nLatkes: Russet potatoes, onion, scallion, flour, butter, black pepper\nComes with side of fries (can sub salad or chips)",
         "allergies": [
           { "name": "allium", "notes": "" },
           { "name": "gluten", "notes": "In latkes, cannot be removed." },
@@ -505,7 +506,7 @@
       },
       {
         "name": "Crispy Chicken Sandwich",
-        "description": "Boneless chicken thigh, marinated in buttermilk and spices\nDredged in a seasoned flour and deep-fried\nServed on a sesame potato bun\nPickled Cucumber\nShredded lettuce\nBasil aioli\nHot honey - red pepper flakes, honey, vinegar\nServed with a side salad of petit lettuces (can sub for fries or chips)",
+        "description": "Boneless chicken thigh, marinated in buttermilk and spices. Dredged in a seasoned flour and deep-fried\n\nServed on a sesame potato bun. Pickled Cucumber, Shredded lettuce, Basil aioli, Hot honey - red pepper flakes, honey, vinegar\n\nServed with a side salad of petit lettuces (can sub for fries or chips)",
         "allergies": [
           { "name": "allium", "notes": "" },
           { "name": "dairy", "notes": "" },
@@ -533,7 +534,7 @@
       },
       {
         "name": "Crab Melt",
-        "description": "The crab melt is a crabby grilled cheese. Our creamy crab dip with extra scallions, mozzarella, and smoked cheddar, spread between white bread sourdough, slathered w/ Old Bay butter, griddled until golden.\nCrab Dip: Blue Crab claw meat (from Venezuela) cauliflower, mayonnaise, sour cream, cheddar cheese, mozzarella, white onion, jalapenos, goya adobo, worcestershire, chives, tarragon parsley, smoked paprika, cayenne, lemon juice, Green tabasco, black pepper\nOld Bay Butter: old bay, butter\nServed w/ a side salad",
+        "description": "The crab melt is a crabby grilled cheese. Our creamy crab dip with extra scallions, mozzarella, and smoked cheddar, spread between white bread sourdough, slathered w/ Old Bay butter, griddled until golden.\n\nCrab Dip: Blue Crab claw meat (from Venezuela) cauliflower, mayonnaise, sour cream, cheddar cheese, mozzarella, white onion, jalapenos, goya adobo, worcestershire, chives, tarragon parsley, smoked paprika, cayenne, lemon juice, Green tabasco, black pepper\n\nOld Bay Butter: old bay, butter\n\nServed w/ a side salad",
         "allergies": [
           { "name": "dairy", "notes": "Bun and cheese" },
           { "name": "shellfish", "notes": "" },
@@ -556,7 +557,7 @@
       },
       {
         "name": "Avocado Toast",
-        "description": "(not listed on the menu, but can be made) There is a button in Square that you can search for.\nAvocado – Avocado, lemon, EVOO, salt\nGarnish: crispy onions, chili flakes",
+        "description": "(not listed on the menu, but can be made) There is a button in Square that you can search for.\n\nAvocado – Avocado, lemon, EVOO, salt\n\nGarnish: crispy onions, chili flakes",
         "allergies": [
           { "name": "gluten", "notes": "" },
           { "name": "allium", "notes": "" }
@@ -591,7 +592,7 @@
       },
       {
         "name": "Mochi Corn Bread",
-        "description": "Ingredients: Butter, parmesan, aleppo, corn kernels, sour cream, eggs, sugar, salt, mochi sweet rice flour, AP flour\nServed w/ honey butter",
+        "description": "Ingredients: Butter, parmesan, aleppo, corn kernels, sour cream, eggs, sugar, salt, mochi sweet rice flour, AP flour\n\nServed w/ honey butter",
         "allergies": [
           { "name": "gluten", "notes": "" },
           { "name": "dairy", "notes": "" },
@@ -602,7 +603,7 @@
       },
       {
         "name": "Potato Latkes",
-        "description": "Served 2 per with creme fraiche topped w/ chives\nShredded potatoes, onion, eggs, scallion, flour, butter, black pepper, baking powder\nCook a la plancha and then deep fried in canola",
+        "description": "Served 2 per with creme fraiche topped w/ chives\n\nShredded potatoes, onion, eggs, scallion, flour, butter, black pepper, baking powder\n\nCooked a la plancha and then deep fried in canola",
         "allergies": [
           { "name": "gluten", "notes": "" },
           { "name": "dairy", "notes": "" },
@@ -636,11 +637,11 @@
     "items": [
       {
         "name": "Chocolate Panna Cotta",
-        "description": "“Cooked Cream” Panna Cotta (milk, heavy cream, sugar, cinnamon, guajillo, cardamom pods, star anise, semi-sweet chocolate, gelatin, espresso)\nSpiced Cream (gelatin, heavy cream, sugar, cinnamon, salt)\nAlmond crumble topping (AP flour, roasted almonds, whole wheat flour, sugar, butter, salt)",
+        "description": "“Cooked Cream” Panna Cotta (milk, heavy cream, sugar, cinnamon, guajillo, cardamom pods, star anise, semi-sweet chocolate, gelatin, espresso)\n\nSpiced Cream (gelatin, heavy cream, sugar, cinnamon, salt)\n\nAlmond crumble topping (AP flour, roasted almonds, whole wheat flour, sugar, butter, salt)",
         "allergies": [
           {
             "name": "gluten",
-            "notes": "(can be avoided remove crumble),"
+            "notes": "Can be avoided remove crumble,"
           },
           { "name": "dairy", "notes": "" },
           { "name": "pork", "notes": "Gelatin contains pork" }
@@ -650,13 +651,8 @@
       },
       {
         "name": "Olive Oil Cake",
-        "description": "EVOO, mochi flour, cornmeal, eggs, sugar, orange juice, eggs, oat milk\nTopped with honey syrup (honey, water)\nServed 2 slices, garnished with candied rosemary-orange glace (from orange peel)\n\nGluten-free and dairy-free.",
-        "allergies": [
-          {
-            "name": "citrus",
-            "notes": ""
-          }
-        ],
+        "description": "EVOO, mochi flour, cornmeal, eggs, sugar, orange juice, eggs, oat milk\n\nTopped with honey syrup (honey, water)\n\nServed 2 slices, garnished with candied rosemary-orange glace (from orange peel)\n\nGluten-free and dairy-free.",
+        "allergies": [],
         "mise": "Fork, Knife"
       },
       {
@@ -668,7 +664,6 @@
             "notes": ""
           },
           { "name": "dairy", "notes": "" },
-          { "name": "citrus", "notes": "" },
           { "name": "eggs", "notes": "" }
         ],
         "mise": "Spoon"
