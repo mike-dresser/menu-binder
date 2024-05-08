@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Checkbox from './components/Checkbox';
 import Button from './components/Button';
 import api from './services/api-client';
+import capitalize from './services/capitalize';
 
 function ItemFilter({
   menuName,
@@ -27,7 +28,7 @@ function ItemFilter({
       filters.push(
         <Checkbox
           key={item}
-          label={`${item[0].toUpperCase()}${item.substring(1)}`}
+          label={capitalize(item)}
           name={item}
           checked={filterItems[item]}
           onFilterChange={onFilterChange}

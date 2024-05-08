@@ -34,6 +34,10 @@ $allergen-glyphs: (
   'allium': '■',
 );
 
+$icon-sm: 1.2em;
+$icon-md: 1.5em;
+$icon-lg: 2.2em;
+
 body {
   font-family: Inter, system-ui, Helvetica, sans-serif;
   padding: 0.5em;
@@ -69,4 +73,12 @@ img {
 }
 .hidden {
   display: none;
+}
+.closeIcon {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  svg {
+    font-size: $icon-md;
+  }
 }

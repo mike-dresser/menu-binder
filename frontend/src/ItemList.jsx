@@ -57,8 +57,10 @@ function ItemList({ menu, allItems }) {
     <li key={`${name}Item`}>
       <div key={`${name}Div`} onClick={handleExpand}>
         <h2>{name}</h2>
-        <span className="expandGlyph">
+        <span className="expandIcon">
+          {/* <IconContext.Provider value={{ size: '2em' }}> */}
           {expanded ? <HiChevronDown /> : <HiChevronRight />}
+          {/* </IconContext.Provider> */}
         </span>
       </div>
       {showFilterOptions && (
@@ -91,7 +93,9 @@ function ItemList({ menu, allItems }) {
                 })}
               </div>
               <Button action={handleClearFilter} type="outline">
-                Clear ✖️
+                <span className="closeIcon">
+                  Clear <HiX />
+                </span>
               </Button>
             </div>
           </>
@@ -130,7 +134,9 @@ function ItemList({ menu, allItems }) {
                         }
                         type="text"
                       >
-                        <HiX />
+                        <span className="closeIcon">
+                          <HiX />
+                        </span>
                       </Button>
                     )}
                   </li>

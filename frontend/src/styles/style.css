@@ -40,6 +40,15 @@ img {
   display: none;
 }
 
+.closeIcon {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+}
+.closeIcon svg {
+  font-size: 1.5em;
+}
+
 #itemDetails {
   white-space: pre-wrap;
 }
@@ -154,10 +163,13 @@ button.outline {
   font-size: 0.9em;
   margin: 0;
 }
-button.outline .icon {
+button.outline .lockIcon {
   display: flex;
   align-items: center;
   gap: 0.25em;
+}
+button.outline .lockIcon svg {
+  font-size: 1.5em;
 }
 
 input[type=submit] {
@@ -197,9 +209,6 @@ input[type=submit] {
   font-size: 1.2em;
   line-height: 1.4em;
 }
-#menuList span.expandGlyph {
-  font-size: 1.5em;
-}
 #menuList div.filteredByContainer {
   align-items: flex-end;
   border-bottom: 2px solid lightgrey;
@@ -215,6 +224,9 @@ input[type=submit] {
   margin: 0.25em;
   padding: 0.25em 0.5em;
   border-radius: 5px;
+}
+#menuList .expandIcon {
+  font-size: 2.2em;
 }
 
 #header {
@@ -302,7 +314,7 @@ input[type=submit] {
   display: block;
   align-self: center;
   margin: 0 0.5em;
-  font-size: 1.2rem;
+  font-size: 1.5em;
   color: rgb(192, 192, 192);
 }
 

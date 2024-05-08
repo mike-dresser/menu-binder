@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Dialog from '../../Dialog';
 import { HiOutlineInformationCircle } from 'react-icons/hi';
+import capitalize from '../../services/capitalize';
 
 function ItemAllergens({ item }) {
   const [noteOpen, setNoteOpen] = useState(false);
@@ -9,10 +10,6 @@ function ItemAllergens({ item }) {
   function displayAllergenInfo(allergen) {
     setSelectedAllergen({ ...allergen });
     setNoteOpen(true);
-  }
-
-  function capitalize(str) {
-    return str.slice(0, 1).toUpperCase() + str.slice(1);
   }
 
   return (
@@ -29,7 +26,9 @@ function ItemAllergens({ item }) {
       <ul className="allergenContainer">
         {item.allergens.map((allergen) => (
           <li className="allergen" key={allergen.id}>
-            <span className={`${allergen.name}Item`}>{allergen.name}</span>
+            <span className={`${allergen.name}Item`}>
+              {capitalize(allergen.name)}
+            </span>
 
             {allergen.notes && (
               <span

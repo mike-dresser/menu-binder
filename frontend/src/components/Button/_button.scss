@@ -11,10 +11,13 @@ button {
     font-size: 0.9em;
     margin: 0;
 
-    .icon {
+    .lockIcon {
       display: flex;
       align-items: center;
       gap: 0.25em;
+      svg {
+        font-size: $icon-md;
+      }
     }
   }
 }

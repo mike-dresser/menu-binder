@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import NewItemAllergen from './NewItemAllergen';
 import api from '../../services/api-client';
+import capitalize from '../../services/capitalize';
 
 // This caches existing allergen names
 let allAllergens = [];
@@ -69,7 +70,7 @@ function NewItemAllergenList({ newItem, setNewItem }) {
         {filteredAllergens.map((allergen) => {
           return (
             <option key={allergen.name} value={allergen.name} id={allergen.id}>
-              {allergen.name}
+              {capitalize(allergen.name)}
             </option>
           );
         })}

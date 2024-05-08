@@ -11,11 +11,11 @@ function Header({ editMode, setEditMode }) {
       </h1>
       <Button action={() => setEditMode(!editMode)} type="outline">
         {editMode ? (
-          <span className="icon">
+          <span className="lockIcon">
             Finish Editing <HiOutlineLockOpen />
           </span>
         ) : (
-          <span className="icon">
+          <span className="lockIcon">
             Edit <HiOutlineLockClosed />
           </span>
         )}

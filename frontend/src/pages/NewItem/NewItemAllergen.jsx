@@ -1,6 +1,7 @@
 import Dialog from '../../Dialog';
 import { useState } from 'react';
 import { HiOutlineInformationCircle, HiX } from 'react-icons/hi';
+import capitalize from '../../services/capitalize';
 
 function NewItemAllergen({ allergen, newItem, setNewItem }) {
   const [newAllergenNote, setNewAllergenNote] = useState('');
@@ -35,7 +36,9 @@ function NewItemAllergen({ allergen, newItem, setNewItem }) {
 
   return (
     <li className="allergen">
-      <span className={`${allergen.name}Item`}>{allergen.name}</span>
+      <span className={`${allergen.name}Item`}>
+        {capitalize(allergen.name)}
+      </span>
       {noteOpen && (
         <Dialog
           boxState={noteOpen}
