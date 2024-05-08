@@ -3,6 +3,7 @@ import { EditModeContext } from '../../App';
 import api from '../../services/api-client';
 import { HiOutlinePencil } from 'react-icons/hi';
 import Confirm from '../../components/Confirm';
+import Button from '../../components/Button';
 
 function EditableTextField({ type = 'p', itemField, item, setItem, children }) {
   const editMode = useContext(EditModeContext);
@@ -23,9 +24,9 @@ function EditableTextField({ type = 'p', itemField, item, setItem, children }) {
           {React.createElement(type, { children })}
           {/* <p>{children}</p> */}
           {editMode && (
-            <span className="editGlyph" onClick={() => setEnableEdit(true)}>
+            <Button type="editGlyph" action={() => setEnableEdit(true)}>
               <HiOutlinePencil />
-            </span>
+            </Button>
           )}
         </div>
       )}

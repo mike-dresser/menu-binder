@@ -6,6 +6,7 @@ import ItemAllergens from './ItemAllergens';
 import NewItemAllergenList from '../NewItem/NewItemAllergenList';
 import NewItemCategoryList from '../NewItem/NewItemCategoryList';
 import Confirm from '../../components/Confirm';
+import Button from '../../components/Button';
 
 function EditableList({ field, item, setItem }) {
   const editMode = useContext(EditModeContext);
@@ -67,9 +68,9 @@ function EditableList({ field, item, setItem }) {
         (enableEdit ? (
           <Confirm onConfirm={() => onSubmit(field)} onCancel={onCancel} />
         ) : (
-          <span className="editGlyph" onClick={() => setEnableEdit(true)}>
+          <Button type="editGlyph" action={() => setEnableEdit(true)}>
             <HiOutlinePencil />
-          </span>
+          </Button>
         ))}
     </div>
   );

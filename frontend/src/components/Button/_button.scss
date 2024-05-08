@@ -26,6 +26,13 @@ button {
     cursor: pointer;
     font-size: $icon-sm;
   }
+  &.editGlyph {
+    display: block;
+    align-self: center;
+    margin: 0 0.5em;
+    font-size: $icon-md;
+    color: $header-color;
+  }
   .lockIcon {
     display: flex;
     align-items: center;

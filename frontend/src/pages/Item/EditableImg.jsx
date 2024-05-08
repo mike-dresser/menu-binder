@@ -3,6 +3,7 @@ import { EditModeContext } from '../../App';
 import ImgUpload from '../NewItem/ImgUpload';
 import { HiOutlinePencil } from 'react-icons/hi';
 import Confirm from '../../components/Confirm';
+import Button from '../../components/Button';
 
 function EditableImg({ children, itemField, item, setItem }) {
   const editMode = useContext(EditModeContext);
@@ -16,9 +17,9 @@ function EditableImg({ children, itemField, item, setItem }) {
         <div className="editableField">
           {children}
           {editMode && (
-            <span className="editGlyph" onClick={() => setEnableEdit(true)}>
+            <Button type="editGlyph" action={() => setEnableEdit(true)}>
               <HiOutlinePencil />
-            </span>
+            </Button>
           )}
         </div>
       )}
