@@ -11,13 +11,17 @@ function ItemAllergens({ item }) {
     setNoteOpen(true);
   }
 
+  function capitalize(str) {
+    return str.slice(0, 1).toUpperCase() + str.slice(1);
+  }
+
   return (
     <div className="dialogContainer">
       {noteOpen && (
         <Dialog
           boxState={noteOpen}
           setBoxState={setNoteOpen}
-          title={selectedAllergen.name}
+          title={capitalize(selectedAllergen.name)}
           content={selectedAllergen.notes}
         />
       )}
