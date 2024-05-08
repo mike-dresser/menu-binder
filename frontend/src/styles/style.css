@@ -127,14 +127,6 @@ li.allergen span.alliumItem::before {
   content: "■";
 }
 
-.infoGlyph {
-  display: flex;
-  align-items: center;
-  color: rgb(192, 192, 192);
-  padding-left: 0.8em;
-  cursor: pointer;
-}
-
 .allergenContainer {
   margin: 0 1em;
   display: flex;
@@ -170,6 +162,14 @@ button.closeIcon {
 }
 button.closeIcon svg {
   font-size: 1.5em;
+}
+button.infoGlyph {
+  display: flex;
+  align-items: center;
+  color: rgb(192, 192, 192);
+  padding-left: 0.8em;
+  cursor: pointer;
+  font-size: 1.2em;
 }
 button .lockIcon {
   display: flex;

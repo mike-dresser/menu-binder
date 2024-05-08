@@ -18,6 +18,14 @@ button {
       font-size: $icon-md;
     }
   }
+  &.infoGlyph {
+    display: flex;
+    align-items: center;
+    color: $header-color;
+    padding-left: 0.8em;
+    cursor: pointer;
+    font-size: $icon-sm;
+  }
   .lockIcon {
     display: flex;
     align-items: center;

@@ -2,6 +2,7 @@ import Dialog from '../../Dialog';
 import { useState } from 'react';
 import { HiOutlineInformationCircle, HiX } from 'react-icons/hi';
 import capitalize from '../../services/capitalize';
+import Button from '../../components/Button';
 
 function NewItemAllergen({ allergen, newItem, setNewItem }) {
   const [newAllergenNote, setNewAllergenNote] = useState('');
@@ -50,30 +51,26 @@ function NewItemAllergen({ allergen, newItem, setNewItem }) {
                 value={newAllergenNote}
                 onChange={(e) => setNewAllergenNote(e.target.value)}
               ></textarea>
-              <button onClick={() => addAllergenNote(allergen)}>Add</button>
+              <Button type="outline" action={() => addAllergenNote(allergen)}>
+                Add
+              </Button>
             </>
           }
         />
       )}
       {allergen.notes ? (
-        <span
-          className="infoGlyph"
-          onClick={() => updateAllergenNote(allergen)}
-        >
+        <Button type="infoGlyph" action={() => updateAllergenNote(allergen)}>
           <HiOutlineInformationCircle />
-        </span>
+        </Button>
       ) : (
-        <span
-          className="infoGlyph"
-          onClick={() => updateAllergenNote(allergen)}
-        >
+        <Button type="infoGlyph" action={() => updateAllergenNote(allergen)}>
           ...
-        </span>
+        </Button>
       )}
-      <span onClick={() => deleteAllergen(allergen)}>
+      <Button type="closeIcon" action={() => deleteAllergen(allergen)}>
         ️
         <HiX />
-      </span>
+      </Button>
     </li>
   );
 }

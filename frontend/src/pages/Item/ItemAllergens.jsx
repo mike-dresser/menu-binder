@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Dialog from '../../Dialog';
 import { HiOutlineInformationCircle } from 'react-icons/hi';
 import capitalize from '../../services/capitalize';
+import Button from '../../components/Button';
 
 function ItemAllergens({ item }) {
   const [noteOpen, setNoteOpen] = useState(false);
@@ -31,12 +32,12 @@ function ItemAllergens({ item }) {
             </span>
 
             {allergen.notes && (
-              <span
-                className="infoGlyph"
-                onClick={() => displayAllergenInfo(allergen)}
+              <Button
+                type="infoGlyph"
+                action={() => displayAllergenInfo(allergen)}
               >
                 <HiOutlineInformationCircle />
-              </span>
+              </Button>
             )}
           </li>
         ))}
