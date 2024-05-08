@@ -2,7 +2,7 @@ import { HiCheck, HiX } from 'react-icons/hi';
 
 function Confirm({ onConfirm, onCancel }) {
   return (
-    <div>
+    <div className="confirm">
       <span className="closeIcon" onClick={onConfirm}>
         <HiCheck />
       </span>

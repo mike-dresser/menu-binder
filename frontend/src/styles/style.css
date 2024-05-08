@@ -151,6 +151,15 @@ li.allergen span.alliumItem::before {
   flex-wrap: wrap;
 }
 
+.confirm {
+  display: flex;
+}
+.confirm svg:hover {
+  background-color: rgb(192, 192, 192);
+  color: white;
+  border-radius: 4px;
+}
+
 button.text {
   border: none;
   background-color: white;
