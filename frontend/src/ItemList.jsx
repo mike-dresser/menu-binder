@@ -79,7 +79,7 @@ function ItemList({ menu, allItems }) {
       {expanded &&
         (isFilteredBy.length ? (
           <>
-            <p className="sectionHeader">Filtered By</p>
+            <h4 className="sectionHeader">Filtered By</h4>
             <div className="filteredByContainer">
               <div>
                 {isFilteredBy.map((allergen) => {
@@ -104,12 +104,10 @@ function ItemList({ menu, allItems }) {
         ))}
       {categories &&
         categories.map((each) => {
-          {
-          }
           return (
             <ul className={expanded ? 'expanded' : ''}>
               <li key={`${name}${each.name}`}>
-                <p className="sectionHeader">{each.name}</p>
+                <h3 className="sectionHeader">{each.name}</h3>
               </li>
               <li key={`${name}${each.name}Add`}>
                 {editMode && (

@@ -39,32 +39,32 @@ function NewItem() {
 
   return (
     <>
-      <p className="sectionHeader">Image</p>
+      <h3 className="sectionHeader">Image</h3>
       <ImgUpload newItem={newItem} setNewItem={setNewItem} />
       <form id="newItem" onSubmit={onSubmit}>
-        <p className="sectionHeader">Name</p>
+        <h3 className="sectionHeader">Name</h3>
         <input
           type="text"
           name="name"
           value={newItem['name']}
           onChange={onTextChange}
         ></input>
-        <p className="sectionHeader">Description</p>
+        <h3 className="sectionHeader">Description</h3>
         <textarea
           name="description"
           value={newItem['description']}
           onChange={onTextChange}
         ></textarea>
-        <p className="sectionHeader">Allergens</p>
+        <h3 className="sectionHeader">Allergens</h3>
         <NewItemAllergenList newItem={newItem} setNewItem={setNewItem} />
-        <p className="sectionHeader">Mise</p>
+        <h3 className="sectionHeader">Mise</h3>
         <input
           type="text"
           name="mise"
           value={newItem['mise']}
           onChange={onTextChange}
         ></input>
-        <p className="sectionHeader">Menu Categories</p>
+        <h3 className="sectionHeader">Menu Categories</h3>
         <NewItemCategoryList newItem={newItem} setNewItem={setNewItem} />
         <input type="submit" value="Add New Item"></input>
       </form>

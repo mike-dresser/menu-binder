@@ -50,23 +50,23 @@ function Item() {
         {item.name}
       </EditableTextField>
 
-      <p className="sectionHeader">Description</p>
+      <h3 className="sectionHeader">Description</h3>
 
       <EditableTextField itemField="description" item={item} setItem={setItem}>
         {item.description}
       </EditableTextField>
 
-      <p className="sectionHeader">Allergens</p>
+      <h3 className="sectionHeader">Allergens</h3>
 
       <EditableList field="itemAllergens" item={item} setItem={setItem} />
 
-      <p className="sectionHeader">Mise</p>
+      <h3 className="sectionHeader">Mise</h3>
 
       <EditableTextField itemField="mise" item={item} setItem={setItem}>
         {item.mise}
       </EditableTextField>
 
-      <p className="sectionHeader">Available</p>
+      <h3 className="sectionHeader">Available</h3>
       <EditableList field="itemCategories" item={item} setItem={setItem} />
     </div>
   );
