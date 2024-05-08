@@ -54,7 +54,7 @@ function ItemList({ menu, allItems }) {
   }, []);
   let [name, categories] = [menu.name, filteredMenu.categories];
   return (
-    <li key={`${name}Item`}>
+    <li key={menu.id}>
       <div key={`${name}Div`} onClick={handleExpand}>
         <h2>{name}</h2>
         <span className="expandIcon">
@@ -108,10 +108,10 @@ function ItemList({ menu, allItems }) {
         categories.map((each) => {
           return (
             <ul className={expanded ? 'expanded' : ''}>
-              <li key={`${name}${each.name}`}>
+              <li key={each.id}>
                 <h3 className="sectionHeader">{each.name}</h3>
               </li>
-              <li key={`${name}${each.name}Add`}>
+              <li key={`${each.id}Add`}>
                 {editMode && (
                   <ItemAdd
                     allItems={allItems}

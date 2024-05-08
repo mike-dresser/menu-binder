@@ -40,6 +40,10 @@ img {
   display: none;
 }
 
+textarea {
+  font: inherit;
+}
+
 #itemDetails {
   white-space: pre-wrap;
 }

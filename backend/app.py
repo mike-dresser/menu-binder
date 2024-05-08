@@ -113,7 +113,7 @@ def all_items():
         db.session.commit()
         for allergen in r.get('allergens'):
             new_item_allergen = ItemAllergen(item_id=new_item.to_dict()['id'],
-                                             allergen_id=allergen.get('allergen_id'),
+                                             allergen_id=allergen.get('id'),
                                              notes=allergen.get('notes'))
             db.session.add(new_item_allergen)
         for category in r.get('categories'):
