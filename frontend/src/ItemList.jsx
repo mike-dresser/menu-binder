@@ -67,7 +67,7 @@ function ItemList({ menu, allItems }) {
         <Dialog
           boxState={showFilterOptions}
           setBoxState={setShowFilterOptions}
-          title={'Remove Items Including'}
+          title={'Exclude... '}
           content={
             <ItemFilter
               menuName={name}
@@ -108,7 +108,7 @@ function ItemList({ menu, allItems }) {
         categories.map((each) => {
           return (
             <ul className={expanded ? 'expanded' : ''}>
-              <li key={each.id}>
+              <li key={`${each.id}Name`}>
                 <h3 className="sectionHeader">{each.name}</h3>
               </li>
               <li key={`${each.id}Add`}>

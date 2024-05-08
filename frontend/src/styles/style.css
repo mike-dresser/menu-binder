@@ -305,6 +305,7 @@ input[type=submit] {
 .filterForm {
   display: flex;
   flex-direction: column;
+  margin: auto;
 }
 .filterForm div {
   display: flex;
@@ -312,9 +313,8 @@ input[type=submit] {
   justify-content: space-between;
   margin: 0.5em;
 }
-.filterForm input[type=submit] {
-  margin-top: 0.75em;
-  align-self: center;
+.filterForm button {
+  margin: 0.75em 0 0.5em;
 }
 
 .filteredByBadge {

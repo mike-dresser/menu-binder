@@ -25,6 +25,7 @@
 .filterForm {
   display: flex;
   flex-direction: column;
+  margin: auto;
 
   div {
     display: flex;
@@ -33,9 +34,8 @@
     margin: 0.5em;
   }
 
-  input[type='submit'] {
-    margin-top: 0.75em;
-    align-self: center;
+  button {
+    margin: 0.75em 0 0.5em;
   }
 }
 
