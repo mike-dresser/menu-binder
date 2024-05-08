@@ -7,9 +7,12 @@
   }
   .backLink {
     font-size: 1.2em;
+    margin-top: 0.15em;
     font-weight: 600;
-    margin-bottom: 0.5em;
     display: inline-block;
+    svg {
+      font-size: $icon-md;
+    }
   }
 }
 
