@@ -40,15 +40,6 @@ img {
   display: none;
 }
 
-.closeIcon {
-  display: flex;
-  align-items: center;
-  gap: 0.25em;
-}
-.closeIcon svg {
-  font-size: 1.5em;
-}
-
 #itemDetails {
   white-space: pre-wrap;
 }
@@ -160,7 +151,7 @@ li.allergen span.alliumItem::before {
   border-radius: 4px;
 }
 
-button.text {
+button {
   border: none;
   background-color: white;
 }
@@ -172,12 +163,20 @@ button.outline {
   font-size: 0.9em;
   margin: 0;
 }
-button.outline .lockIcon {
+button.closeIcon {
   display: flex;
   align-items: center;
   gap: 0.25em;
 }
-button.outline .lockIcon svg {
+button.closeIcon svg {
+  font-size: 1.5em;
+}
+button .lockIcon {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+}
+button .lockIcon svg {
   font-size: 1.5em;
 }
 

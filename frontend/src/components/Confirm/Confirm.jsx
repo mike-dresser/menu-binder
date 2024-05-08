@@ -1,14 +1,15 @@
 import { HiCheck, HiX } from 'react-icons/hi';
+import Button from '../Button';
 
 function Confirm({ onConfirm, onCancel }) {
   return (
     <div className="confirm">
-      <span className="closeIcon" onClick={onConfirm}>
+      <Button type="closeIcon" action={onConfirm}>
         <HiCheck />
-      </span>
-      <span className="closeIcon" onClick={onCancel}>
+      </Button>
+      <Button type="closeIcon" action={onCancel}>
         <HiX />
-      </span>
+      </Button>
     </div>
   );
 }

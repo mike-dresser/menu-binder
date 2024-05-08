@@ -1,8 +1,7 @@
 button {
-  &.text {
-    border: none;
-    background-color: white;
-  }
+  border: none;
+  background-color: white;
+  // &.text {}
   &.outline {
     background-color: white;
     border: 1px solid black;
@@ -10,14 +9,21 @@ button {
     padding: 0.5em 1em;
     font-size: 0.9em;
     margin: 0;
-
-    .lockIcon {
-      display: flex;
-      align-items: center;
-      gap: 0.25em;
-      svg {
-        font-size: $icon-md;
-      }
+  }
+  &.closeIcon {
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+    svg {
+      font-size: $icon-md;
+    }
+  }
+  .lockIcon {
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+    svg {
+      font-size: $icon-md;
     }
   }
 }

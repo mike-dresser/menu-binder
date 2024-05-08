@@ -74,11 +74,3 @@ img {
 .hidden {
   display: none;
 }
-.closeIcon {
-  display: flex;
-  align-items: center;
-  gap: 0.25em;
-  svg {
-    font-size: $icon-md;
-  }
-}
