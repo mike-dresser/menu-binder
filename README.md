@@ -4,7 +4,9 @@ _Menu Education for the 21st Century_
 
 Menu Binder is a mobile solution for menu education and communication. Replace printed menu descriptions with a mobile site accessible to all team members 24/7, instantly updateable from your phone.
 
-<img src="./demo/menu%20list.png" width="300px" align="center"/>
+<div align="center">
+<img src="./demo/menu%20list.png" width="300px"/>
+</div>
 
 ## Item View
 
@@ -12,6 +14,8 @@ Add images, ingredients, allergen information, mise/marking notes for front-of-h
 
 <div align="center">
 <img src="./demo/item%201.png" width="300px" />
+</div>
+<div align="center">
 <img src="./demo/item%202.png" width="300px" />
 </div>
 
@@ -25,13 +29,17 @@ Add notes to specific allergens to communicate what can be removed, substituted,
 
 Items may be edited at will, from the mobile device of any user with edit privileges. Daily additions and menu changes just got easier.
 
-<img src="./demo/item%20edit.png" width="300px" />
+<div align="center">
+  <img src="./demo/item%20edit.png" width="300px" />
+</div>
 
 ## Menu Filtering
 
 Filter menu items by major allergen for a quick overview of what can be served without modification.
 
-<img src="./demo/menu%20filter.png" width="300px" />
+<div align="center">
+  <img src="./demo/menu%20filter.png" width="300px" />
+</div>
 
 ## Coming Soon
 
