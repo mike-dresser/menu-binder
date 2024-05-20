@@ -1,29 +1,17 @@
-import { useEffect, useState, useContext } from 'react';
+import { useContext } from 'react';
 import ItemList from '../ItemList';
 import Button from '../components/Button';
 import { EditModeContext } from '../App';
 import { useNavigate } from 'react-router-dom';
-import api from '../services/api-client';
+import useMenuData from '../hooks/useMenuData';
+import useAlltems from '../hooks/useAllItems';
 
 function MenuList() {
-  const [testMenu, setTestMenu] = useState([]);
-  const [allItems, setAllItems] = useState([]);
   const editMode = useContext(EditModeContext);
   const navigate = useNavigate();
+  const testMenu = useMenuData();
+  const allItems = useAlltems();
 
-  useEffect(() => {
-    const fetchMenuData = async () => {
-      const menuData = await api.get('/menus');
-      setTestMenu(menuData);
-    };
-    fetchMenuData();
-    const fetchAllItems = async () => {
-      const itemData = await api.get('/items');
-      setAllItems(itemData);
-    };
-    fetchMenuData();
-    fetchAllItems();
-  }, []);
   return (
     <>
       {editMode && (
@@ -34,7 +22,7 @@ function MenuList() {
         </div>
       )}
       <ul id="menuList">
-        {testMenu &&
+        {testMenu.length > 0 &&
           testMenu.map((menu) => (
             <div key={`${menu.name}Dialog`} className="dialogContainer">
               <ItemList key={menu.id} menu={menu} allItems={allItems} />
