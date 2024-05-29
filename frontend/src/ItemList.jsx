@@ -31,6 +31,7 @@ function ItemList({ menu, allItems }) {
       console.log(menu);
     }
     fetchDelete();
+    // update the menu list after item delete
     function updateMenu(itemId, catId) {
       const updated = { categories: [] };
       for (let category of filteredMenu.categories) {
@@ -58,9 +59,7 @@ function ItemList({ menu, allItems }) {
       <div key={`${name}Div`} onClick={handleExpand}>
         <h2>{name}</h2>
         <span className="expandIcon">
-          {/* <IconContext.Provider value={{ size: '2em' }}> */}
           {expanded ? <HiChevronDown /> : <HiChevronRight />}
-          {/* </IconContext.Provider> */}
         </span>
       </div>
       {showFilterOptions && (

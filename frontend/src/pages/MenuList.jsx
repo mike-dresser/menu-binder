@@ -9,7 +9,7 @@ import useAlltems from '../hooks/useAllItems';
 function MenuList() {
   const editMode = useContext(EditModeContext);
   const navigate = useNavigate();
-  const testMenu = useMenuData();
+  const menuData = useMenuData();
   const allItems = useAlltems();
 
   return (
@@ -22,8 +22,8 @@ function MenuList() {
         </div>
       )}
       <ul id="menuList">
-        {testMenu.length > 0 &&
-          testMenu.map((menu) => (
+        {menuData.length > 0 &&
+          menuData.map((menu) => (
             <div key={`${menu.name}Dialog`} className="dialogContainer">
               <ItemList key={menu.id} menu={menu} allItems={allItems} />
             </div>
